@@ -1,0 +1,187 @@
+           * {
+              margin: 0;
+              padding: 0;
+              box-sizing: content-box;
+          }
+
+
+          @font-face {
+              font-family: 'MinhaFonte';
+              src: url('handelsonsix_cyr_six.otf') format('truetype');
+          }
+
+          header {
+              background-color: rgba(22, 22, 22, 0.856);
+              color: rgba(204, 214, 223, 0.911);
+              padding: 2%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+
+          .header-left {
+              display: block;
+              align-items: left;
+          }
+
+          .second-header {
+              background-color: rgba(161, 161, 161, 0.562);
+              padding: 10px;
+              display: flex;
+              justify-content: center;
+          }
+
+          .nav-links {
+              list-style: none;
+              display: flex;
+          }
+
+          .nav-links li {
+              margin: 0 15px
+          }
+
+          .nav-links a {
+              color: black;
+              font-family: 'Courier New', Courier, monospace;
+              font-size: 2vw;
+              text-decoration: none;
+              padding: 5px 10px;
+              transform: color 0.3 ease;
+          }
+
+          .nav-links a:hover {
+              color: #ffcc00;
+          }
+
+          a img {
+              height: 3vw;
+              margin-right: auto;
+          }
+
+
+          .brand {
+              font-family: 'MinhaFonte', sans-serif;
+              font-size: 5vw;
+
+          }
+
+
+          .logo img {
+              max-height: 150px;
+              width: auto;
+              object-fit: contain;
+          }
+
+          .img {
+              max-width: 1vw;
+
+          }
+
+          .text {
+              font-size: 2vw;
+              letter-spacing: 1vw;
+              font-family: 'MinhaFonte', sans-serif;
+              text-align: left;
+              margin-left: 1vw;
+
+          }
+
+          body {
+              background-image: url("BackGrounds/bkgr.png");
+              background-repeat: repeat;
+              background-size: cover;
+              background-position: top left;
+          }
+
+
+          h1 {
+
+              color: rgb(212, 173, 0);
+              font-family: 'MinhaFonte',sans-serif; 
+              font-size: 6vw;
+              text-align: center;
+              margin-right: 10px;
+              margin-left: 10px;
+              text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+
+          }
+
+
+          p {
+              text-align: justify;
+              text-justify: inter-word;
+              hyphens: auto;
+              color: rgba(204, 214, 223, 0.911);
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+              font-size: small;
+              text-indent: 30px;
+              text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
+
+
+          }
+
+          .icons {
+              display: flex;
+              gap: 30px;
+              align-items: center;
+          }
+
+
+          @media (max-width: 600px) {
+
+            h1 {
+
+                color: rgb(212, 173, 0);
+                font-family: 'MinhaFonte',sans-serif; 
+                font-size: 50px;
+                text-align: center;
+                margin-right: 10px;
+                margin-left: 10px;
+                text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  
+            }
+
+              header {
+                  padding: 15px;
+              }
+
+              .brand {
+                  font-size: 40px;
+              }
+
+              .text {
+                  font-size: 15px;
+                  letter-spacing: 8px;
+                  font-family: 'MinhaFonte', sans-serif;
+                  text-align: left;
+                  margin-left: 12px;
+              }
+
+              a img {
+                  height: 20px;
+                  margin-right: 10px;
+              }
+
+              .icons {
+                  display: flex;
+                  gap: 20px;
+                  align-items: center;
+              }
+
+              .secondary-header {
+                  flex-direction: column;
+              }
+
+              .nav-links {
+                  flex-direction: row;
+              }
+
+              .nav-links li {
+                  margin: 10px 0;
+              }
+
+              .nav-links a {
+                  font-size: 20px;
+              }
+
+          }
