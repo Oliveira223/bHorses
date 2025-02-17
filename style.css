@@ -81,6 +81,8 @@
           }
 
           
+
+          
           .text {
               font-size: 2vw;
               letter-spacing: 1vw;
@@ -129,6 +131,12 @@
                 gap: 2vw;
                 align-items: center;
             }
+
+            .icon-fixa {            /* evita a troca de cor do icone no modo escuro */
+                -webkit-filter: invert(0);
+                filter: invert(0);
+            }
+            
             
             .blocks{
                 margin-left: 5vw;
