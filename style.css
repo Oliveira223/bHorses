@@ -32,7 +32,7 @@
           header {
               background-color: rgba(22, 22, 22, 0.856);
               /*background-color: rgba(20, 20, 20, 0.884);*/
-              color: rgba(204, 214, 223, 0.911);
+              color: rgba(255, 255, 255, 0.911);
               padding: 2%;
               display: flex;
               justify-content: space-between;
@@ -125,6 +125,8 @@
                 
                 
             }
+
+            
             
             .icons {
                 display: flex;
@@ -161,6 +163,14 @@
             .blocks img:hover {
                 transform: scale(1.1);          /* Aumenta o tamanho da imagem */
             }
+
+            .quadrado_cinza{
+                border-radius: 5%;
+                height: 20vw;
+                width: 95vw;
+                background-color: rgba(128, 128, 128, 0.856);
+                margin: 0 auto;
+            }
             
             /* Para celular */
           @media (max-width: 600px) {
@@ -194,7 +204,7 @@
               }
 
               a img {
-                  height: 20px;
+                  height: 30px;
                   margin-right: 10px;
               }
 
@@ -207,19 +217,7 @@
               .secondary-header {
                   flex-direction: column;
               }
-
-              .nav-links {
-                  flex-direction: row;
-              }
-
-              .nav-links li {
-                  margin: 10px 0;
-              }
-
-              .nav-links a {
-                  font-size: 20px;
-              }
-
+ 
               .img_prin{
                 height: 80vw;
               }
@@ -242,3 +240,70 @@
                 
               }
           }
+
+          @media (max-width: 415px){
+            h1 {
+
+                color: rgb(212, 173, 0);
+                font-family: 'MinhaFonte',sans-serif; 
+                font-size: 50px;
+                text-align: center;
+                margin-right: 10px;
+                margin-left: 10px;
+                text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  
+            }
+
+              header {
+                  padding: 15px;
+              }
+
+              .brand {              /*Black Horses*/
+                  font-size: 35px;
+              }
+
+              .text {               /*Artes Marciais*/
+                  font-size: 12px;
+                  letter-spacing: 8px;
+                  font-family: 'MinhaFonte', sans-serif;
+                  text-align: left;
+                  margin-left: 8px;
+              }
+
+              a img {
+                  height: 25px;
+                  margin-right: 10px;
+              }
+
+              .icons {
+                  display: flex;
+                  gap: 20px;
+                  align-items: center;
+              }
+
+              .secondary-header {
+                  flex-direction: column;
+              }
+
+
+              .img_prin{
+                height: 80vw;
+              }
+
+              .blocks{
+                border: 50%;
+              }
+
+              .blocks{
+                margin-top: 50%;
+                margin-left: 10%;
+              }
+
+              .blocks img{
+                border-radius: 10% ;
+                width: 80% ;
+                height: auto ;
+                display:  flex;
+                margin-top: 20%;     
+          }
+        }
