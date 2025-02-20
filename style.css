@@ -183,7 +183,7 @@
 
           .aula_experimental {
 
-             
+
               margin-left: auto;
               margin-right: auto;
               width: 20vw;
@@ -249,22 +249,21 @@
 
 
           .blocks {
-              margin-left: 3vw;
               margin-top: 2vw;
-              justify-content: center;
-
+              text-align: center;
+              /* Centraliza as imagens */
           }
-
 
           .blocks img {
               border-radius: 10%;
               width: 25%;
               height: auto;
-              display: inline;
-              margin-left: 5vw;
+              display: inline-block;
+              /* Alinha as imagens em linha */
+              margin: 0 3vw;
+              /* Espaçamento entre as imagens */
               box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
               transition: transform 0.3s ease;
-
           }
 
 
@@ -590,15 +589,13 @@
 
               .blocks {
                   margin-top: 2.4vw;
-                  margin-left: 10%;
               }
 
               .blocks img {
                   border-radius: 10%;
-                  width: 80%;
-                  height: auto;
-                  display: flex;
-                 margin-bottom: 10vw;
+                  width: 70vw;
+                  margin-top: 3vw;
+                  margin-bottom: 10vw;
 
               }
 
@@ -607,7 +604,7 @@
                   width: 44vw;
                   height: 13vw;
                   border-radius: 10vw;
-                  margin-top: 36vw;
+                  margin-top: 33vw;
               }
 
               .aula_experimental p {
@@ -869,11 +866,11 @@
                   border: 50%;
               }
 
-             
+
           }
 
           @media (max-width: 325px) {
-             
+
               .tooltip {
 
                   left: -30px;
