@@ -616,11 +616,11 @@
 
               .tooltip {
 
-                  left: 40px;
-                  top: 50%;
+                  left: -50px;
+                  top: -100px;
                   transform: translateY(-50%) scale(0.95);
-                  padding: 10px;
-                  width: 100px;
+                  padding: 15px;
+                  width: 300px;
 
               }
 
@@ -892,6 +892,15 @@
           
             .aula_experimental {
                 top: 22%;
+            }
+
+            .tooltip {
+
+                left: -30px;
+                top: -150px;
+            
+                width: 250px;
+
             }
 
          
