@@ -103,7 +103,7 @@
               background-repeat: repeat-y;
               background-size: 100%;
               background-position: center;
-              
+
           }
 
 
@@ -179,7 +179,7 @@
               filter: none;
           }
 
-    
+
 
           .aula_experimental {
 
@@ -199,7 +199,7 @@
               transition: background-color 0.5s ease;
               border-radius: 5vw;
               border: 0.1vw solid #fffffffa;
-              box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322); 
+              box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322);
               animation: float 2s infinite;
           }
 
@@ -222,7 +222,7 @@
               margin-right: auto;
               margin-left: auto;
               margin-top: 3vw;
-              
+
               display: flex;
               justify-content: center;
               align-items: center;
@@ -277,7 +277,8 @@
               /*fundo cinza*/
               border-radius: 4vw;
               width: 60vw;
-              height: 83vw;   /*83vw*/
+              height: 83vw;
+              /*83vw*/
               background-color: rgba(61, 61, 61, 0.801);
               margin-right: auto;
               margin-left: auto;
@@ -494,7 +495,8 @@
 
           }
 
-          .plano_anual h6 {   /*valor total*/
+          .plano_anual h6 {
+              /*valor total*/
               font-family: monospace;
               font-size: 1vw;
               color: #ccc;
@@ -502,13 +504,14 @@
               margin-left: 0vw;
           }
 
-          .plano_anual p{
-            font-family: monospace;
+          .plano_anual p {
+              font-family: monospace;
               font-size: 0.8vw;
               color: #ccc;
               margin-top: 4.2vw;
               margin-left: 10vw;
           }
+
           /*tablets*/
 
           @media (max-width: 800px) {
@@ -525,11 +528,12 @@
           /* Para celular */
           @media (max-width: 600px) {
 
-            body {
-                background-size: 150%;
-                background-position: center;
-                
-            }
+              body {
+                  background-size: 150%;
+                  background-position: center;
+
+              }
+
               h1 {
 
                   color: rgb(212, 173, 0);
@@ -564,9 +568,7 @@
               }
 
               .icons {
-                  display: flex;
-                  gap: 20px;
-                  align-items: center;
+                  gap: 12px;
               }
 
               .secondary-header {
@@ -624,187 +626,188 @@
 
               }
 
-              
-              
+
+
               .planos-container {
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
                   /*centraliza os itens*/
                   gap: 5vw;
-                }
-                
-                .titulo {
-                    /* "Nossos Planos" */
-                    font-size: 12vw;
-                    letter-spacing: 0.2vw;
-                    padding-top: 3vw;
-                    margin-bottom: 0vw;
-                }
-                
-                .subtitulo {
-                    /*explicação*/
-                    padding: 4vw;
-                    font-size: 4vw;
-                    padding-top: 0vw;
-                    margin-bottom: 0vw;
-                    
-                }
-                
-                .planos_backg {
-                    /*fundo cinza*/
-                    width: 85vw;
-                    height: 400vw;
-                    margin-right: auto;
-                    margin-left: auto;
-                    margin-top: 5vw;
-                    
+              }
 
-                  }
+              .titulo {
+                  /* "Nossos Planos" */
+                  font-size: 12vw;
+                  letter-spacing: 0.2vw;
+                  padding-top: 3vw;
+                  margin-bottom: 0vw;
+              }
 
-            
-                
-                
-                .icon img {
-                    margin-top: -2vw;
-                    width: 6vw;
-                    height: auto;
-                }
+              .subtitulo {
+                  /*explicação*/
+                  padding: 4vw;
+                  font-size: 4vw;
+                  padding-top: 0vw;
+                  margin-bottom: 0vw;
 
-                .container h2 {
-                    /*mensal*/
-                    font-size: 10vw;
-                    padding-top: 2vw;
-                    margin-bottom: 0vw;
-                }
-      
-                .plano {
-                    /*blocos*/
-                    width: 53vw;
-                    height: 67vw;
-                    margin-top: 0vw;
-                    margin-bottom: 5vw; 
-                    padding: 1vw;
-                    border-radius: 10vw;
-    
-      
-                }
-      
-                
-                .plano h3 {
-                    /*dias*/
-                    font-size: 20vw;
-                    margin-top: 12vw;
-                    margin-bottom: 1vw;
-                    line-height: 3vw;
-                    /*espaçamento entre linhas*/
-                    color: #dddbdb;
-                }
-                
-                
-                
-                .plano h4 {
-                    /*Por semana*/
-                    font-size: 5vw;
-                    margin-top: 8vw;
-                    line-height: 2vw;
-                    /*espaçamento entre linhas*/
-                    color: #dddbdb;
-                }
-                
-                .plano h5 {
-                    /*valores*/
-                    font-size: 13vw;
-                    margin-top: 7.4vw;
-                    margin-bottom: 0.5vw;
-                   
-                    
-                }
-                
-                .plano h6 {
-                    /*(sem turma fixa)*/
-                    font-size: 2.7vw;
-                    margin-top: 2vw;
-                    letter-spacing: 0.27vw;
-                }
-                
-                .plano img {
-                    margin-top: 0.4vw;
-                    height: 4vw;
-                    width: auto;
-                }
+              }
+
+              .planos_backg {
+                  /*fundo cinza*/
+                  width: 85vw;
+                  height: 400vw;
+                  margin-right: auto;
+                  margin-left: auto;
+                  margin-top: 5vw;
+
+
+              }
 
 
 
-                .plano_anual {
-                    width: 66vw;
-                    height: 85vw;
-                    margin-top: 0vw;
-                    margin-bottom: 2vw;
-                 
-                    padding: 1vw;
-                    border-radius: 10vw;
-                    
-                }
-      
-                .plano_anual img {
-                    margin-top: 3vw;
-                    height: 8vw;
-                    width: auto;
-                }
-      
-                .plano_anual h3 {
-                    /*dias*/
-                    font-size: 15vw;
-                    margin-top: 18vw;
-                    margin-bottom: 0vw;
-                    line-height: 3vw;           
-                }
 
-                .plano_anual h4 {
-                    /*Por semana*/
-                    font-size: 4vw;
-                    line-height: 2vw;
-                   margin-top: 6vw;
-                }
-      
-                .plano_anual h5 {
-                    /*valores*/
-                    font-size: 13vw;
-                    margin-top: 12vw;
-                    margin-bottom: 0.5vw;
-                  
-      
-                }
-      
-                .plano_anual h6 {
-                    font-family: 'Nunito', 'Inter', monospace, sans-serif;
-                    font-size: 5vw;
-                    line-height: 2vw;
-                    color: #dddbdb;
-                }
-      
-                .plano_anual p{   /*valor total*/
-                    font-size: 2.7vw;
-                    margin-top: 9.5vw;
-                    margin-left: 32vw;
-                }
+              .icon img {
+                  margin-top: -2vw;
+                  width: 6vw;
+                  height: auto;
+              }
+
+              .container h2 {
+                  /*mensal*/
+                  font-size: 10vw;
+                  padding-top: 2vw;
+                  margin-bottom: 0vw;
+              }
+
+              .plano {
+                  /*blocos*/
+                  width: 53vw;
+                  height: 67vw;
+                  margin-top: 0vw;
+                  margin-bottom: 5vw;
+                  padding: 1vw;
+                  border-radius: 10vw;
 
 
-                .agendar {
-                    width: 40vw;
-                    height: 10vw;
-                    margin-top: 5vw;
-    
-                    transition: background-color 0.5s ease;
-                    border-radius: 10vw;
-             
-                }
-      
-                .agendar p {
-                    font-size: 4vw;
-                }
-      
+              }
+
+
+              .plano h3 {
+                  /*dias*/
+                  font-size: 20vw;
+                  margin-top: 12vw;
+                  margin-bottom: 1vw;
+                  line-height: 3vw;
+                  /*espaçamento entre linhas*/
+                  color: #dddbdb;
+              }
+
+
+
+              .plano h4 {
+                  /*Por semana*/
+                  font-size: 5vw;
+                  margin-top: 8vw;
+                  line-height: 2vw;
+                  /*espaçamento entre linhas*/
+                  color: #dddbdb;
+              }
+
+              .plano h5 {
+                  /*valores*/
+                  font-size: 13vw;
+                  margin-top: 7.4vw;
+                  margin-bottom: 0.5vw;
+
+
+              }
+
+              .plano h6 {
+                  /*(sem turma fixa)*/
+                  font-size: 2.7vw;
+                  margin-top: 2vw;
+                  letter-spacing: 0.27vw;
+              }
+
+              .plano img {
+                  margin-top: 0.4vw;
+                  height: 4vw;
+                  width: auto;
+              }
+
+
+
+              .plano_anual {
+                  width: 66vw;
+                  height: 85vw;
+                  margin-top: 0vw;
+                  margin-bottom: 2vw;
+
+                  padding: 1vw;
+                  border-radius: 10vw;
+
+              }
+
+              .plano_anual img {
+                  margin-top: 3vw;
+                  height: 8vw;
+                  width: auto;
+              }
+
+              .plano_anual h3 {
+                  /*dias*/
+                  font-size: 15vw;
+                  margin-top: 18vw;
+                  margin-bottom: 0vw;
+                  line-height: 3vw;
+              }
+
+              .plano_anual h4 {
+                  /*Por semana*/
+                  font-size: 4vw;
+                  line-height: 2vw;
+                  margin-top: 6vw;
+              }
+
+              .plano_anual h5 {
+                  /*valores*/
+                  font-size: 13vw;
+                  margin-top: 12vw;
+                  margin-bottom: 0.5vw;
+
+
+              }
+
+              .plano_anual h6 {
+                  font-family: 'Nunito', 'Inter', monospace, sans-serif;
+                  font-size: 5vw;
+                  line-height: 2vw;
+                  color: #dddbdb;
+              }
+
+              .plano_anual p {
+                  /*valor total*/
+                  font-size: 2.7vw;
+                  margin-top: 9.5vw;
+                  margin-left: 32vw;
+              }
+
+
+              .agendar {
+                  width: 40vw;
+                  height: 10vw;
+                  margin-top: 5vw;
+
+                  transition: background-color 0.5s ease;
+                  border-radius: 10vw;
+
+              }
+
+              .agendar p {
+                  font-size: 4vw;
+              }
+
 
 
 
@@ -831,20 +834,18 @@
 
               .brand {
                   /*Black Horses*/
-                  font-size: 35px;
+                  font-size: 25px;
               }
 
-                 .aula_experimental {
+              .aula_experimental {
                   top: 25.5%;
               }
 
               .text {
                   /*Artes Marciais*/
-                  font-size: 12px;
-                  letter-spacing: 8px;
-                  font-family: 'MinhaFonte', sans-serif;
-                  text-align: left;
-                  margin-left: 8px;
+                  font-size: 9px;
+                  letter-spacing: 5px;
+                  margin-left: 12px;
               }
 
               a img {
@@ -853,9 +854,7 @@
               }
 
               .icons {
-                  display: flex;
-                  gap: 20px;
-                  align-items: center;
+                  gap: 8px;
               }
 
               .secondary-header {
@@ -885,23 +884,23 @@
               }
           }
 
-          @media (max-width: 325px){
-            .blocks {
-                margin-top: 30%;
-            }
-          
-            .aula_experimental {
-                top: 22%;
-            }
+          @media (max-width: 325px) {
+              .blocks {
+                  margin-top: 165px;
+              }
 
-            .tooltip {
+              .aula_experimental {
+                  top: 170px;
+              }
 
-                left: -30px;
-                top: -150px;
-            
-                width: 250px;
+              .tooltip {
 
-            }
+                  left: -30px;
+                  top: -150px;
 
-         
+                  width: 250px;
+
+              }
+
+
           }
