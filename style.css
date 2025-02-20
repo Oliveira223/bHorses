@@ -814,25 +814,15 @@
 
 
 
-
-
-
-
           }
 
 
 
           @media (max-width: 415px) {
               h1 {
-
-                  color: rgb(212, 173, 0);
-                  font-family: 'MinhaFonte', sans-serif;
                   font-size: 50px;
-                  text-align: center;
                   margin-right: 10px;
                   margin-left: 10px;
-                  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
-
               }
 
               header {
@@ -842,6 +832,10 @@
               .brand {
                   /*Black Horses*/
                   font-size: 35px;
+              }
+
+                 .aula_experimental {
+                  top: 25.5%;
               }
 
               .text {
@@ -889,4 +883,16 @@
                   display: flex;
                   margin-top: 20%;
               }
+          }
+
+          @media (max-width: 325px){
+            .blocks {
+                margin-top: 30%;
+            }
+          
+            .aula_experimental {
+                top: 22%;
+            }
+
+         
           }
