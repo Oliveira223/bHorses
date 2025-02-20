@@ -7,26 +7,84 @@
 
           @font-face {
               font-family: 'MinhaFonte';
-              src: url('handelsonsix_cyr_six.otf') format('truetype');
+              src: url(Fonts/handelsonsix_cyr_six.otf) format('truetype');
           }
 
-          @keyframes zoomEffect 
-          {
+          @font-face {
+              font-family: 'Inter';
+              src: url(Fonts/Inter-VariableFont_opsz\,wght.ttf) format('truetype');
+          }
+
+          @font-face {
+              font-family: 'Nunito';
+              src: url(Fonts/Nunito-VariableFont_wght.ttf) format('truetype');
+          }
+
+          @keyframes zoomEffect {
               0% {
-                  transform: scale(1); /* Inicia com o tamanho normal */
+                  transform: scale(1);
+                  /* Inicia com o tamanho normal */
               }
+
               50% {
-                  transform: scale(1.15); /* Aumenta para 20% */
+                  transform: scale(1.15);
+                  /* Aumenta para 20% */
               }
+
               100% {
-                  transform: scale(1); /* Volta ao tamanho normal */
+                  transform: scale(1);
+                  /* Volta ao tamanho normal */
               }
           }
-  
+
+          @keyframes piscar-borda {
+              0% {
+                  border-color: rgba(22, 22, 22, 0.911);
+                  ;
+                  box-shadow: 0 0 5px rgba(172, 202, 0, 0.856);
+              }
+
+              50% {
+                  border-color: rgba(22, 22, 22, 0.911);
+                  ;
+                  box-shadow: 0 0 15px rgba(172, 202, 0, 0.856);
+              }
+
+              100% {
+                  border-color: rgba(22, 22, 22, 0.911);
+                  ;
+                  box-shadow: 0 0 5px rgba(172, 202, 0, 0.856);
+              }
+          }
+
+          @keyframes float {
+              0% {
+                  transform: translateY(0);
+              }
+
+              50% {
+                  transform: translateY(-1vw);
+              }
+
+              100% {
+                  transform: translateY(0);
+              }
+          }
+
           .zoom {
-              animation: zoomEffect 2s ; /* Suaviza a animação e repete */
+              animation: zoomEffect 2s;
+              /* Suaviza a animação e repete */
               animation-iteration-count: 1;
               cursor: pointer;
+          }
+
+          a {
+              text-decoration: none;
+          }
+
+          a img {
+              height: 3vw;
+              margin-right: auto;
           }
 
           header {
@@ -37,7 +95,28 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
-              background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.445) 80%,  rgba(0, 0, 0, 0.342) 87%, transparent);
+              background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.445) 80%, rgba(0, 0, 0, 0.342) 87%, transparent);
+          }
+
+          body {
+              background-image: url("Backgrounds/bkgr.png");
+              background-repeat: repeat-y;
+              background-size: 100%;
+              background-position: center;
+              
+          }
+
+
+          h1 {
+
+              color: rgb(212, 173, 0);
+              font-family: 'MinhaFonte', sans-serif;
+              font-size: 6vw;
+              text-align: center;
+              margin-right: 10px;
+              margin-left: 10px;
+              text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+
           }
 
           .header-left {
@@ -52,10 +131,6 @@
               justify-content: center;
           }
 
-          a img {
-              height: 3vw;
-              margin-right: auto;
-          }
 
 
           .brand {
@@ -65,127 +140,407 @@
           }
 
 
-          .img_prin{
-            width: 100vw;
-           /*height: 320px;*/
-            height: 40vw;
-            object-fit: cover;
-            object-position: top;
-            
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.877) 96%, transparent);
-            
+          .img_prin {
+              width: 100vw;
+              /*height: 320px;*/
+              height: 40vw;
+              object-fit: cover;
+              object-position: top;
+
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.877) 96%, transparent);
+
           }
 
-          
+          .img_div {
+              height: 10vw;
+              display: block;
+              margin: 0 auto;
+              margin-top: 8vw;
+          }
 
-          
           .text {
+              /*Artes Marciais*/
               font-size: 2vw;
               letter-spacing: 1vw;
               font-family: 'MinhaFonte', sans-serif;
               text-align: left;
               margin-left: 1vw;
+
+          }
+
+          .icons {
+              display: flex;
+              gap: 2vw;
+              align-items: center;
+              filter: none;
+          }
+
+    
+
+          .aula_experimental {
+
+              position: absolute;
+              left: 40%;
+              top: 29vw;
+              width: 20vw;
+              height: 5vw;
+              background-color: rgb(22, 22, 22);
+              margin-bottom: 10vw;
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: justify;
+              cursor: pointer;
+              transition: background-color 0.5s ease;
+              border-radius: 5vw;
+              border: 0.1vw solid #fffffffa;
+              box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322); 
+              animation: float 2s infinite;
+          }
+
+          .aula_experimental:hover {
+              background-color: #cfdd06;
+          }
+
+          .aula_experimental p {
+              color: #ffffffda;
+              font-family: 'Inter', sans-serif;
+              font-size: 2vw;
+              text-decoration: none;
+
+          }
+
+          .agendar {
+              width: 24vw;
+              height: 5vw;
+              background-color: rgba(22, 22, 22, 0.911);
+              margin-right: auto;
+              margin-left: auto;
+              margin-top: 3vw;
               
-            }
-            
-            body {
-                background-image: url("Backgrounds/bkgr.png");
-                background-repeat: repeat;
-                background-size: cover;
-                background-position: top left;
-            }
-            
-            
-            h1 {
-                
-                color: rgb(212, 173, 0);
-                font-family: 'MinhaFonte',sans-serif; 
-                font-size: 6vw;
-                text-align: center;
-                margin-right: 10px;
-                margin-left: 10px;
-                text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
-                
-            }
-            
-            
-            p {
-                text-align: justify;
-                text-justify: inter-word;
-                hyphens: auto;
-                color: rgba(204, 214, 223, 0.911);
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: small;
-                text-indent: 30px;
-                text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
-                
-                
-            }
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: justify;
+              cursor: pointer;
+              transition: background-color 0.5s ease;
+              border-radius: 5vw;
+              border-color: #33333300;
+              border: 0.2vw solid #a8760000;
+              animation: piscar-borda 1.5s infinite alternate ease-in-out;
+          }
 
-            
-            
-            .icons {
-                display: flex;
-                gap: 2vw;
-                align-items: center;
-            }
+          .agendar:hover {
+              background-color: #52570dd3;
+          }
 
-            .icon-fixa {            /* evita a troca de cor do icone no modo escuro */
-                -webkit-filter: invert(0);
-                filter: invert(0);
-            }
-            
-            
-            .blocks{
-                margin-left: 5vw;
-                margin-top: 22vw;
-                justify-content: center;
-                
-            }
-            
-            
-            .blocks img{
-                border-radius: 10% ;
-                width: 25% ;
-                height: auto ;
-                display:  inline;
-                margin-left: 5vw;
-                box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
-                transition: transform 0.3s ease; 
-                
+          .agendar p {
+              color: #ffffffda;
+              font-family: 'Inter', sans-serif;
+              font-size: 1.5vw;
+              text-decoration: none;
+
+          }
+
+
+          .blocks {
+              margin-left: 3vw;
+              margin-top: 25vw;
+              justify-content: center;
+
+          }
+
+
+          .blocks img {
+              border-radius: 10%;
+              width: 25%;
+              height: auto;
+              display: inline;
+              margin-left: 5vw;
+              box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
+              transition: transform 0.3s ease;
+
+          }
+
+
+          .blocks img:hover {
+              transform: scale(1.1);
+              /* Aumenta o tamanho da imagem */
+          }
+
+          .planos_backg {
+              /*fundo cinza*/
+              border-radius: 4vw;
+              width: 60vw;
+              height: 83vw;   /*83vw*/
+              background-color: rgba(61, 61, 61, 0.801);
+              margin-right: auto;
+              margin-left: auto;
+              margin-top: 5vw;
+              text-align: center;
+
+
+          }
+
+          .container {
+              display: inline-block;
+              position: relative;
+              justify-content: center;
+          }
+
+          .container h2 {
+              /*mensal*/
+              font-family: 'MinhaFonte', sans-serif;
+              font-size: 4vw;
+              letter-spacing: 0.6vw;
+              align-items: center;
+              padding-top: 2vw;
+              margin-bottom: 0vw;
+              color: #dddbdb;
+              text-shadow: 0 0 10px rgba(40, 49, 0, 0.822);
+          }
+
+          .icon {
+              background: none;
+              border: none;
+              padding: 0;
+              cursor: pointer;
+          }
+
+          .icon img {
+              margin-top: 1vw;
+              width: 2vw;
+              height: auto;
+          }
+
+          .tooltip {
+              font-family: 'Courier New', Courier, monospace;
+              opacity: 0;
+              /* Inicialmente invisível */
+              visibility: hidden;
+              position: absolute;
+              left: 26vw;
+              top: -2.5vw;
+              transform: translateY(-50%) scale(0.95);
+              background-color: #454647;
+              color: #fff;
+              padding: 10px;
+              /*espaço entre texto e bordas*/
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              width: 500px;
+              box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+          }
+
+          .icon:focus+.tooltip {
+              opacity: 1;
+              /* Torna visível */
+              visibility: visible;
+              /* Agora pode ser interagido */
+              transform: translateY(-50%) scale(1);
+          }
+
+
+          .planos-container {
+              display: flex;
+              justify-content: center;
+              /*centraliza os itens*/
+              gap: 2vw;
+
+          }
+
+          .titulo {
+              /* "Nossos Planos" */
+              font-family: 'MinhaFonte', sans-serif;
+              font-size: 6vw;
+              letter-spacing: 0.2vw;
+              padding-top: 3vw;
+              margin-bottom: 0vw;
+              color: #dddbdb;
+
+              text-shadow: 0 0 10px rgb(0, 0, 0);
+          }
+
+          .subtitulo {
+              font-family: 'Nunito', sans-serif;
+              font-size: 1vw;
+              padding-top: 0vw;
+              margin-bottom: 0vw;
+              color: #f0f0f0;
+
+          }
+
+          .plano {
+              /*blocos*/
+              width: 13vw;
+              height: 18vw;
+              background-color: #d1d1d100;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin-top: 0vw;
+              margin-bottom: 2vw;
+              box-shadow: 0px 0px 8px rgb(152, 179, 1);
+              padding: 1vw;
+              border-radius: 2vw;
+              border: 0.2vw solid rgba(172, 202, 0, 0.856);
+
+          }
+
+          .plano img {
+              margin-top: 0.4vw;
+              height: 1vw;
+              width: auto;
+          }
+
+          .plano h3 {
+              /*dias*/
+              font-family: 'Nunito', 'Inter', monospace, sans-serif;
+              font-size: 3vw;
+              margin-top: 2.7vw;
+              margin-bottom: 0vw;
+              line-height: 3vw;
+              /*espaçamento entre linhas*/
+              color: #dddbdb;
+          }
+
+
+
+          .plano h4 {
+              /*Por semana*/
+              font-family: 'Nunito', 'Inter', monospace, sans-serif;
+              font-size: 1.5vw;
+              line-height: 2vw;
+              /*espaçamento entre linhas*/
+              color: #dddbdb;
+          }
+
+          .plano h5 {
+              /*valores*/
+              font-size: 3.5vw;
+              font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+              margin-top: 1.5vw;
+              margin-bottom: 0.5vw;
+              font-weight: bold;
+              color: #f5f5f5;
+
+          }
+
+          .plano h6 {
+              /*(sem turma fixa)*/
+              margin-top: 0vw;
+              letter-spacing: 0.27vw;
+              font-family: monospace;
+              font-size: 0.7vw;
+              color: #f5f5f5;
+          }
+
+          .plano_anual {
+              width: 18vw;
+              height: 25vw;
+              background-color: #d1d1d100;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin-top: 0vw;
+              margin-bottom: 2vw;
+              box-shadow: 0px 0px 8px rgb(152, 179, 1);
+              padding: 1vw;
+              border-radius: 2vw;
+              border: 0.2vw solid rgba(172, 202, 0, 0.856);
+          }
+
+          .plano_anual img {
+              margin-top: 1vw;
+              height: 2vw;
+              width: auto;
+          }
+
+          .plano_anual h3 {
+              /*dias*/
+              font-family: 'Nunito', 'Inter', monospace, sans-serif;
+              font-size: 3.5vw;
+              margin-top: 4.5vw;
+              margin-bottom: 0vw;
+              line-height: 3vw;
+              /*espaçamento entre linhas*/
+              color: #dddbdb;
+          }
+
+
+
+          .plano_anual h4 {
+              /*Por semana*/
+              font-family: 'Nunito', 'Inter', monospace, sans-serif;
+              font-size: 1.5vw;
+              line-height: 2vw;
+              margin-top: 0.3vw;
+              color: #dddbdb;
+          }
+
+          .plano_anual h5 {
+              /*valores*/
+              font-size: 2.8vw;
+              font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+              margin-top: 2.8vw;
+              font-weight: bold;
+              color: #f5f5f5;
+
+          }
+
+          .plano_anual h6 {   /*valor total*/
+              font-family: monospace;
+              font-size: 1vw;
+              color: #ccc;
+              margin-top: 0vw;
+              margin-left: 0vw;
+          }
+
+          .plano_anual p{
+            font-family: monospace;
+              font-size: 0.8vw;
+              color: #ccc;
+              margin-top: 4.2vw;
+              margin-left: 10vw;
+          }
+          /*tablets*/
+
+          @media (max-width: 800px) {
+
+              .tooltip {
+                  width: 100px;
               }
-            
 
-            .blocks img:hover {
-                transform: scale(1.1);          /* Aumenta o tamanho da imagem */
-            }
+          }
 
-            .quadrado_cinza{
-                border-radius: 5%;
-                height: 20vw;
-                width: 95vw;
-                background-color: rgba(128, 128, 128, 0.856);
-                margin: 0 auto;
-            }
-            
-            /* Para celular */
+
+
+
+          /* Para celular */
           @media (max-width: 600px) {
 
-            h1 {
-
-                color: rgb(212, 173, 0);
-                font-family: 'MinhaFonte',sans-serif; 
-                font-size: 50px;
-                text-align: center;
-                margin-right: 10px;
-                margin-left: 10px;
-                text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
-  
+            body {
+                background-size: 150%;
+                background-position: center;
+                
             }
+              h1 {
+
+                  color: rgb(212, 173, 0);
+                  font-family: 'MinhaFonte', sans-serif;
+                  font-size: 50px;
+                  text-align: center;
+                  margin-right: 10px;
+                  margin-left: 10px;
+                  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+
+              }
 
               header {
                   padding: 15px;
@@ -217,52 +572,280 @@
               .secondary-header {
                   flex-direction: column;
               }
- 
-              .img_prin{
-                height: 80vw;
+
+              .img_prin {
+                  height: 80vw;
               }
 
-              .blocks{
-                border: 50%;
+              .img_div {
+                  height: 20vw;
+                  margin-top: 7vw;
               }
 
-              .blocks{
-                margin-top: 50%;
-                margin-left: 10%;
+              .blocks {
+                  border: 50%;
               }
 
-              .blocks img{
-                border-radius: 10% ;
-                width: 80% ;
-                height: auto ;
-                display:  flex;
-                margin-top: 20%;
+              .blocks {
+                  margin-top: 50%;
+                  margin-left: 10%;
+              }
+
+              .blocks img {
+                  border-radius: 10%;
+                  width: 80%;
+                  height: auto;
+                  display: flex;
+                  margin-top: 20%;
+
+              }
+
+              .aula_experimental {
+                  animation-delay: 3s;
+                  width: 44vw;
+                  height: 13vw;
+                  border-radius: 10vw;
+                  left: 30%;
+                  top: 30%;
+              }
+
+              .aula_experimental p {
+                  font-size: 4.3vw;
+
+              }
+
+              .tooltip {
+
+                  left: 40px;
+                  top: 50%;
+                  transform: translateY(-50%) scale(0.95);
+                  padding: 10px;
+                  width: 100px;
+
+              }
+
+              
+              
+              .planos-container {
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  /*centraliza os itens*/
+                  gap: 5vw;
+                }
                 
-              }
+                .titulo {
+                    /* "Nossos Planos" */
+                    font-size: 12vw;
+                    letter-spacing: 0.2vw;
+                    padding-top: 3vw;
+                    margin-bottom: 0vw;
+                }
+                
+                .subtitulo {
+                    /*explicação*/
+                    padding: 4vw;
+                    font-size: 4vw;
+                    padding-top: 0vw;
+                    margin-bottom: 0vw;
+                    
+                }
+                
+                .planos_backg {
+                    /*fundo cinza*/
+                    width: 85vw;
+                    height: 400vw;
+                    margin-right: auto;
+                    margin-left: auto;
+                    margin-top: 5vw;
+                    
+
+                  }
+
+            
+                
+                
+                .icon img {
+                    margin-top: -2vw;
+                    width: 6vw;
+                    height: auto;
+                }
+
+                .container h2 {
+                    /*mensal*/
+                    font-size: 10vw;
+                    padding-top: 2vw;
+                    margin-bottom: 0vw;
+                }
+      
+                .plano {
+                    /*blocos*/
+                    width: 53vw;
+                    height: 67vw;
+                    margin-top: 0vw;
+                    margin-bottom: 5vw; 
+                    padding: 1vw;
+                    border-radius: 10vw;
+    
+      
+                }
+      
+                
+                .plano h3 {
+                    /*dias*/
+                    font-size: 20vw;
+                    margin-top: 12vw;
+                    margin-bottom: 1vw;
+                    line-height: 3vw;
+                    /*espaçamento entre linhas*/
+                    color: #dddbdb;
+                }
+                
+                
+                
+                .plano h4 {
+                    /*Por semana*/
+                    font-size: 5vw;
+                    margin-top: 8vw;
+                    line-height: 2vw;
+                    /*espaçamento entre linhas*/
+                    color: #dddbdb;
+                }
+                
+                .plano h5 {
+                    /*valores*/
+                    font-size: 13vw;
+                    margin-top: 7.4vw;
+                    margin-bottom: 0.5vw;
+                   
+                    
+                }
+                
+                .plano h6 {
+                    /*(sem turma fixa)*/
+                    font-size: 2.7vw;
+                    margin-top: 2vw;
+                    letter-spacing: 0.27vw;
+                }
+                
+                .plano img {
+                    margin-top: 0.4vw;
+                    height: 4vw;
+                    width: auto;
+                }
+
+
+
+                .plano_anual {
+                    width: 66vw;
+                    height: 85vw;
+                    margin-top: 0vw;
+                    margin-bottom: 2vw;
+                 
+                    padding: 1vw;
+                    border-radius: 10vw;
+                    
+                }
+      
+                .plano_anual img {
+                    margin-top: 3vw;
+                    height: 8vw;
+                    width: auto;
+                }
+      
+                .plano_anual h3 {
+                    /*dias*/
+                    font-size: 15vw;
+                    margin-top: 18vw;
+                    margin-bottom: 0vw;
+                    line-height: 3vw;           
+                }
+
+                .plano_anual h4 {
+                    /*Por semana*/
+                    font-size: 4vw;
+                    line-height: 2vw;
+                   margin-top: 6vw;
+                }
+      
+                .plano_anual h5 {
+                    /*valores*/
+                    font-size: 13vw;
+                    margin-top: 12vw;
+                    margin-bottom: 0.5vw;
+                  
+      
+                }
+      
+                .plano_anual h6 {
+                    font-family: 'Nunito', 'Inter', monospace, sans-serif;
+                    font-size: 5vw;
+                    line-height: 2vw;
+                    color: #dddbdb;
+                }
+      
+                .plano_anual p{   /*valor total*/
+                    font-size: 2.7vw;
+                    margin-top: 9.5vw;
+                    margin-left: 32vw;
+                }
+
+
+                .agendar {
+                    width: 40vw;
+                    height: 10vw;
+                    margin-top: 5vw;
+    
+                    transition: background-color 0.5s ease;
+                    border-radius: 10vw;
+             
+                }
+      
+                .agendar p {
+                    font-size: 4vw;
+                }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
           }
 
-          @media (max-width: 415px){
-            h1 {
 
-                color: rgb(212, 173, 0);
-                font-family: 'MinhaFonte',sans-serif; 
-                font-size: 50px;
-                text-align: center;
-                margin-right: 10px;
-                margin-left: 10px;
-                text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
-  
-            }
+
+          @media (max-width: 415px) {
+              h1 {
+
+                  color: rgb(212, 173, 0);
+                  font-family: 'MinhaFonte', sans-serif;
+                  font-size: 50px;
+                  text-align: center;
+                  margin-right: 10px;
+                  margin-left: 10px;
+                  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+
+              }
 
               header {
                   padding: 15px;
               }
 
-              .brand {              /*Black Horses*/
+              .brand {
+                  /*Black Horses*/
                   font-size: 35px;
               }
 
-              .text {               /*Artes Marciais*/
+              .text {
+                  /*Artes Marciais*/
                   font-size: 12px;
                   letter-spacing: 8px;
                   font-family: 'MinhaFonte', sans-serif;
@@ -286,24 +869,24 @@
               }
 
 
-              .img_prin{
-                height: 80vw;
+              .img_prin {
+                  height: 80vw;
               }
 
-              .blocks{
-                border: 50%;
+              .blocks {
+                  border: 50%;
               }
 
-              .blocks{
-                margin-top: 50%;
-                margin-left: 10%;
+              .blocks {
+                  margin-top: 50%;
+                  margin-left: 10%;
               }
 
-              .blocks img{
-                border-radius: 10% ;
-                width: 80% ;
-                height: auto ;
-                display:  flex;
-                margin-top: 20%;     
+              .blocks img {
+                  border-radius: 10%;
+                  width: 80%;
+                  height: auto;
+                  display: flex;
+                  margin-top: 20%;
+              }
           }
-        }
