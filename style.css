@@ -821,7 +821,7 @@
 
 
 
-          @media (max-width: 415px) {
+          @media (max-width: 435px) {
               h1 {
                   font-size: 50px;
                   margin-right: 10px;
@@ -838,7 +838,7 @@
               }
 
               .aula_experimental {
-                  top: 25.5%;
+                  top: 210px;
               }
 
               .text {
@@ -871,7 +871,7 @@
               }
 
               .blocks {
-                  margin-top: 50%;
+                  margin-top: 230px;
                   margin-left: 10%;
               }
 
