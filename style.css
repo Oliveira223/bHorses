@@ -635,8 +635,21 @@
               text-align: center;
           }
 
+          .location p{
+            color: #ccc;
+            font-family: monospace, sans-serif;
+            font-size: 1.5vw;
+          }
+
+          .location h3{
+            font-family: 'Nunito', sans-serif;
+            font-size: 2vw;
+            padding-top: 1vw;
+            margin-bottom: 0vw;
+            color: #f0f0f0;
+          }
           .location iframe {
-              margin-top: 2.4vw;
+              
               border-radius: 1vw;
               width: 47vw;
               height: 37vw;
@@ -953,8 +966,18 @@
                   padding: 3vw;
                   border-radius: 4vw;
                   width: 85vw;
-                  height: 125vw;
+                  height: 130vw;
                   margin-top: 8vw;
+              }
+
+              .location p{
+                margin-top: 1vw;
+                font-size: 2.5vw;
+              }
+    
+              .location h3{
+              font-size: 3vw; 
+                padding-top: 1vw;
               }
 
               .location iframe {
