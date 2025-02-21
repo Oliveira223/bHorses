@@ -28,43 +28,44 @@
             animation: spin 2s linear infinite; /* Adiciona animação de rotação */
         }
         
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg); /* Começa com a imagem sem rotação */
-            }
-            100% {
-                transform: rotate(360deg); /* Gira a imagem 360 graus */
-            }
-        }
         
-
-
-          @font-face {
+        
+        
+        @font-face {
               font-family: 'MinhaFonte';
               src: url(Fonts/handelsonsix_cyr_six.otf) format('truetype');
-          }
+            }
+            
+            @font-face {
+                font-family: 'Inter';
+                src: url(Fonts/Inter-VariableFont_opsz\,wght.ttf) format('truetype');
+            }
+            
+            @font-face {
+                font-family: 'Nunito';
+                src: url(Fonts/Nunito-VariableFont_wght.ttf) format('truetype');
+            }
 
-          @font-face {
-              font-family: 'Inter';
-              src: url(Fonts/Inter-VariableFont_opsz\,wght.ttf) format('truetype');
-          }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg); /* Começa com a imagem sem rotação */
+                }
+                100% {
+                    transform: rotate(360deg); /* Gira a imagem 360 graus */
+                }
+            }
 
-          @font-face {
-              font-family: 'Nunito';
-              src: url(Fonts/Nunito-VariableFont_wght.ttf) format('truetype');
-          }
-
-          @keyframes zoomEffect {
-              0% {
-                  transform: scale(1);
-                  /* Inicia com o tamanho normal */
+            @keyframes zoomEffect {
+                0% {
+                    transform: scale(1);
+                    /* Inicia com o tamanho normal */
+                }
+                
+                50% {
+                    transform: scale(1.15);
+                    /* Aumenta para 20% */
               }
-
-              50% {
-                  transform: scale(1.15);
-                  /* Aumenta para 20% */
-              }
-
+              
               100% {
                   transform: scale(1);
                   /* Volta ao tamanho normal */
@@ -219,10 +220,8 @@
 
 
           .zoom {
-              animation: zoomEffect 2s;
-              /* Suaviza a animação e repete */
-              animation-iteration-count: 1;
-              cursor: pointer;
+              animation: zoomEffect 3s;
+              animation-iteration-count: infinite;
           }
 
           a {
@@ -656,6 +655,51 @@
           }
 
     
+          /* ----------- MODALIDADES ---------------------- */
+
+          .construção{
+          text-align: center;
+          }
+
+          .construção img{
+            width: 40vw;
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           /*tablets*/
 
