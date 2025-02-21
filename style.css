@@ -71,6 +71,112 @@
               }
           }
 
+
+          .tabela_fundo {
+              /*fundo cinza da tabela*/
+              border-radius: 4vw;
+              width: 70vw;
+              height: 30vw;
+              background-color: rgba(61, 61, 61, 0.801);
+              margin-right: auto;
+              margin-left: auto;
+              margin-top: 5vw;
+              text-align: center;
+          }
+
+          .tabela_container {
+              display: flex;
+              justify-content: center;
+              gap: 4.4vw;
+              flex-wrap: wrap;
+          }
+
+          .tabela_caixa {
+              margin-top: 2vw;
+              background: #fff;
+              padding: 0.7vw;
+              border-radius: 0.6vw;
+              box-shadow: 10px 10px 20px rgba(2, 2, 0, 0.952);
+              width: 17vw;
+              text-align: left;
+          }
+
+          .tabela_caixa h2 {
+              font-family: 'Inter', sans-serif;
+              font-size: 2vw;
+              background: #1d1d1d;
+              color: white;
+              padding: 0.7vw;
+              border-radius: 0.6vw;
+              text-align: center;
+
+          }
+
+          .tabela_caixa p {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 1vw;
+              margin-left: 0.4vw;
+              font-size: 1vw;
+
+          }
+
+          .tabela_caixa strong {
+              /*dias semana*/
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              width: 6vw;
+              flex-shrink: 0;
+
+          }
+
+          .tabela_caixa h6 {
+              font-family: Nunito;
+              font-size: 0.8vw;
+              margin-left: 5.7vw;
+          }
+
+          .horario {
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              flex: 1;
+              text-align: center;
+          }
+
+          .horario.vazio {
+              /*talvez seja desnecessário, mas ajuda na organização*/
+              visibility: hidden;
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           .zoom {
               animation: zoomEffect 2s;
               /* Suaviza a animação e repete */
@@ -277,7 +383,6 @@
               border-radius: 4vw;
               width: 60vw;
               height: 83vw;
-              /*83vw*/
               background-color: rgba(61, 61, 61, 0.801);
               margin-right: auto;
               margin-left: auto;
@@ -527,6 +632,72 @@
           /* Para celular */
           @media (max-width: 600px) {
 
+              .tabela_fundo {
+                  /*fundo cinza da tabela*/
+                  padding: 5vw;
+                  border-radius: 4vw;
+                  width: 78vw;
+                  height: 180vw;
+
+                  margin-top: 5vw;
+                  text-align: center;
+              }
+
+              .tabela_container {
+                  display: flex;
+                  justify-content: center;
+                  gap: 8vw;
+                  /*gap entre caixas*/
+                  flex-wrap: wrap;
+                  line-height: 7vw;
+              }
+
+              .tabela_caixa {
+                  margin-top: 4vw;
+                  padding: 2vw;
+                  border-radius: 1.5vw;
+                  width: 70vw;
+                  height: 40vw;
+              }
+
+              .tabela_caixa h2 {
+                  /*modalidades*/
+                  font-size: 6vw;
+                  padding: 2vw;
+                  border-radius: 1.5vw;
+                  text-align: center;
+                  margin-bottom: 4vw;
+              }
+
+              .tabela_caixa p {
+                  /*horarios*/
+                  
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 5vw;
+              }
+
+              .tabela_caixa strong {
+                  /*dias semana*/
+                  
+                  margin-left: 1vw;
+                  font-size: 5vw;
+                  width: 25vw;
+
+              }
+
+              .tabela_caixa h6 {
+
+                  font-family: Nunito;
+                  font-size: 2.7vw;
+                  margin-left: 32vw;
+                  margin-top: -1.2vw;
+              }
+
+            
+
+
+
               body {
                   background-size: 150%;
                   background-position: center;
@@ -580,7 +751,8 @@
 
               .img_div {
                   height: 20vw;
-                  margin-top: 7vw;
+                  margin-bottom: 6vw;
+                  margin-top: 6vw;
               }
 
               .blocks {
@@ -595,7 +767,7 @@
                   border-radius: 10%;
                   width: 70vw;
                   margin-top: 3vw;
-                  margin-bottom: 10vw;
+                  margin-bottom: 6vw;
 
               }
 
@@ -606,12 +778,26 @@
                   border-radius: 10vw;
                   margin-top: 33vw;
               }
-
+              
               .aula_experimental p {
                   font-size: 4.3vw;
-
-              }
-
+                  
+                }    
+                
+                .agendar {
+                    width: 40vw;
+                    height: 10vw;
+                    margin-top: 8vw;
+  
+                    transition: background-color 0.5s ease;
+                    border-radius: 10vw;
+  
+                }
+  
+                .agendar p {
+                    font-size: 4vw;
+                }
+  
               .tooltip {
 
                   left: -50px;
@@ -620,7 +806,7 @@
                   padding: 15px;
                   width: 300px;
 
-              }
+              }    
 
 
 
@@ -630,7 +816,7 @@
                   align-items: center;
                   /*centraliza os itens*/
                   gap: 5vw;
-              }
+              }    
 
               .titulo {
                   /* "Nossos Planos" */
@@ -638,7 +824,7 @@
                   letter-spacing: 0.2vw;
                   padding-top: 3vw;
                   margin-bottom: 0vw;
-              }
+              }    
 
               .subtitulo {
                   /*explicação*/
@@ -647,7 +833,7 @@
                   padding-top: 0vw;
                   margin-bottom: 0vw;
 
-              }
+              }    
 
               .planos_backg {
                   /*fundo cinza*/
@@ -658,7 +844,7 @@
                   margin-top: 5vw;
 
 
-              }
+              }    
 
 
 
@@ -667,14 +853,14 @@
                   margin-top: -2vw;
                   width: 6vw;
                   height: auto;
-              }
+              }    
 
               .container h2 {
                   /*mensal*/
                   font-size: 10vw;
                   padding-top: 2vw;
                   margin-bottom: 0vw;
-              }
+              }    
 
               .plano {
                   /*blocos*/
@@ -686,7 +872,7 @@
                   border-radius: 10vw;
 
 
-              }
+              }    
 
 
               .plano h3 {
@@ -697,7 +883,7 @@
                   line-height: 3vw;
                   /*espaçamento entre linhas*/
                   color: #dddbdb;
-              }
+              }    
 
 
 
@@ -708,7 +894,7 @@
                   line-height: 2vw;
                   /*espaçamento entre linhas*/
                   color: #dddbdb;
-              }
+              }    
 
               .plano h5 {
                   /*valores*/
@@ -717,20 +903,20 @@
                   margin-bottom: 0.5vw;
 
 
-              }
+              }    
 
               .plano h6 {
                   /*(sem turma fixa)*/
                   font-size: 2.7vw;
                   margin-top: 2vw;
                   letter-spacing: 0.27vw;
-              }
+              }    
 
               .plano img {
                   margin-top: 0.4vw;
                   height: 4vw;
                   width: auto;
-              }
+              }    
 
 
 
@@ -743,13 +929,13 @@
                   padding: 1vw;
                   border-radius: 10vw;
 
-              }
+              }    
 
               .plano_anual img {
                   margin-top: 3vw;
                   height: 8vw;
                   width: auto;
-              }
+              }    
 
               .plano_anual h3 {
                   /*dias*/
@@ -757,14 +943,14 @@
                   margin-top: 18vw;
                   margin-bottom: 0vw;
                   line-height: 3vw;
-              }
+              }    
 
               .plano_anual h4 {
                   /*Por semana*/
                   font-size: 4vw;
                   line-height: 2vw;
                   margin-top: 6vw;
-              }
+              }    
 
               .plano_anual h5 {
                   /*valores*/
@@ -773,36 +959,22 @@
                   margin-bottom: 0.5vw;
 
 
-              }
+              }    
 
               .plano_anual h6 {
                   font-family: 'Nunito', 'Inter', monospace, sans-serif;
                   font-size: 5vw;
                   line-height: 2vw;
                   color: #dddbdb;
-              }
+              }    
 
               .plano_anual p {
                   /*valor total*/
                   font-size: 2.7vw;
                   margin-top: 9.5vw;
                   margin-left: 32vw;
-              }
+              }    
 
-
-              .agendar {
-                  width: 40vw;
-                  height: 10vw;
-                  margin-top: 5vw;
-
-                  transition: background-color 0.5s ease;
-                  border-radius: 10vw;
-
-              }
-
-              .agendar p {
-                  font-size: 4vw;
-              }
 
 
 
