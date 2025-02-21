@@ -609,6 +609,10 @@
           }
 
           .location .fallback{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none; /* Inicialmente oculto */
             margin-top: 2.4vw;
               border-radius: 1vw;
               width: 47vw;
