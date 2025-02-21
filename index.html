@@ -13,7 +13,12 @@
 </head>
 
 <body>
-    
+
+    <div id="preload">
+        <img src="icons/bhicon.png" alt="Carregando..."> 
+    </div>
+
+
     <header>
 
         <div class="header-left">
@@ -244,6 +249,13 @@
     <div style="height: 100vw;"></div>
 
 
+    <script>
+        // Código JavaScript
+        window.onload = function() {
+            document.getElementById("preload").style.display = "none";  // Esconde a tela de carregamento
+            document.getElementById("conteudo").style.display = "block";  // Exibe o conteúdo
+        };
+    </script>
 
 </body>
 
