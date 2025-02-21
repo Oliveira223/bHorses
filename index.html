@@ -13,9 +13,12 @@
 </head>
 
 <body>
-
-    <div id="preload">
-        <img src="icons/bhicon.png" alt="Carregando..."> 
+    <div class="loading">
+        
+        <div id="preload">
+            <img src="icons/bhicon.png" alt="Carregando...">
+            <!-- Aqui você pode colocar sua animação de carregamento -->
+        </div>
     </div>
 
 
@@ -148,7 +151,7 @@
     </a>
 
 
-        <img src="Imagens/blackhorses_text.png" alt="" class="img_div">
+    <img src="Imagens/blackhorses_text.png" alt="" class="img_div">
 
 
     <div class="tabela_fundo" id="horario">
@@ -199,31 +202,31 @@
                     <span class="horario">12:00</span>
                     <span class="horario">19:00</span>
                 </p>
-                
+
             </div>
-            
+
             <div class="tabela_caixa">
-                
+
                 <h2>Hapkido</h2>
                 <p> <strong>Segunda</strong>
                     <span style="margin-left: -1vw;" class="horario">10:00*</span>
                     <span class="horario">11:00**</span>
                     <span class="horario">20:00</span>
                 </p>
-                
+
                 <p> <strong>Quarta</strong>
                     <span class="horario vazio"></span>
                     <span class="horario vazio"></span>
                     <span class="horario">20:00</span>
                 </p>
-                
+
                 <p> <strong>Sexta</strong>
                     <span class="horario vazio"></span>
                     <span class="horario vazio"></span>
                     <span class="horario">20:00</span>
                 </p>
-                
-                <h6>*05 à 09 anos  **10 à 14 anos</h6>
+
+                <h6>*05 à 09 anos **10 à 14 anos</h6>
             </div>
 
         </div>
@@ -232,12 +235,14 @@
     <img src="Imagens/blackhorses_text.png" alt="" class="img_div">
 
     <div class="location" id="Localização">
-        
+
         <h2 class="titulo">Localização</h2>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13812.127429304584!2d-51.24850365617953!3d-30.09520132983639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519839f8acc51d9%3A0x21c015b2b0583ab2!2sBlack%20Horses%20Artes%20Marciais!5e0!3m2!1sen!2sus!4v1740156145284!5m2!1sen!2sus" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      
-        
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13812.127429304584!2d-51.24850365617953!3d-30.09520132983639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519839f8acc51d9%3A0x21c015b2b0583ab2!2sBlack%20Horses%20Artes%20Marciais!5e0!3m2!1sen!2sus!4v1740156145284!5m2!1sen!2sus"
+            style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
     </div>
 
 
@@ -251,7 +256,7 @@
 
     <script>
         // Código JavaScript
-        window.onload = function() {
+        window.onload = function () {
             document.getElementById("preload").style.display = "none";  // Esconde a tela de carregamento
             document.getElementById("conteudo").style.display = "block";  // Exibe o conteúdo
         };
