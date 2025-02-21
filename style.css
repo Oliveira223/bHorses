@@ -608,22 +608,7 @@
               height: 37vw;
           }
 
-          .location .fallback{
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none; /* Inicialmente oculto */
-            margin-top: 2.4vw;
-              border-radius: 1vw;
-              width: 47vw;
-              height: 37vw;
-          }
-
-          .location iframe:empty + .fallback {
-            display: block; /* Mostra a imagem quando o iframe estiver vazio */
-        }
-
-
+    
 
           /*tablets*/
 
