@@ -221,6 +221,11 @@
 
           .zoom {
               animation: zoomEffect 3s;
+              animation-iteration-count: 1;
+          }
+
+          .zoom_infinite{
+            animation: zoomEffect 3s;
               animation-iteration-count: infinite;
           }
 
