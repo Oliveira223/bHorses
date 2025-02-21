@@ -71,6 +71,9 @@
               }
           }
 
+          html {
+            scroll-behavior: smooth;
+        }
 
           .tabela_fundo {
               /*fundo cinza da tabela*/
@@ -147,36 +150,6 @@
           }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           .zoom {
               animation: zoomEffect 2s;
               /* Suaviza a animação e repete */
@@ -213,7 +186,7 @@
           }
 
 
-          h1 {
+          h1 {    /*modalidades*/
 
               color: rgb(212, 173, 0);
               font-family: 'MinhaFonte', sans-serif;
@@ -511,7 +484,6 @@
               margin-top: 2.7vw;
               margin-bottom: 0vw;
               line-height: 3vw;
-              /*espaçamento entre linhas*/
               color: #dddbdb;
           }
 
@@ -522,7 +494,6 @@
               font-family: 'Nunito', 'Inter', monospace, sans-serif;
               font-size: 1.5vw;
               line-height: 2vw;
-              /*espaçamento entre linhas*/
               color: #dddbdb;
           }
 
@@ -574,7 +545,6 @@
               margin-top: 4.5vw;
               margin-bottom: 0vw;
               line-height: 3vw;
-              /*espaçamento entre linhas*/
               color: #dddbdb;
           }
 
@@ -616,18 +586,34 @@
               margin-left: 10vw;
           }
 
-          /*tablets*/
 
-          @media (max-width: 800px) {
+          .location{
+            border-radius: 3vw;
+            width: 60vw;
+            height: 53vw;
+            background-color: rgba(61, 61, 61, 0.801);
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 5vw;
+            text-align: center;
+          }
 
-              .tooltip {
-                  width: 100px;
-              }
-
+          .location iframe{
+            margin-top: 2.4vw;
+            border-radius: 1vw;
+            width: 47vw; 
+            height: 37vw; 
           }
 
 
 
+          /*tablets*/
+
+          @media (max-width: 800px) {
+              .tooltip {
+                  width: 100px;
+              }
+          }
 
           /* Para celular */
           @media (max-width: 600px) {
@@ -638,7 +624,6 @@
                   border-radius: 4vw;
                   width: 78vw;
                   height: 180vw;
-
                   margin-top: 5vw;
                   text-align: center;
               }
@@ -671,7 +656,6 @@
 
               .tabela_caixa p {
                   /*horarios*/
-                  
                   display: flex;
                   justify-content: space-between;
                   font-size: 5vw;
@@ -679,11 +663,9 @@
 
               .tabela_caixa strong {
                   /*dias semana*/
-                  
                   margin-left: 1vw;
                   font-size: 5vw;
                   width: 25vw;
-
               }
 
               .tabela_caixa h6 {
@@ -694,26 +676,9 @@
                   margin-top: -1.2vw;
               }
 
-            
-
-
-
               body {
                   background-size: 150%;
                   background-position: center;
-
-              }
-
-              h1 {
-
-                  color: rgb(212, 173, 0);
-                  font-family: 'MinhaFonte', sans-serif;
-                  font-size: 50px;
-                  text-align: center;
-                  margin-right: 10px;
-                  margin-left: 10px;
-                  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
-
               }
 
               header {
@@ -768,7 +733,6 @@
                   width: 70vw;
                   margin-top: 3vw;
                   margin-bottom: 6vw;
-
               }
 
               .aula_experimental {
@@ -781,14 +745,12 @@
               
               .aula_experimental p {
                   font-size: 4.3vw;
-                  
                 }    
                 
                 .agendar {
                     width: 40vw;
                     height: 10vw;
                     margin-top: 8vw;
-  
                     transition: background-color 0.5s ease;
                     border-radius: 10vw;
   
@@ -805,16 +767,12 @@
                   transform: translateY(-50%) scale(0.95);
                   padding: 15px;
                   width: 300px;
-
               }    
-
-
 
               .planos-container {
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
-                  /*centraliza os itens*/
                   gap: 5vw;
               }    
 
@@ -832,7 +790,6 @@
                   font-size: 4vw;
                   padding-top: 0vw;
                   margin-bottom: 0vw;
-
               }    
 
               .planos_backg {
@@ -842,12 +799,7 @@
                   margin-right: auto;
                   margin-left: auto;
                   margin-top: 5vw;
-
-
               }    
-
-
-
 
               .icon img {
                   margin-top: -2vw;
@@ -870,8 +822,6 @@
                   margin-bottom: 5vw;
                   padding: 1vw;
                   border-radius: 10vw;
-
-
               }    
 
 
@@ -881,8 +831,6 @@
                   margin-top: 12vw;
                   margin-bottom: 1vw;
                   line-height: 3vw;
-                  /*espaçamento entre linhas*/
-                  color: #dddbdb;
               }    
 
 
@@ -892,8 +840,6 @@
                   font-size: 5vw;
                   margin-top: 8vw;
                   line-height: 2vw;
-                  /*espaçamento entre linhas*/
-                  color: #dddbdb;
               }    
 
               .plano h5 {
@@ -901,8 +847,6 @@
                   font-size: 13vw;
                   margin-top: 7.4vw;
                   margin-bottom: 0.5vw;
-
-
               }    
 
               .plano h6 {
@@ -918,14 +862,11 @@
                   width: auto;
               }    
 
-
-
               .plano_anual {
                   width: 66vw;
                   height: 85vw;
                   margin-top: 0vw;
                   margin-bottom: 2vw;
-
                   padding: 1vw;
                   border-radius: 10vw;
 
@@ -957,15 +898,11 @@
                   font-size: 13vw;
                   margin-top: 12vw;
                   margin-bottom: 0.5vw;
-
-
               }    
 
               .plano_anual h6 {
-                  font-family: 'Nunito', 'Inter', monospace, sans-serif;
                   font-size: 5vw;
                   line-height: 2vw;
-                  color: #dddbdb;
               }    
 
               .plano_anual p {
@@ -975,18 +912,25 @@
                   margin-left: 32vw;
               }    
 
-
-
-
-
-
-
-
-
+              .location{
+                padding: 3vw;
+                border-radius: 4vw;
+                width: 85vw;
+                height: 125vw;
+                margin-top: 8vw;
+              }
+    
+              .location iframe{
+                margin-top: 3vw;
+                border-radius: 1vw;
+                width: 72vw; 
+                height: 100vw; 
+                box-shadow: 10px 10px 20px rgba(2, 2, 0, 0.952);
+                
+              }
 
 
           }
-
 
 
           @media (max-width: 435px) {
@@ -1029,7 +973,6 @@
                   flex-direction: column;
               }
 
-
               .img_prin {
                   height: 80vw;
               }
@@ -1037,20 +980,12 @@
               .blocks {
                   border: 50%;
               }
-
-
           }
 
           @media (max-width: 325px) {
-
               .tooltip {
-
                   left: -30px;
                   top: -150px;
-
                   width: 250px;
-
               }
-
-
           }
