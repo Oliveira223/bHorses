@@ -151,6 +151,7 @@
               transform: translateY(-20px);
               /* Começa deslocado para cima */
               animation: fadeInMove 0.5s ease-in-out forwards;
+              animation-delay: 0.2s;
           }
 
 
