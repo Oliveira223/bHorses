@@ -145,7 +145,7 @@
               animation: fadeInLeft 0.5s ease-in-out forwards;
           }
 
-       
+
           .fade-in {
               opacity: 0;
               transform: translateY(-20px);
@@ -281,6 +281,16 @@
 
           a {
               text-decoration: none;
+              color: inherit;
+          }
+
+          a:visited {
+              color: inherit;
+          }
+
+          a:active,
+          a:hover {
+              color: inherit;
           }
 
           a img {
