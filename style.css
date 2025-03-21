@@ -137,7 +137,7 @@
               }
           }
 
-
+          /*fade in das modalidades*/
           .fade-in-left {
               opacity: 0;
               transform: translateX(-50px);
@@ -146,10 +146,11 @@
           }
 
 
+          /*fade in do header*/
           .fade-in {
               opacity: 0;
               transform: translateY(-20px);
-              /* Começa deslocado para cima */
+
               animation: fadeInMove 0.5s ease-in-out forwards;
               animation-delay: 0.2s;
           }
@@ -165,17 +166,7 @@
               background-size: 100%;
               background-position: center;
 
-          }
-
-          header {
-              background-color: rgba(22, 22, 22, 0.856);
-              /*background-color: rgba(20, 20, 20, 0.884);*/
-              color: rgba(255, 255, 255, 0.911);
-              padding: 2%;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.445) 80%, rgba(0, 0, 0, 0.342) 87%, transparent);
+              
 
           }
 
@@ -183,7 +174,6 @@
 
           h1 {
               /*modalidades*/
-
               color: rgb(212, 173, 0);
               font-family: 'MinhaFonte', sans-serif;
               font-size: 6vw;
@@ -193,6 +183,220 @@
               text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 
           }
+
+          /*Imagem Equipe Black Horses*/
+          .img_prin {
+              width: 100vw;
+              /*height: 320px;*/
+              height: 40vw;
+              object-fit: cover;
+              object-position: top;
+
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.877) 96%, transparent);
+
+          }
+
+          /*Cabeçalho*/
+          header {
+              background-color: rgba(22, 22, 22, 0.856);
+              color: rgba(255, 255, 255, 0.911);
+              padding: 2%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.445) 80%, rgba(0, 0, 0, 0.342) 87%, transparent);
+              position: relative;
+              transition: box-shadow 0.3s ease, padding 0.3s ease;
+
+          }
+
+
+          .header-left {
+              margin-top: 1vw;
+              margin-right: 15vw;
+              margin-left: 3vw;
+              display: block;
+              align-items: left;
+
+          }
+
+
+
+          .header-right {
+              margin-right: 4vw;
+              font-family: 'Inter', sans-serif;
+              font-size: 2vw;
+              color: #b8b6b6;
+
+              padding-top: -2;
+              display: flex;
+              gap: 4vw;
+              align-items: center;
+         
+
+          }
+
+       
+
+          .header-right a:hover {
+            transition: transform 0.3s ease, color 0.3s ease;
+              color: #ffffff;
+              transform: scale(1.1);
+          }
+
+          .brand {
+              /*Black Horses*/
+              margin-top: -1vw;
+              font-family: 'MinhaFonte', sans-serif;
+              font-size: 5vw;
+
+          }
+
+          .text {
+              /*Artes Marciais*/
+              font-size: 2vw;
+              letter-spacing: 1vw;
+              font-family: 'MinhaFonte', sans-serif;
+              text-align: left;
+              margin-left: 1vw;     
+              margin-bottom: 1vw;
+
+
+          }
+
+          .overlay {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgb(107, 107, 107);
+
+              display: none;
+              justify-content: center;   /*alinha no centro (x)*/
+              align-items: center;       /*alinha no centro (y)*/
+              z-index: 10;
+              /* Fica por cima de todo o conteúdo, menos o X */
+          }
+
+          /* Conteúdo centralizado */
+          .centered-content {
+                font-family: 'Inter', sans-serif;
+              text-align: center;
+              color: white;
+              font-size: 24px;
+          }
+
+          .centered-content p {
+              margin-top: 50px;
+          }
+
+          /* Quando o menu estiver aberto, mostra a overlay */
+          .overlay.open {
+              display: flex;
+          }
+
+
+
+
+
+          /*navMenu*/
+          .nav-icon-5 {
+              display: none;
+              margin-top: 0.7vw;
+              width: 80px;
+              height: 46px;
+
+              position: absolute;
+              cursor: pointer;
+              top: 22.5px;
+              right: 0;
+              z-index: 10;
+
+          }
+
+          .nav-icon-5 span {
+              background-color: #fff;
+              position: absolute;
+              border-radius: 2px;
+              transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+              width: 100%;
+              height: 5px;
+              /*grossura*/
+              transition-duration: 0.4s;
+              z-index: 10;
+          }
+
+          /*linhas*/
+          .nav-icon-5 span:nth-child(1) {
+              top: 0px;
+              left: 0px;
+
+          }
+
+          .nav-icon-5 span:nth-child(2) {
+              top: 19px;
+              left: 0px;
+              opacity: 1;
+          }
+
+          .nav-icon-5 span:nth-child(3) {
+              bottom: 0px;
+              left: 0px;
+          }
+
+
+          /*animação*/
+          .nav-icon-5.open span:nth-child(1) {
+              transform: rotate(45deg);
+              top: 13px;
+          }
+
+          .nav-icon-5.open span:nth-child(2) {
+              transform: rotate(135deg);
+              top: 13px;
+
+          }
+
+          .nav-icon-5.open span:nth-child(3) {
+              opacity: 0;
+          }
+
+
+
+
+
+          .blocks {
+              margin-top: 2vw;
+              text-align: center;
+              /* Centraliza as imagens */
+          }
+
+          .blocks img {
+              border-radius: 10%;
+              width: 25%;
+              height: auto;
+              display: inline-block;
+              /* Alinha as imagens em linha */
+              margin: 0 3vw;
+              /* Espaçamento entre as imagens */
+              box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
+          }
+
+
+
+          .icons {
+              display: none;
+              gap: 2vw;
+              align-items: center;
+              filter: none;
+          }
+
+
 
           .tabela_fundo {
               /*fundo cinza da tabela*/
@@ -299,64 +503,13 @@
           }
 
 
-          .header-left {
-              display: block;
-              align-items: left;
-          }
 
-          .second-header {
-              background-color: rgba(161, 161, 161, 0.562);
-              padding: 10px;
-              display: flex;
-              justify-content: center;
-          }
-
-
-
-          .brand {
-              font-family: 'MinhaFonte', sans-serif;
-              font-size: 5vw;
-
-          }
-
-
-          .img_prin {
-              width: 100vw;
-              /*height: 320px;*/
-              height: 40vw;
-              object-fit: cover;
-              object-position: top;
-
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: -1;
-              mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.877) 96%, transparent);
-
-          }
 
           .img_div {
               height: 10vw;
               display: block;
               margin: 0 auto;
               margin-top: 8vw;
-          }
-
-          .text {
-              /*Artes Marciais*/
-              font-size: 2vw;
-              letter-spacing: 1vw;
-              font-family: 'MinhaFonte', sans-serif;
-              text-align: left;
-              margin-left: 1vw;
-
-          }
-
-          .icons {
-              display: flex;
-              gap: 2vw;
-              align-items: center;
-              filter: none;
           }
 
 
@@ -429,29 +582,7 @@
           }
 
 
-          .blocks {
-              margin-top: 2vw;
-              text-align: center;
-              /* Centraliza as imagens */
-          }
 
-          .blocks img {
-              border-radius: 10%;
-              width: 25%;
-              height: auto;
-              display: inline-block;
-              /* Alinha as imagens em linha */
-              margin: 0 3vw;
-              /* Espaçamento entre as imagens */
-              box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
-              transition: transform 0.3s ease;
-          }
-
-
-          .blocks img:hover {
-              transform: scale(1.1);
-              /* Aumenta o tamanho da imagem */
-          }
 
           .planos_backg {
               /*fundo cinza*/
@@ -702,7 +833,7 @@
 
           .location p {
               color: #ccc;
-              font-family: monospace, sans-serif;
+              font-family: 'Inter', sans-serif;
               font-size: 1.5vw;
           }
 
@@ -720,6 +851,56 @@
               width: 47vw;
               height: 37vw;
           }
+
+
+          footer {
+            background-color: black;  
+            color: white;             
+            text-align: center;       
+            padding: 5vw 0;          /* Espaçamento no rodapé */
+            position: relative;
+            bottom: 0;
+            width: 100%;}
+          
+          /* Conteúdo do rodapé */
+          .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+          }
+          
+          /* Coluna da esquerda */
+          .footer-left p {
+            margin: 0;
+          }
+          
+          /* Coluna da direita - Links sociais */
+          .footer-right {
+            display: flex;
+            gap: 20px;
+          }
+          
+          .footer-right a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+          }
+          
+          .footer-right a:hover {
+            color: #ccc; /* Efeito de hover nos links */
+          }
+
+
+
+
+
+
+
+
+
+
+
 
 
           /* ----------- MODALIDADES ---------------------- */
@@ -769,16 +950,83 @@
 
 
 
-          /*tablets*/
 
-          @media (max-width: 800px) {
-              .tooltip {
-                  width: 100px;
+          @media (max-width: 750px) {
+
+              .header-left {
+                  margin-top: 1vw;
+                  margin-right: 15vw;
+                  margin-left: 3vw;
+
+
               }
-          }
 
-          /* Para celular */
-          @media (max-width: 600px) {
+
+              body {
+                  background-size: 150%;
+                  background-position: center;
+              }
+
+              header {
+                  padding: 15px;
+
+              }
+
+              .header-left {
+                  margin-top: 1vw;
+                  margin-left: 2vw;
+              }
+
+
+              .brand {
+                  font-size: 30px;
+              }
+
+
+              .text {
+                  font-size: 12px;
+                  letter-spacing: 5px;
+                  text-align: left;
+                  margin-left: 12px;
+              }
+
+
+              .nav-icon-5 {
+                  margin-bottom: 10px;
+                  margin-right: 20px;
+                  display: block;
+                  width: 52px;
+                  height: 30px;
+              }
+
+              .nav-icon-5 span {
+                  height: 4px;
+                  /*grossura*/
+              }
+
+              /*linhas*/
+              .nav-icon-5 span:nth-child(2) {
+                  top: 13px;
+                  left: 0px;
+
+              }
+
+              .nav-icon-5 span:nth-child(3) {
+                  bottom: 0px;
+                  left: 0px;
+              }
+
+
+              a img {
+                  height: 30px;
+                  margin-right: 10px;
+              }
+
+
+              .header-right {
+                  display: none;
+              }
+
 
               .tabela_fundo {
                   /*fundo cinza da tabela*/
@@ -838,33 +1086,9 @@
                   margin-top: -1.2vw;
               }
 
-              body {
-                  background-size: 150%;
-                  background-position: center;
-              }
-
-              header {
-                  padding: 15px;
-              }
-
-              .brand {
-                  font-size: 40px;
-              }
-
-              .text {
-                  font-size: 15px;
-                  letter-spacing: 8px;
-                  font-family: 'MinhaFonte', sans-serif;
-                  text-align: left;
-                  margin-left: 12px;
-              }
-
-              a img {
-                  height: 30px;
-                  margin-right: 10px;
-              }
 
               .icons {
+                  display: flex;
                   gap: 12px;
               }
 
@@ -1101,63 +1325,4 @@
 
               }
 
-
-          }
-
-
-          @media (max-width: 435px) {
-              h1 {
-                  font-size: 50px;
-                  margin-right: 10px;
-                  margin-left: 10px;
-              }
-
-              header {
-                  padding: 15px;
-              }
-
-              .brand {
-                  /*Black Horses*/
-                  font-size: 25px;
-              }
-
-              .aula_experimental {
-                  top: 210px;
-              }
-
-              .text {
-                  /*Artes Marciais*/
-                  font-size: 9px;
-                  letter-spacing: 5px;
-                  margin-left: 12px;
-              }
-
-              a img {
-                  height: 25px;
-                  margin-right: 10px;
-              }
-
-              .icons {
-                  gap: 8px;
-              }
-
-              .secondary-header {
-                  flex-direction: column;
-              }
-
-              .img_prin {
-                  height: 80vw;
-              }
-
-              .blocks {
-                  border: 50%;
-              }
-          }
-
-          @media (max-width: 325px) {
-              .tooltip {
-                  left: -30px;
-                  top: -150px;
-                  width: 250px;
-              }
           }

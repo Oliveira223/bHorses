@@ -8,22 +8,26 @@
     <title>Black Horses</title>
 
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
 
 
+    
 </head>
 
 <body>
-    <div class="loading">
 
+
+    <!-- Carregamento-->
+    <div class="loading">
         <div id="preload">
             <img src="icons/bhicon.png" alt="Carregando...">
-            <!-- Aqui você pode colocar sua animação de carregamento -->
         </div>
     </div>
 
 
-
+    <!-- Cabeçalho -->
     <header class="fade-in">
+
 
         <a href="index.html">
             <div class="header-left">
@@ -32,21 +36,55 @@
             </div>
         </a>
 
-        <div class="icons">
 
-            <a href="index.html">
-                <img src="icons/icons8-home-480_edit.png" alt="icone home"> </a>
-
-            <a href="https://www.instagram.com/blackhorses.artesmarciais/" target="_blank" rel="external">
-                <img src="icons/inst_icon.png" alt="icone instagram"> </a>
-
-            <a href="https://w.app/pi5grb" target="_blank" rel="external">
-                <img src="icons/whatsapp_icon.png" alt="icone whatsapp_icon"> </a>
-
-
+        <!-- links -->
+        <div class="header-right">
+            <a href="#">
+                <p>Quem Somos</p>
+            </a>
+            <a href="#">
+                <p>Informações</p>
+            </a>
+            <a href="#">
+                <p>Instagram</p>
+            </a>
         </div>
 
     </header>
+
+    <!-- Fundo Quando menu aberto-->
+
+    <div class="overlay">
+        <div class="centered-content">
+
+            <a href="">
+                <p>Home</p>
+            </a>
+
+            <a href="">
+                <p>Quem Somos</p>
+            </a>
+
+            <a href="">
+                <p>Informações</p>
+            </a>
+
+            <a href="">
+                <p>Eventos</p>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Hamburguer-->
+    <div class="icon nav-icon-5">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    </div>
+
 
     <img src="Imagens/wide.jpg" alt="Imagem equipe blackhorses" class="img_prin">
 
@@ -57,18 +95,26 @@
         </a>
     </div>
 
+
+
+    <!-- Modalidades-->
     <div class="blocks">
-        <a href="Boxe.html"> <img class="fade-in-left" style="animation-delay: 0.6s;" src="Imagens/boxe_img.jpg" alt=""></a>
-        <a href="Hapkido.html"> <img class="fade-in-left" style="animation-delay: 1s;" src="Imagens/hap_box.png" alt=""></a>
-        <a href="muaythai.html"><img class="fade-in-left" style="animation-delay: 1.4s;" src="Imagens/mt_box (1).jpg" alt=""></a>
+        <a href="Boxe.html"> <img class="fade-in-left" style="animation-delay: 0.6s;" src="Imagens/boxe_img.jpg"
+                alt=""></a>
+        <a href="Hapkido.html"> <img class="fade-in-left" style="animation-delay: 1s;" src="Imagens/hap_box.png"
+                alt=""></a>
+        <a href="muaythai.html"><img class="fade-in-left" style="animation-delay: 1.4s;" src="Imagens/mt_box (1).jpg"
+                alt=""></a>
     </div>
 
 
 
     <img src="Imagens/blackhorses_text.png" alt="" class="img_div">
 
-    
 
+
+
+    <!-- Planos -->
     <div class="planos_backg" id="planos">
         <h2 class="titulo">Nossos Planos</h2>
         <h2 class="subtitulo">> Escolha quantos dias você quer treinar <bold>por semana.</bold> <br>> Você pode
@@ -156,6 +202,7 @@
 
 
 
+    <!-- Horários -->
     <div class="tabela_fundo" id="horario">
 
         <h2 class="titulo">Horários</h2>
@@ -240,6 +287,8 @@
 
 
 
+
+    <!-- Localização -->
     <div class="location" id="Localização">
 
         <h2 class="titulo">Localização</h2>
@@ -249,7 +298,7 @@
             style="border:0;" frameborder="0" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"
             loading="lazy"></iframe>
 
-        <p>*Atualize o site caso o mapa não abra. </p>
+        <p>Atualize o site caso o mapa não abra. </p>
 
 
     </div>
@@ -258,26 +307,27 @@
     <img src="Imagens/blackhorses_text.png" alt="" class="img_div">
 
 
+    <div style="height: 4vw;"></div>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+              <p>&copy; 2025 Black Horses - Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+              <a href="https://facebook.com" target="_blank">Facebook</a>
+              <a href="https://instagram.com" target="_blank">Instagram</a>
+              <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+          </div>
 
 
 
+    </footer>
 
 
 
-
-
-
-
-
-    
-    <div style="height: 100vw;"></div>
-
-    <script>
-        window.onload = function () {
-            document.getElementById("preload").style.display = "none";  // Esconde a tela de carregamento
-            document.getElementById("conteudo").style.display = "block";  // Exibe o conteúdo
-        };
-    </script>
 
 </body>
 
