@@ -2,7 +2,15 @@
               margin: 0;
               padding: 0;
               box-sizing: content-box;
+              user-select: none;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              -webkit-tap-highlight-color: transparent;
+
           }
+
+
 
           /* Estilo para a tela de carregamento */
           #preload {
@@ -31,11 +39,19 @@
           }
 
 
+          /*evita troca de cor pelo modo escuro*/
+          @media (prefers-color-scheme: dark) {}
+
 
 
           @font-face {
               font-family: 'MinhaFonte';
               src: url(Fonts/handelsonsix_cyr_six.otf) format('truetype');
+          }
+
+          @font-face {
+              font-family: 'Roboto';
+              src: url(Fonts/Roboto-VariableFont_wdth\,wght.ttf) format('truetype');
           }
 
           @font-face {
@@ -166,7 +182,7 @@
               background-size: 100%;
               background-position: center;
 
-              
+
 
           }
 
@@ -236,14 +252,14 @@
               display: flex;
               gap: 4vw;
               align-items: center;
-         
+
 
           }
 
-       
+
 
           .header-right a:hover {
-            transition: transform 0.3s ease, color 0.3s ease;
+              transition: transform 0.3s ease, color 0.3s ease;
               color: #ffffff;
               transform: scale(1.1);
           }
@@ -262,7 +278,7 @@
               letter-spacing: 1vw;
               font-family: 'MinhaFonte', sans-serif;
               text-align: left;
-              margin-left: 1vw;     
+              margin-left: 1vw;
               margin-bottom: 1vw;
 
 
@@ -277,15 +293,17 @@
               background-color: rgb(107, 107, 107);
 
               display: none;
-              justify-content: center;   /*alinha no centro (x)*/
-              align-items: center;       /*alinha no centro (y)*/
+              justify-content: center;
+              /*alinha no centro (x)*/
+              align-items: center;
+              /*alinha no centro (y)*/
               z-index: 10;
               /* Fica por cima de todo o conteúdo, menos o X */
           }
 
           /* Conteúdo centralizado */
           .centered-content {
-                font-family: 'Inter', sans-serif;
+              font-family: 'Inter', sans-serif;
               text-align: center;
               color: white;
               font-size: 24px;
@@ -293,6 +311,21 @@
 
           .centered-content p {
               margin-top: 50px;
+          }
+
+          /*aula experimental*/
+          .centered-content h4 {
+
+              padding: 20px;
+              font-weight: normal;
+              font-size: 30px;
+              border-radius: 1vw;
+              border-color: #33333300;
+              border: 0.5vw solid #bbbbbb;
+              background-color: rgb(39, 39, 38);
+              margin-top: 50px;
+
+
           }
 
           /* Quando o menu estiver aberto, mostra a overlay */
@@ -306,6 +339,7 @@
 
           /*navMenu*/
           .nav-icon-5 {
+
               display: none;
               margin-top: 0.7vw;
               width: 80px;
@@ -316,8 +350,10 @@
               top: 22.5px;
               right: 0;
               z-index: 10;
-
+              outline: none;
+              text-decoration: none;
           }
+
 
           .nav-icon-5 span {
               background-color: #fff;
@@ -329,6 +365,8 @@
               /*grossura*/
               transition-duration: 0.4s;
               z-index: 10;
+              outline: none;
+              text-decoration: none;
           }
 
           /*linhas*/
@@ -524,6 +562,7 @@
               background-color: rgb(22, 22, 22);
               margin-top: 17vw;
 
+              
               display: flex;
               justify-content: center;
               align-items: center;
@@ -550,9 +589,9 @@
           }
 
           .agendar {
-              width: 24vw;
+              width: 30vw;
               height: 5vw;
-              background-color: rgba(22, 22, 22, 0.911);
+              background-color: #25d366;
               margin-right: auto;
               margin-left: auto;
               margin-top: 3vw;
@@ -560,24 +599,28 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              text-align: justify;
+              text-align: left;
               cursor: pointer;
               transition: background-color 0.5s ease;
               border-radius: 5vw;
-              border-color: #33333300;
-              border: 0.2vw solid #a8760000;
-              animation: piscar-borda 1.5s infinite alternate ease-in-out;
+              box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322);
           }
 
           .agendar:hover {
-              background-color: #52570dd3;
+              background-color: #075e54;
           }
 
+          .agendar img{
+            width: 3.5vw;
+            height: auto;
+            margin-right: 1.5vw;
+          }
           .agendar p {
               color: #ffffffda;
-              font-family: 'Inter', sans-serif;
-              font-size: 1.5vw;
-              text-decoration: none;
+              font-family: 'Roboto', 'Inter', sans-serif;
+              font-weight: 500;
+              font-size: 2vw;
+
 
           }
 
@@ -691,7 +734,7 @@
               /*blocos*/
               width: 13vw;
               height: 18vw;
-              background-color: #d1d1d100;
+              background-color: #5c5c5c;
               flex-direction: column;
               justify-content: center;
               align-items: center;
@@ -753,7 +796,7 @@
           .plano_anual {
               width: 46.5vw;
               height: 25vw;
-              background-color: #d1d1d100;
+              background-color: #5c5c5c;
               flex-direction: column;
               justify-content: center;
               align-items: center;
@@ -854,41 +897,44 @@
 
 
           footer {
-            background-color: black;  
-            color: white;             
-            text-align: center;       
-            padding: 5vw 0;          /* Espaçamento no rodapé */
-            position: relative;
-            bottom: 0;
-            width: 100%;}
-          
+              background-color: black;
+              color: white;
+              text-align: center;
+              padding: 5vw 0;
+              /* Espaçamento no rodapé */
+              position: relative;
+              bottom: 0;
+              width: 100%;
+          }
+
           /* Conteúdo do rodapé */
           .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 10%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px 10%;
           }
-          
+
           /* Coluna da esquerda */
           .footer-left p {
-            margin: 0;
+              margin: 0;
           }
-          
+
           /* Coluna da direita - Links sociais */
           .footer-right {
-            display: flex;
-            gap: 20px;
+              display: flex;
+              gap: 20px;
           }
-          
+
           .footer-right a {
-            text-decoration: none;
-            color: #fff;
-            transition: color 0.3s ease;
+              text-decoration: none;
+              color: #fff;
+              transition: color 0.3s ease;
           }
-          
+
           .footer-right a:hover {
-            color: #ccc; /* Efeito de hover nos links */
+              color: #ccc;
+              /* Efeito de hover nos links */
           }
 
 
@@ -1134,12 +1180,17 @@
               }
 
               .agendar {
-                  width: 40vw;
+                  width: 50vw;
                   height: 10vw;
                   margin-top: 8vw;
-                  transition: background-color 0.5s ease;
                   border-radius: 10vw;
 
+              }
+
+              .agendar img{
+                width: 30px;
+                height: auto;
+                margin-right: 10px;
               }
 
               .agendar p {
