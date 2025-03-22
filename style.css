@@ -181,10 +181,10 @@
               background-repeat: repeat-y;
               background-size: 100%;
               background-position: center;
-
-
-
+              overflow-x: hidden; 
           }
+
+         
 
 
 
@@ -297,7 +297,7 @@
               /*alinha no centro (x)*/
               align-items: center;
               /*alinha no centro (y)*/
-              z-index: 10;
+              z-index: 100;
               /* Fica por cima de todo o conteúdo, menos o X */
           }
 
@@ -331,6 +331,7 @@
           /* Quando o menu estiver aberto, mostra a overlay */
           .overlay.open {
               display: flex;
+           
           }
 
 
@@ -349,7 +350,7 @@
               cursor: pointer;
               top: 22.5px;
               right: 0;
-              z-index: 10;
+              z-index: 900;
               outline: none;
               text-decoration: none;
           }

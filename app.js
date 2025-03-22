@@ -1,36 +1,45 @@
 window.onload = function () {
-  document.getElementById("preload").style.display = "none";  // Esconde a tela de carregamento
-  document.getElementById("conteudo").style.display = "block";  // Exibe o conteúdo
+    document.getElementById("preload").style.display = "none";  // Esconde a tela de carregamento
+    document.getElementById("conteudo").style.display = "block";  // Exibe o conteúdo
 };
 
+const navIcon = document.querySelector('.nav-icon-5'); // O ícone do menu
+const overlay = document.querySelector('.overlay'); // O overlay
+const overlayLinks = document.querySelectorAll('.overlay a'); // Links dentro do overlay
 
-const icons = document.querySelectorAll('.icon');
-const overlay = document.querySelector('.overlay');
-const overlayLinks = document.querySelectorAll('.overlay a');
-const icon = document.querySelector('.icon.nav-icon-5');
-const navIcon = document.querySelector('.nav-icon-5');
-const navMenu = document.querySelector('.nav-menu');
 
-icons.forEach(icon => {
-    icon.addEventListener('click', () => {
-        // Alterna a classe 'open' no overlay (para exibir ou ocultar a camada cinza)
+/* ---------------------------EVENTO DE CLIQUE ----------------------------- */
+let isMenuOpen = false;
+
+
+
+    /*decteca o clique no navMenu*/
+    navIcon.addEventListener('click', () => {
+        console.log('Ícone clicado');
+
+        // Alterna a classe 'open' no overlay para exibir ou ocultar
         overlay.classList.toggle('open');
+        // Alterna a classe 'open' no ícone do menu para o efeito de animação
+        navIcon.classList.toggle('open');
 
-        // Alterna a classe 'open' no ícone (hambúrguer para X)
-        icon.classList.toggle('open');
-
-        // Alterna a classe 'open' no menu de navegação
-        navMenu.classList.toggle('open');
+        //torna isMenuOpen Verdadeiro, o que faz os ifs realizarem suas devidas taredas
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';  // Bloqueia o scroll
+            console.log('scroll desativado');
+        } else {
+            document.body.style.overflow = '';  // Restaura o scroll
+            console.log('scroll reativado');
+        }
     });
-});
+
+/* ------------------------------------------------------------------------ */
 
 
-// Adiciona um evento de clique em cada link
-overlayLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        overlay.classList.remove('open'); // Fecha o overlay
-        navIcon.classList.remove('open'); // Reseta o ícone do menu
+    // Fechar o overlay ao clicar em um link dentro dele
+    overlayLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            overlay.classList.remove('open'); // Fecha o overlay
+            navIcon.classList.remove('open'); // Reseta o ícone
+        });
     });
-});
-
-
