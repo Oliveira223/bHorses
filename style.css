@@ -562,8 +562,6 @@
           .planos_backg {
               /*fundo cinza*/
               border-radius: 4vw;
-              width: 10px;
-              height: 10px;
               background-color: rgba(61, 61, 61, 0.801);
               margin-right: auto;
               margin-left: auto;
@@ -659,8 +657,6 @@
           .tabela_fundo {
               /*fundo cinza da tabela*/
               border-radius: 4vw;
-              width: 70vw;
-              height: 30vw;
               background-color: rgba(61, 61, 61, 0.801);
               margin-right: auto;
               margin-left: auto;
@@ -754,11 +750,7 @@
 
           .location {
               border-radius: 3vw;
-              width: 60vw;
-              height: 53vw;
               background-color: rgba(61, 61, 61, 0.801);
-              margin-right: auto;
-              margin-left: auto;
               margin-top: 5vw;
               text-align: center;
           }
@@ -1052,8 +1044,9 @@
 
               .planos_backg {
                   /*fundo cinza*/
-                  width: 90%;
-                  height: 530px;
+                  width: 80%;
+                  min-height: 100px; /* Altura mínima opcional */
+                  padding: 20px;
               }
 
 
@@ -1136,9 +1129,9 @@
               .tabela_fundo {
                   /*fundo cinza da tabela*/
                   border-radius: 4vw;
-                  padding: 10px;
-                  width: 90%;
-                  height: 490px;
+                  width: 80%;
+                  min-height: 100px; /* Altura mínima opcional */
+                  padding: 20px;
                   margin-top: 5px;
                   text-align: center;
                   margin-right: auto;
@@ -1196,13 +1189,14 @@
 
               .location {
                   border-radius: 4vw;
-                  padding: 10px;
-                  width: 90%;
-                  height: 395px;
+                  width: 80%;
+                  min-height: 100px; /* Altura mínima opcional */
+                  padding: 20px;
                   margin-top: 8vw;
                   text-align: center;
                   margin-right: auto;
                   margin-left: auto;
+                 
               }
 
               .location p {
