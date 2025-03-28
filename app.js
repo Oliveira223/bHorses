@@ -41,5 +41,8 @@ let isMenuOpen = false;
         link.addEventListener('click', () => {
             overlay.classList.remove('open'); // Fecha o overlay
             navIcon.classList.remove('open'); // Reseta o ícone
+
+            document.body.style.overflow = ''; // Reativa o scroll da página
+            isMenuOpen = false; // Atualiza o estado do menu
         });
     });
