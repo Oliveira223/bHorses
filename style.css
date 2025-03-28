@@ -41,10 +41,6 @@
           }
 
 
-          /*evita troca de cor pelo modo escuro*/
-          @media (prefers-color-scheme: dark) {}
-
-
 
           @font-face {
               font-family: 'MinhaFonte';
@@ -971,16 +967,16 @@
 
               .brand {
                   /*Black Horses*/
-                  font-size: 42px;
+                  font-size: 9vw;
               }
 
 
               .text {
                   /*artes marciais*/
-                  font-size: 20px;
-                  letter-spacing: 6px;
+                  font-size: 4vw;
+                  letter-spacing: 10%;
                   text-align: left;
-                  margin-left: 17.7px;
+                  margin-left: 10%;
                   margin-top: -7px;
               }
 
@@ -1002,7 +998,6 @@
               .nav-icon-5 span:nth-child(2) {
                   top: 13px;
                   left: 0px;
-
               }
 
               .nav-icon-5 span:nth-child(3) {
@@ -1010,20 +1005,14 @@
                   left: 0px;
               }
 
-
               a img {
                   height: 30px;
                   margin-right: 10px;
               }
 
-
               .header-right {
                   display: none;
               }
-
-
-
-
 
               .icons {
                   display: flex;
@@ -1044,7 +1033,6 @@
                   margin-top: 6vw;
               }
 
-
               .blocks img {
                   border-radius: 10%;
                   width: 70vw;
@@ -1057,7 +1045,7 @@
                   width: 44vw;
                   height: 13vw;
                   border-radius: 10vw;
-                  margin-top: 70px;
+                  margin-top: 25vw;
               }
 
               .aula_experimental p {
@@ -1124,7 +1112,7 @@
 
               .planos_info_anual {
                   margin-top: 10px;
-                  font-size: 24px;
+                  font-size: 7vw;
                   font-weight: 600;
               }
 
@@ -1225,7 +1213,7 @@
                   min-height: 100px;
                   /* Altura mínima opcional */
                   padding: 20px;
-                  margin-top: 8vw;
+                  margin-top: 1vw;
                   text-align: center;
                   margin-right: auto;
                   margin-left: auto;
@@ -1238,7 +1226,7 @@
               }
 
               .location h3 {
-                  font-size: 3vw;
+                  font-size: 4vw;
                   padding-top: 1vw;
               }
 
@@ -1256,17 +1244,17 @@
           @media (max-width: 500px) {
               .brand {
                   /*Black Horses*/
-                  margin-top: -1vw;
-                  font-size: 30px;
+                  margin-top: 1vw;
+                  font-size: 9vw;
                   white-space: nowrap;
                   margin-bottom: 5px;
               }
 
               .text {
                   /*Artes Marciais*/
-                  font-size: 15px;
+                  font-size: 4vw;
                   letter-spacing: 1vw;
-                  margin-left: 18px;
+                  margin-left: 6vw;
                   margin-bottom: 1vw;
 
               }
