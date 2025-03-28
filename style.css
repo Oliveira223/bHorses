@@ -333,7 +333,7 @@
 
               position: absolute;
               cursor: pointer;
-              top: 22.5px;
+              top: 8vw;
               right: 0;
               z-index: 900;
               outline: none;
@@ -1078,8 +1078,8 @@
 
 
               .agendar {
-                  width: 160px;
-                  height: 40px;
+                  width: 55%;
+                  height: 14vw;
                   border-radius: 10vw;
                   padding-right: 8px;
                   padding-left: 8px;
@@ -1087,13 +1087,13 @@
               }
 
               .agendar img {
-                  width: 25px;
+                  width: 8vw;
                   height: auto;
 
               }
 
               .agendar p {
-                  font-size: 15px;
+                  font-size: 4.8vw;
               }
 
 
