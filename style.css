@@ -704,6 +704,7 @@
               padding: 0.7vw;
               border-radius: 0.6vw;
               text-align: center;
+              margin-bottom: 2vw;
 
           }
 
@@ -741,7 +742,7 @@
               /*talvez seja desnecessário, mas ajuda na organização*/
               visibility: hidden;
           }
-
+          /* ----------------------------------------- */
 
 
 
@@ -1152,7 +1153,7 @@
                   display: flex;
                   justify-content: space-between;
                   font-size: 5vw;
-                  line-height: 20px;
+                  line-height: 7vw;
               }
 
               .tabela_caixa strong {
