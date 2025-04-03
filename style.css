@@ -810,6 +810,7 @@
           .footer_container {
               display: flex;
               align-items: center;
+              justify-content: space-between;
 
           }
 
@@ -834,7 +835,7 @@
           }
 
           .footer_logo img {
-              margin-left: 20vw;
+            margin-right: 30vw;
               width: 10vw;
               height: auto;
               padding-top: 28px;
@@ -1176,7 +1177,7 @@
               
                 .footer_links {
                     padding-top: 20px;
-                    margin-left: 32px;
+                    margin-left: 10vw;
                     gap: 5px;
                 }
                 
@@ -1190,7 +1191,7 @@
                 }
                 
                 .footer_logo img {
-                    margin-left: 45px;
+                    margin-right: 10vw;
                     width: 100px;
                     height: auto;
                     padding-top: 28px;
