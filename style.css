@@ -134,26 +134,27 @@
 
 
           @keyframes reflexoAlternado {
-              0% {
-                  transform: translate(-100%, -100%);
-              }
-
-              45% {
-                  transform: translate(50%, 50%);
-              }
-
-              46% {
-                  transform: translate(50%, 50%);
-              }
-
-              70% {
-                  transform: translate(-150%, -150%);
-              }
-
-              100% {
-                  transform: translate(-100%, -100%);
-              }
+            0% {
+              transform: translateX(-100%);
+            }
+          
+            45% {
+              transform: translateX(50%);
+            }
+          
+            46% {
+              transform: translateX(50%);
+            }
+          
+            70% {
+              transform: translateX(-150%);
+            }
+          
+            100% {
+              transform: translateX(-100%);
+            }
           }
+          
 
 
 
@@ -228,6 +229,22 @@
               text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 
           }
+
+
+          a {
+              text-decoration: none;
+              color: inherit;
+          }
+
+          a:visited {
+              color: inherit;
+          }
+
+          a:active,
+          a:hover {
+              color: inherit;
+          }
+
 
           /*Imagem Equipe Black Horses*/
           .img_prin {
@@ -424,7 +441,7 @@
 
 
           .blocks {
-            
+
               margin-top: 2vw;
               text-align: center;
               /* Centraliza as imagens */
@@ -450,29 +467,6 @@
           }
 
 
-          .zoom {
-              animation: zoomEffect 3s;
-              animation-iteration-count: 1;
-          }
-
-          .zoom_infinite {
-              animation: zoomEffect 3s;
-              animation-iteration-count: infinite;
-          }
-
-          a {
-              text-decoration: none;
-              color: inherit;
-          }
-
-          a:visited {
-              color: inherit;
-          }
-
-          a:active,
-          a:hover {
-              color: inherit;
-          }
 
 
           .img_div {
@@ -517,14 +511,14 @@
               top: -100%;
               left: -100%;
               width: 300%;
-              height: 300%;
+              height: 500%;
               background: linear-gradient(120deg,
                       transparent 0%,
-                      rgba(255, 255, 255, 0.08) 40%,
-                      rgba(255, 255, 255, 0.12) 50%,
-                      rgba(255, 255, 255, 0.08) 60%,
+                      rgba(32, 32, 32, 0.192) 40%,
+                      rgba(255, 255, 255, 0.164) 50%,
+                      rgba(80, 79, 79, 0.295) 60%,
                       transparent 100%);
-              animation: reflexoAlternado 5s ease-in-out infinite;
+              animation: reflexoAlternado 6s ease-in-out infinite;
               pointer-events: none;
           }
 
@@ -548,41 +542,74 @@
 
           }
 
+
+          /* converse conosoco */
           .agendar {
-              width: 30vw;
-              height: 5vw;
-              background-color: #1fc55c;
-              margin-right: auto;
-              margin-left: auto;
-              margin-top: 9vw;
-              margin-bottom: 7vw;
-
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: left;
-              cursor: pointer;
-              transition: background-color 0.5s ease;
-              border-radius: 5vw;
-              box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322);
-          }
-
-          .agendar:hover {
-              background-color: #075e54;
-          }
-
-          .agendar img {
-              width: 3.5vw;
-              height: auto;
-              margin-right: 1.5vw;
-          }
-
-          .agendar p {
-              color: #ffffff;
-              font-family: 'Roboto', 'Inter', sans-serif;
-              font-weight: 500;
-              font-size: 2vw;
-          }
+            width: 30vw;
+            height: 5vw;
+            background-color: #1fc55c;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 9vw;
+            margin-bottom: 7vw;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            border-radius: 5vw;
+            box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322);
+        
+            position: relative; /* necessário para o ::after funcionar */
+            overflow: hidden;   /* evita que o brilho passe para fora */
+        }
+        
+        .agendar:hover {
+            background-color: #075e54;
+        }
+        
+        /* Ícone */
+        .agendar img {
+            width: 3.5vw;
+            height: auto;
+            margin-right: 1.5vw;
+        }
+        
+        /* Texto */
+        .agendar p {
+            color: #ffffff;
+            font-family: 'Roboto', 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 2vw;
+        }
+        
+        /* Reflexo (shine) */
+        .agendar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-20deg);
+            animation: shine 2.8s infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes shine {
+            to {
+                left: 125%;
+            }
+        }
+         
 
           .titulo {
               /* "Nossos Planos" */
