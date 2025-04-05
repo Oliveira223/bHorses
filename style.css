@@ -62,6 +62,10 @@
               src: url(Fonts/Nunito-VariableFont_wght.ttf) format('truetype');
           }
 
+
+
+
+          /* --------------  ANIMAÇÕES  ------------------------------- */
           @keyframes spin {
               0% {
                   transform: rotate(0deg);
@@ -91,25 +95,6 @@
               }
           }
 
-          @keyframes piscar-borda {
-              0% {
-                  border-color: rgba(22, 22, 22, 0.911);
-                  ;
-                  box-shadow: 0 0 5px rgba(172, 202, 0, 0.856);
-              }
-
-              50% {
-                  border-color: rgba(22, 22, 22, 0.911);
-                  ;
-                  box-shadow: 0 0 15px rgba(172, 202, 0, 0.856);
-              }
-
-              100% {
-                  border-color: rgba(22, 22, 22, 0.911);
-                  ;
-                  box-shadow: 0 0 5px rgba(172, 202, 0, 0.856);
-              }
-          }
 
           @keyframes float {
               0% {
@@ -124,6 +109,52 @@
                   transform: translateY(0);
               }
           }
+
+          @keyframes gradient {
+              0% {
+                  background-position: 0% 0%;
+              }
+
+              25% {
+                  background-position: 100% 0%;
+              }
+
+              50% {
+                  background-position: 100% 100%;
+              }
+
+              75% {
+                  background-position: 0% 100%;
+              }
+
+              100% {
+                  background-position: 0% 0%;
+              }
+          }
+
+
+          @keyframes reflexoAlternado {
+              0% {
+                  transform: translate(-100%, -100%);
+              }
+
+              45% {
+                  transform: translate(50%, 50%);
+              }
+
+              46% {
+                  transform: translate(50%, 50%);
+              }
+
+              70% {
+                  transform: translate(-150%, -150%);
+              }
+
+              100% {
+                  transform: translate(-100%, -100%);
+              }
+          }
+
 
 
 
@@ -278,8 +309,7 @@
               left: 0;
               width: 100%;
               height: 100%;
-              background-color: rgb(107, 107, 107);
-
+              background-color: #616161;
               display: none;
               justify-content: center;
               /*alinha no centro (x)*/
@@ -302,16 +332,16 @@
 
           }
 
-          /*aula experimental*/
+
+          /*aula experimental (do overlay) */
           .centered-content h4 {
 
               padding: 20px;
               font-weight: normal;
               font-size: 30px;
               border-radius: 1vw;
-              border-color: #33333300;
               border: 0.5vw solid #bbbbbb;
-              background-color: rgb(39, 39, 38);
+              background-color: #191a1d;
               margin-top: 50px;
 
 
@@ -394,6 +424,7 @@
 
 
           .blocks {
+            
               margin-top: 2vw;
               text-align: center;
               /* Centraliza as imagens */
@@ -453,32 +484,64 @@
 
 
           .aula_experimental {
-              margin-left: auto;
-              margin-right: auto;
-              width: 20vw;
-              height: 5vw;
-              background-color: rgb(22, 22, 22);
-              margin-top: 17vw;
-
               display: flex;
               justify-content: center;
               align-items: center;
-              text-align: justify;
+
+              width: 20vw;
+              height: 5vw;
+              margin: 10vw auto 0;
+              /* top auto bottom em uma linha */
+              padding: 0.7vw 2vw;
+
               cursor: pointer;
-              transition: background-color 0.5s ease;
+              text-align: center;
               border-radius: 5vw;
-              border: 0.1vw solid #fffffffa;
+              border: 0.15vw solid rgba(255, 255, 255, 0.438);
               box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322);
-              animation: float 2s infinite;
-              animation-delay: 2.05s;
+
+              background: linear-gradient(-45deg, #000, #0a0a0a, #000);
+              background-size: 200% 200%;
+
+              position: relative;
+              overflow: hidden;
+              filter: brightness(1.15);
+
+              animation: float 4s ease-in-out infinite;
           }
 
+
+          .aula_experimental::before {
+              content: "";
+              position: absolute;
+              top: -100%;
+              left: -100%;
+              width: 300%;
+              height: 300%;
+              background: linear-gradient(120deg,
+                      transparent 0%,
+                      rgba(255, 255, 255, 0.08) 40%,
+                      rgba(255, 255, 255, 0.12) 50%,
+                      rgba(255, 255, 255, 0.08) 60%,
+                      transparent 100%);
+              animation: reflexoAlternado 5s ease-in-out infinite;
+              pointer-events: none;
+          }
+
+
           .aula_experimental:hover {
-              background-color: #cfdd06;
+
+              filter: brightness(1.25);
+              box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+              transition: filter 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+
           }
 
           .aula_experimental p {
-              color: #ffffffda;
+              font-weight: 400;
+              color: #ffffffee;
+              /* branco levemente suave, não estourado */
+              letter-spacing: 0.5px;
               font-family: 'Inter', sans-serif;
               font-size: 2vw;
               text-decoration: none;
@@ -555,6 +618,7 @@
           .info {
               color: #ececec;
               padding-top: 10px;
+              padding-bottom: 4px;
               font-family: 'Nunito';
               font-size: 1.5vw;
           }
@@ -699,10 +763,20 @@
               text-align: left;
           }
 
+
+
+
+
+
           .tabela_caixa h2 {
               font-family: 'Inter', sans-serif;
               font-size: 2vw;
-              background: #1d1d1d;
+              background: #191a1d;
+
+              /*   gradient 
+              background: rgb(70,73,19);
+              background: radial-gradient(circle, rgba(70,73,19,1) 0%, rgba(25,26,29,1) 88%);
+            */
               color: white;
               padding: 0.7vw;
               border-radius: 0.6vw;
@@ -835,7 +909,7 @@
           }
 
           .footer_logo img {
-            margin-right: 30vw;
+              margin-right: 30vw;
               width: 10vw;
               height: auto;
               padding-top: 28px;
@@ -950,11 +1024,14 @@
               }
 
               .aula_experimental {
-                  animation-delay: 3s;
+                  margin: 25vw auto 0;
+                  /* top auto bottom em uma linha */
+                  padding: 0.7vw 2vw;
+                  border-radius: 15vw;
+                  animation-delay: 2s;
                   width: 44vw;
                   height: 13vw;
-                  border-radius: 10vw;
-                  margin-top: 25vw;
+
               }
 
               .aula_experimental p {
@@ -1174,33 +1251,33 @@
 
               /*--------- RODAPÉ ------------------*/
 
-              
-                .footer_links {
-                    padding-top: 20px;
-                    margin-left: 10vw;
-                    gap: 5px;
-                }
-                
-                .footer_links p {
-                    font-size: 4vw;
-                }
-                
-                .footer_links img {
-                    width: 5.5vw;
-                    height: auto;
-                }
-                
-                .footer_logo img {
-                    margin-right: 10vw;
-                    width: 100px;
-                    height: auto;
-                    padding-top: 28px;
-                }
-                
-                .footer_copyright {
-                    margin-top: 20px;
-                    font-size: 3vw;
-                    padding-bottom: 15px;
-                }
-                
-            }
+
+              .footer_links {
+                  padding-top: 20px;
+                  margin-left: 10vw;
+                  gap: 5px;
+              }
+
+              .footer_links p {
+                  font-size: 4vw;
+              }
+
+              .footer_links img {
+                  width: 5.5vw;
+                  height: auto;
+              }
+
+              .footer_logo img {
+                  margin-right: 10vw;
+                  width: 100px;
+                  height: auto;
+                  padding-top: 10vw;
+              }
+
+              .footer_copyright {
+                  margin-top: 20px;
+                  font-size: 3vw;
+                  padding-bottom: 15px;
+              }
+
+          }
