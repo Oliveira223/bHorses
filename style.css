@@ -518,7 +518,7 @@
                       rgba(255, 255, 255, 0.164) 50%,
                       rgba(80, 79, 79, 0.295) 60%,
                       transparent 100%);
-              animation: reflexoAlternado 6s ease-in-out infinite;
+              animation: reflexoAlternado 5s ease-in-out infinite;
               pointer-events: none;
           }
 
@@ -531,16 +531,44 @@
 
           }
 
-          .aula_experimental p {
-              font-weight: 400;
-              color: #ffffffee;
-              /* branco levemente suave, não estourado */
-              letter-spacing: 0.5px;
-              font-family: 'Inter', sans-serif;
-              font-size: 2vw;
-              text-decoration: none;
-
+          .texto_rolante {
+            height: 2.5vw;
+            overflow: hidden;
+            position: relative;
           }
+          
+          .texto_rolante span {
+            display: block;
+            height: 2.5vw;
+            line-height: 2.5vw;
+            text-align: center;
+            letter-spacing: 0.05vw;
+            animation: roletaTexto3 10s ease-in-out infinite;
+            font-weight: 400;
+            color: #ffffffee;
+            font-family: 'Inter', sans-serif;
+            font-size: 2vw;
+            text-decoration: none;
+          }
+          
+          @keyframes roletaTexto3 {
+            0%, 25% {
+              transform: translateY(0%);
+            }
+          
+            33%, 58% {
+              transform: translateY(-100%);
+            }
+          
+            66%, 91% {
+              transform: translateY(-200%);
+            }
+          
+            100% {
+              transform: translateY(0%);
+            }
+          }
+
 
 
           /* converse conosoco */
@@ -1058,12 +1086,23 @@
                   animation-delay: 2s;
                   width: 44vw;
                   height: 13vw;
-
               }
 
-              .aula_experimental p {
-                  font-size: 4.3vw;
+              .texto_rolante {
+                height: 4vw;
               }
+              
+              .texto_rolante span { 
+                height: 4vw;
+                line-height: 4vw;  
+                font-weight: 400;
+                font-size: 3.5vw;
+              }
+
+
+
+
+
 
               .titulo {
                   /* "Nossos Planos" */
