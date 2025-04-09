@@ -62,6 +62,10 @@
               src: url(Fonts/Nunito-VariableFont_wght.ttf) format('truetype');
           }
 
+          @font-face {
+              font-family: 'BebasNeue';
+              src: url(Fonts/BebasNeue-Regular.ttf) format('truetype');
+          }
 
 
 
@@ -134,27 +138,27 @@
 
 
           @keyframes reflexoAlternado {
-            0% {
-              transform: translateX(-100%);
-            }
-          
-            45% {
-              transform: translateX(50%);
-            }
-          
-            46% {
-              transform: translateX(50%);
-            }
-          
-            70% {
-              transform: translateX(-150%);
-            }
-          
-            100% {
-              transform: translateX(-100%);
-            }
+              0% {
+                  transform: translateX(-100%);
+              }
+
+              45% {
+                  transform: translateX(50%);
+              }
+
+              46% {
+                  transform: translateX(50%);
+              }
+
+              70% {
+                  transform: translateX(-150%);
+              }
+
+              100% {
+                  transform: translateX(-100%);
+              }
           }
-          
+
 
 
 
@@ -216,21 +220,6 @@
 
 
 
-
-
-          h1 {
-              /*modalidades*/
-              color: rgb(212, 173, 0);
-              font-family: 'MinhaFonte', sans-serif;
-              font-size: 6vw;
-              text-align: center;
-              margin-right: 10px;
-              margin-left: 10px;
-              text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
-
-          }
-
-
           a {
               text-decoration: none;
               color: inherit;
@@ -245,11 +234,22 @@
               color: inherit;
           }
 
+          .revelar {
+              opacity: 0;
+              transform: translateY(40px);
+              transition: opacity 0.8s ease, transform 0.8s ease;
+              will-change: opacity, transform;
+          }
+
+          .revelar.visivel {
+              opacity: 1;
+              transform: translateY(0);
+          }
+
 
           /*Imagem Equipe Black Horses*/
           .img_prin {
               width: 100vw;
-              /*height: 320px;*/
               height: 40vw;
               object-fit: cover;
               object-position: top;
@@ -260,6 +260,21 @@
               z-index: -1;
               mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.877) 96%, transparent);
 
+          }
+
+          .img_prin_sub {
+              width: 100vw;
+              height: 40vw;
+              object-fit: cover;
+              object-position: top;
+
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.877) 96%, transparent);
+              filter: brightness(0.6);
+              /* valor entre 0 e 1 para escurecer */
           }
 
           /*Cabeçalho*/
@@ -441,7 +456,6 @@
 
 
           .blocks {
-
               margin-top: 2vw;
               text-align: center;
               /* Centraliza as imagens */
@@ -452,9 +466,7 @@
               width: 25%;
               height: auto;
               display: inline-block;
-              /* Alinha as imagens em linha */
               margin: 0 3vw;
-              /* Espaçamento entre as imagens */
               box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
           }
 
@@ -531,113 +543,122 @@
 
           }
 
+
+
+
+          /* -------- VEM SEM BLACK ---------- */
           .texto_rolante {
-            height: 2.5vw;
-            overflow: hidden;
-            position: relative;
+              height: 2.5vw;
+              /* = font-size = line height */
+              overflow: hidden;
+              position: relative;
           }
-          
+
           .texto_rolante span {
-            display: block;
-            height: 2.5vw;
-            line-height: 2.5vw;
-            text-align: center;
-            letter-spacing: 0.05vw;
-            animation: roletaTexto3 10s ease-in-out infinite;
-            font-weight: 400;
-            color: #ffffffee;
-            font-family: 'Inter', sans-serif;
-            font-size: 2vw;
-            text-decoration: none;
+              display: block;
+              height: 2.5vw;
+              line-height: 2.5vw;
+              text-align: center;
+              letter-spacing: 0.05vw;
+              animation: roletaTexto3 10s ease-in-out infinite;
+              font-weight: 400;
+              color: #ffffffee;
+              font-family: 'Inter', sans-serif;
+              font-size: 2vw;
+              text-decoration: none;
           }
-          
+
           @keyframes roletaTexto3 {
-            0%, 25% {
-              transform: translateY(0%);
-            }
-          
-            33%, 58% {
-              transform: translateY(-100%);
-            }
-          
-            66%, 91% {
-              transform: translateY(-200%);
-            }
-          
-            100% {
-              transform: translateY(0%);
-            }
+
+              0%,
+              25% {
+                  transform: translateY(0%);
+              }
+
+              33%,
+              58% {
+                  transform: translateY(-100%);
+              }
+
+              66%,
+              91% {
+                  transform: translateY(-200%);
+              }
+
+              100% {
+                  transform: translateY(0%);
+              }
           }
 
 
 
           /* converse conosoco */
           .agendar {
-            width: 30vw;
-            height: 5vw;
-            background-color: #1fc55c;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 9vw;
-            margin-bottom: 7vw;
-        
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            cursor: pointer;
-            transition: background-color 0.5s ease;
-            border-radius: 5vw;
-            box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322);
-        
-            position: relative; /* necessário para o ::after funcionar */
-            overflow: hidden;   /* evita que o brilho passe para fora */
-        }
-        
-        .agendar:hover {
-            background-color: #075e54;
-        }
-        
-        /* Ícone */
-        .agendar img {
-            width: 3.5vw;
-            height: auto;
-            margin-right: 1.5vw;
-        }
-        
-        /* Texto */
-        .agendar p {
-            color: #ffffff;
-            font-family: 'Roboto', 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 2vw;
-        }
-        
-        /* Reflexo (shine) */
-        .agendar::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -75%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(
-                120deg,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.3) 50%,
-                rgba(255, 255, 255, 0) 100%
-            );
-            transform: skewX(-20deg);
-            animation: shine 2.8s infinite;
-            pointer-events: none;
-        }
-        
-        @keyframes shine {
-            to {
-                left: 125%;
-            }
-        }
-         
+              width: 30vw;
+              height: 5vw;
+              background-color: #1fc55c;
+              margin-right: auto;
+              margin-left: auto;
+              margin-top: 9vw;
+              margin-bottom: 7vw;
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: left;
+              cursor: pointer;
+              transition: background-color 0.5s ease;
+              border-radius: 5vw;
+              box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.507);
+
+              position: relative;
+              /* necessário para o ::after funcionar */
+              overflow: hidden;
+              /* evita que o brilho passe para fora */
+          }
+
+          .agendar:hover {
+              background-color: #075e54;
+          }
+
+          /* Ícone */
+          .agendar img {
+              width: 3.5vw;
+              height: auto;
+              margin-right: 1.5vw;
+          }
+
+          /* Texto */
+          .agendar p {
+              color: #ffffff;
+              font-family: 'Roboto', 'Inter', sans-serif;
+              font-weight: 500;
+              font-size: 2vw;
+          }
+
+          /* Reflexo (shine) */
+          .agendar::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -75%;
+              width: 50%;
+              height: 100%;
+              background: linear-gradient(120deg,
+                      rgba(255, 255, 255, 0) 0%,
+                      rgba(255, 255, 255, 0.3) 50%,
+                      rgba(255, 255, 255, 0) 100%);
+              transform: skewX(-20deg);
+              animation: shine 2.8s infinite;
+              pointer-events: none;
+          }
+
+          @keyframes shine {
+              to {
+                  left: 125%;
+              }
+          }
+
 
           .titulo {
               /* "Nossos Planos" */
@@ -660,7 +681,8 @@
               /*fundo cinza*/
               width: 85%;
               border-radius: 4vw;
-              background-color: rgba(61, 61, 61, 0.801);
+              /* background-color: #3d3d3dcc; */
+              background-image: radial-gradient(circle, #313230e7, #353736da, #393b3be5, #3f3f40ea, #444444e3);
               margin-right: auto;
               margin-left: auto;
               text-align: center;
@@ -784,6 +806,48 @@
               font-family: 'Nunito', 'Inter', monospace, sans-serif;
               color: #ffffff;
           }
+
+
+          .planos_sec_container {
+              width: 86%;
+              /* igual à .planos_backg */
+              margin: 0 auto;
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 10vw;
+          }
+
+          .planos_sec_container_blocks {
+              text-align: center;
+              /* background-color: rgba(61, 61, 61, 0.801); */
+              background-image: radial-gradient(circle, #313230e7, #353736da, #393b3be5, #3f3f40ea, #444444e3);
+              width: 37.5vw;
+              min-height: 10vw;
+              border-radius: 3vw;
+              padding-top: 2vw;
+              padding-bottom: 2vw;
+
+              /*distancia entre itens*/
+              line-height: 10vw;
+          }
+
+
+          /* to-do */
+          .planos_sec_container_blocks h1 {
+              color: #d4d3d3;
+              font-size: 5vw;
+              font-family: 'MinhaFonte', sans-serif;
+              letter-spacing: 0.2vw;
+          }
+
+          .planos_sec_container_blocks h2 {
+              margin-top: 10px;
+              font-size: 6vw;
+              font-weight: 600;
+              font-family: 'Nunito', 'Inter', monospace, sans-serif;
+              color: #ffffff;
+          }
+
 
 
 
@@ -917,6 +981,91 @@
           }
 
 
+          /* ------------------------------- */
+
+
+
+          /* LINKS PARA OUTRAS PÁGINAS */
+          .container-links {
+              display: flex;
+              flex-direction: column;
+              gap: 0vw;
+              width: 100%;
+              margin-top: 8vw;
+          }
+
+          .link-imagem {
+              position: relative;
+              width: 100%;
+              height: 30vw;
+              overflow: hidden;
+              background-size: 110%;
+              /* inicialmente mais “próxima” */
+              background-position: 50% 30%;
+              background-repeat: no-repeat;
+              transition: background-size 0.6s ease-in-out;
+          }
+
+
+          .link-imagem::before {
+              content: "";
+              position: absolute;
+              inset: 0;
+              background: rgba(0, 0, 0, 0.411);
+              /* escurece */
+
+              z-index: 1;
+              transition: background 0.5s ease;
+          }
+
+          .link-imagem:hover::before {
+              background: rgba(0, 0, 0, 0.1);
+              /* menos escuro no hover */
+          }
+
+          .link-imagem::after {
+              content: '';
+              position: absolute;
+              inset: 0;
+              background: radial-gradient(transparent 60%, rgba(0, 0, 0, 0.377));
+              z-index: 1;
+          }
+
+          .link-imagem:hover {
+              background-size: 100%;
+              /* afasta no hover */
+          }
+
+
+          /* Imagens aplicadas diretamente nos elementos */
+          .link-imagem:nth-child(1) {
+              background-image: url('Fotos/UCS10916.webp');
+          }
+
+          .link-imagem:nth-child(2) {
+              background-image: url('Fotos/UCS13298.webp');
+          }
+
+          .link-imagem:nth-child(3) {
+              background-image: url('Fotos/UCS11168.webp');
+          }
+
+          .texto-sobre {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: white;
+              font-size: 5vw;
+              text-shadow: 2px 2px 10px black;
+              /* font-family: 'Inter', sans-serif; */
+              /* font-weight: bold; */
+              font-family: 'BebasNeue';
+              letter-spacing: 0.1vw;
+              z-index: 4;
+              /* para ficar por cima da foto */
+          }
+
 
 
 
@@ -978,6 +1127,16 @@
 
           .construção {
               text-align: center;
+          }
+
+          .construção h1 {
+              color: rgb(212, 173, 0);
+              font-family: 'MinhaFonte', sans-serif;
+              font-size: 6vw;
+              text-align: center;
+              margin-right: 10px;
+              margin-left: 10px;
+              text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
           }
 
           .construção img {
@@ -1065,6 +1224,10 @@
                   height: 80vw;
               }
 
+              .img_prin_sub {
+                  height: 80vw;
+              }
+
               .img_div {
                   height: 20vw;
                   margin-bottom: 6vw;
@@ -1088,19 +1251,22 @@
                   height: 13vw;
               }
 
+
+
               .texto_rolante {
-                height: 4vw;
-              }
-              
-              .texto_rolante span { 
-                height: 4vw;
-                line-height: 4vw;  
-                font-weight: 400;
-                font-size: 3.5vw;
+                  height: 4vw;
+                  /* = font-size = line height */
+
               }
 
-
-
+              .texto_rolante span {
+                  height: 4.5vw;
+                  /*janela visivel*/
+                  line-height: 4vw;
+                  /*precisa ser igual ao height do .texto_rolante para centralizar as frases */
+                  letter-spacing: 0.05vw;
+                  font-size: 4vw;
+              }
 
 
 
@@ -1119,7 +1285,7 @@
                   /*fundo cinza*/
                   width: 80%;
                   padding: 4vw;
-                  margin-bottom: 10vw;
+                  margin-bottom: 5vw;
               }
 
 
@@ -1313,6 +1479,11 @@
 
               /* ------------------------------------ */
 
+              /* ----------Links -------------- */
+
+              .link-imagem {
+                  height: calc(100vh / 3);
+              }
 
 
               /*--------- RODAPÉ ------------------*/

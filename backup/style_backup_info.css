@@ -1,0 +1,1403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+
+/* Estilo para a tela de carregamento */
+#preload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(22, 22, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#conteudo {
+    display: none;
+    /* O conteúdo será oculto inicialmente */
+}
+
+.loading img {
+    width: 10vw;
+    height: auto;
+    animation: spin 2s linear infinite;
+    /* Adiciona animação de rotação */
+}
+
+
+/*evita troca de cor pelo modo escuro*/
+@media (prefers-color-scheme: dark) {}
+
+
+
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url(Fonts/handelsonsix_cyr_six.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(Fonts/Roboto-VariableFont_wdth\,wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(Fonts/Inter-VariableFont_opsz\,wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(Fonts/Nunito-VariableFont_wght.ttf) format('truetype');
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        /* Começa com a imagem sem rotação */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Gira a imagem 360 graus */
+    }
+}
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+        /* Inicia com o tamanho normal */
+    }
+
+    50% {
+        transform: scale(1.15);
+        /* Aumenta para 20% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Volta ao tamanho normal */
+    }
+}
+
+@keyframes piscar-borda {
+    0% {
+        border-color: rgba(22, 22, 22, 0.911);
+        ;
+        box-shadow: 0 0 5px rgba(172, 202, 0, 0.856);
+    }
+
+    50% {
+        border-color: rgba(22, 22, 22, 0.911);
+        ;
+        box-shadow: 0 0 15px rgba(172, 202, 0, 0.856);
+    }
+
+    100% {
+        border-color: rgba(22, 22, 22, 0.911);
+        ;
+        box-shadow: 0 0 5px rgba(172, 202, 0, 0.856);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1vw);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes fadeInMove {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*fade in das modalidades*/
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    /* Começa deslocada para a esquerda */
+    animation: fadeInLeft 0.5s ease-in-out forwards;
+}
+
+
+/*fade in do header*/
+.fade-in {
+    opacity: 0;
+    transform: translateY(-20px);
+
+    animation: fadeInMove 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("Backgrounds/background_redux.png");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+
+
+
+
+h1 {
+    /*modalidades*/
+    color: rgb(212, 173, 0);
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 6vw;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+
+}
+
+/*Imagem Equipe Black Horses*/
+.img_prin {
+    width: 100vw;
+    /*height: 320px;*/
+    height: 40vw;
+    object-fit: cover;
+    object-position: top;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.877) 96%, transparent);
+
+}
+
+/*Cabeçalho*/
+header {
+    background-color: rgba(22, 22, 22, 0.856);
+    color: rgba(255, 255, 255, 0.911);
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.445) 80%, rgba(0, 0, 0, 0.342) 87%, transparent);
+    position: relative;
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
+
+}
+
+
+.header-left {
+    margin-top: 1vw;
+    margin-right: 15vw;
+    margin-left: 3vw;
+    display: block;
+    align-items: left;
+   
+
+}
+
+
+
+.header-right {
+    margin-right: 4vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 2vw;
+    color: #b8b6b6;
+
+    padding-top: -2;
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+
+
+}
+
+
+
+.header-right a:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.brand {
+    /*Black Horses*/
+    margin-top: -1vw;
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 5vw;
+    white-space: nowrap;
+}
+
+.text {
+    /*Artes Marciais*/
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    font-family: 'MinhaFonte', sans-serif;
+    text-align: left;
+    margin-left: 1vw;
+    margin-bottom: 1vw;
+
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(107, 107, 107);
+
+
+    display: none;
+    justify-content: center;
+    /*alinha no centro (x)*/
+    align-items: center;
+    /*alinha no centro (y)*/
+    z-index: 100;
+
+}
+
+/* Conteúdo centralizado */
+.centered-content {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.centered-content p {
+    margin-top: 50px;
+
+}
+
+/*aula experimental*/
+.centered-content h4 {
+
+    padding: 20px;
+    font-weight: normal;
+    font-size: 30px;
+    border-radius: 1vw;
+    border-color: #33333300;
+    border: 0.5vw solid #bbbbbb;
+    background-color: rgb(39, 39, 38);
+    margin-top: 50px;
+
+
+}
+
+
+/* Quando o menu estiver aberto, mostra a overlay */
+.overlay.open {
+    display: flex;
+
+}
+
+
+
+
+
+/*navMenu*/
+.nav-icon-5 {
+
+    display: none;
+    margin-top: 0.7vw;
+    width: 80px;
+    height: 46px;
+
+    position: absolute;
+    cursor: pointer;
+    top: 22.5px;
+    right: 0;
+    z-index: 900;
+    outline: none;
+    text-decoration: none;
+}
+
+
+.nav-icon-5 span {
+    background-color: #fff;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width: 100%;
+    height: 5px;
+    /*grossura*/
+    transition-duration: 0.4s;
+    z-index: 10;
+    outline: none;
+    text-decoration: none;
+}
+
+/*linhas*/
+.nav-icon-5 span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+
+}
+
+.nav-icon-5 span:nth-child(2) {
+    top: 19px;
+    left: 0px;
+    opacity: 1;
+}
+
+.nav-icon-5 span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+}
+
+
+/*animação*/
+.nav-icon-5.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px;
+}
+
+.nav-icon-5.open span:nth-child(2) {
+    transform: rotate(135deg);
+    top: 13px;
+
+}
+
+.nav-icon-5.open span:nth-child(3) {
+    opacity: 0;
+}
+
+
+
+
+
+.blocks {
+    margin-top: 2vw;
+    text-align: center;
+    /* Centraliza as imagens */
+}
+
+.blocks img {
+    border-radius: 10%;
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    /* Alinha as imagens em linha */
+    margin: 0 3vw;
+    /* Espaçamento entre as imagens */
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
+}
+
+
+
+.icons {
+    display: none;
+    gap: 2vw;
+    align-items: center;
+    filter: none;
+}
+
+
+
+.tabela_fundo {
+    /*fundo cinza da tabela*/
+    border-radius: 4vw;
+    width: 70vw;
+    height: 30vw;
+    background-color: rgba(61, 61, 61, 0.801);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5vw;
+    text-align: center;
+}
+
+.tabela_container {
+    display: flex;
+    justify-content: center;
+    gap: 4.4vw;
+    flex-wrap: wrap;
+}
+
+.tabela_caixa {
+    margin-top: 2vw;
+    background: #fff;
+    padding: 0.7vw;
+    border-radius: 0.6vw;
+    box-shadow: 10px 10px 20px rgba(2, 2, 0, 0.952);
+    width: 17vw;
+    text-align: left;
+}
+
+.tabela_caixa h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2vw;
+    background: #1d1d1d;
+    color: white;
+    padding: 0.7vw;
+    border-radius: 0.6vw;
+    text-align: center;
+
+}
+
+.tabela_caixa p {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    margin-left: 0.4vw;
+    font-size: 1vw;
+
+}
+
+.tabela_caixa strong {
+    /*dias semana*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 6vw;
+    flex-shrink: 0;
+
+}
+
+.tabela_caixa h6 {
+    font-family: Nunito;
+    font-size: 0.8vw;
+    margin-left: 5.7vw;
+}
+
+.horario {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex: 1;
+    text-align: center;
+}
+
+.horario.vazio {
+    /*talvez seja desnecessário, mas ajuda na organização*/
+    visibility: hidden;
+}
+
+
+.zoom {
+    animation: zoomEffect 3s;
+    animation-iteration-count: 1;
+}
+
+.zoom_infinite {
+    animation: zoomEffect 3s;
+    animation-iteration-count: infinite;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:active,
+a:hover {
+    color: inherit;
+}
+
+a img {
+    height: 3vw;
+    margin-right: auto;
+}
+
+
+
+
+.img_div {
+    height: 10vw;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8vw;
+}
+
+
+
+.aula_experimental {
+
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+    height: 5vw;
+    background-color: rgb(22, 22, 22);
+    margin-top: 17vw;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border-radius: 5vw;
+    border: 0.1vw solid #fffffffa;
+    box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322);
+    animation: float 2s infinite;
+    animation-delay: 2.05s;
+}
+
+.aula_experimental:hover {
+    background-color: #cfdd06;
+}
+
+.aula_experimental p {
+    color: #ffffffda;
+    font-family: 'Inter', sans-serif;
+    font-size: 2vw;
+    text-decoration: none;
+
+}
+
+.agendar {
+    width: 30vw;
+    height: 5vw;
+    background-color: #25d366;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border-radius: 5vw;
+    box-shadow: 15px 18px 20px rgba(0, 0, 0, 0.322);
+}
+
+.agendar:hover {
+    background-color: #075e54;
+}
+
+.agendar img {
+    width: 3.5vw;
+    height: auto;
+    margin-right: 1.5vw;
+}
+
+.agendar p {
+    color: #ffffffda;
+    font-family: 'Roboto', 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+
+
+}
+
+
+
+
+.planos_backg {
+    /*fundo cinza*/
+    border-radius: 4vw;
+    width: 60vw;
+    height: 83vw;
+    background-color: rgba(61, 61, 61, 0.801);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5vw;
+    text-align: center;
+
+
+}
+
+.container {
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+}
+
+.container h2 {
+    /*mensal*/
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 4vw;
+    letter-spacing: 0.6vw;
+    align-items: center;
+    padding-top: 2vw;
+    margin-bottom: 0vw;
+    color: #dddbdb;
+    text-shadow: 0 0 10px rgba(40, 49, 0, 0.822);
+}
+
+.icon {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon img {
+    margin-top: 1vw;
+    width: 2vw;
+    height: auto;
+}
+
+
+
+
+.planos-container {
+    display: flex;
+    justify-content: center;
+    /*centraliza os itens*/
+    gap: 2vw;
+
+}
+
+.titulo {
+    /* "Nossos Planos" */
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 6vw;
+    letter-spacing: 0.2vw;
+    padding-top: 3vw;
+    margin-bottom: 0vw;
+    color: #dddbdb;
+
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.subtitulo {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1vw;
+    padding-top: 0vw;
+    margin-bottom: 0vw;
+    color: #f0f0f0;
+
+}
+
+.plano {
+    /*blocos*/
+    width: 13vw;
+    height: 18vw;
+    background-color: #5c5c5c;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vw;
+    margin-bottom: 2vw;
+    box-shadow: 0px 0px 8px rgb(152, 179, 1);
+    padding: 1vw;
+    border-radius: 2vw;
+    border: 0.2vw solid rgba(172, 202, 0, 0.856);
+
+}
+
+.plano img {
+    margin-top: 0.4vw;
+    height: 1vw;
+    width: auto;
+}
+
+.plano h3 {
+    /*dias*/
+    font-family: 'Nunito', 'Inter', monospace, sans-serif;
+    font-size: 3vw;
+    margin-top: 2.7vw;
+    margin-bottom: 0vw;
+    line-height: 3vw;
+    color: #dddbdb;
+}
+
+
+
+.plano h4 {
+    /*Por semana*/
+    font-family: 'Nunito', 'Inter', monospace, sans-serif;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    color: #dddbdb;
+}
+
+.plano h5 {
+    /*valores*/
+    font-size: 3.5vw;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 1.5vw;
+    margin-bottom: 0.5vw;
+    font-weight: bold;
+    color: #f5f5f5;
+
+}
+
+.plano h6 {
+    /*(sem turma fixa)*/
+    margin-top: 0vw;
+    letter-spacing: 0.27vw;
+    font-family: monospace;
+    font-size: 0.7vw;
+    color: #f5f5f5;
+}
+
+.plano_anual {
+    width: 46.5vw;
+    height: 25vw;
+    background-color: #5c5c5c;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vw;
+    margin-bottom: 2vw;
+    box-shadow: 0px 0px 8px rgb(152, 179, 1);
+    padding: 1vw;
+    border-radius: 2vw;
+    border: 0.2vw solid rgba(172, 202, 0, 0.856);
+}
+
+.plano_anual img {
+    margin-top: 1vw;
+    height: 2vw;
+    width: auto;
+}
+
+.plano_anual h3 {
+    /*dias*/
+    font-family: 'Nunito', 'Inter', monospace, sans-serif;
+    font-size: 5vw;
+    margin-top: 4vw;
+    margin-bottom: 0vw;
+    line-height: 3vw;
+    color: #dddbdb;
+}
+
+
+
+.plano_anual h4 {
+    /*Por semana*/
+    font-family: 'Nunito', 'Inter', monospace, sans-serif;
+    font-size: 1.7vw;
+    line-height: 2.4vw;
+    margin-top: 0.5vw;
+    color: #dddbdb;
+}
+
+.plano_anual h5 {
+    /*valores*/
+    font-size: 3.5vw;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 2.2vw;
+    font-weight: bold;
+    color: #f5f5f5;
+
+}
+
+.plano_anual h6 {
+    /*valor total*/
+    font-family: monospace;
+    font-size: 1vw;
+    color: #ccc;
+    margin-top: 0vw;
+    margin-left: 0vw;
+}
+
+.plano_anual p {
+    font-family: monospace;
+    font-size: 0.8vw;
+    color: #ccc;
+    margin-top: 4.2vw;
+    margin-left: 10vw;
+}
+
+
+.location {
+    border-radius: 3vw;
+    width: 60vw;
+    height: 53vw;
+    background-color: rgba(61, 61, 61, 0.801);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5vw;
+    text-align: center;
+}
+
+.location p {
+    color: #ccc;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vw;
+}
+
+.location h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2vw;
+    padding-top: 1vw;
+    margin-bottom: 0vw;
+    color: #f0f0f0;
+}
+
+.location iframe {
+
+    border-radius: 1vw;
+    width: 47vw;
+    height: 37vw;
+}
+
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+
+
+
+
+
+
+
+
+/* ----------- MODALIDADES ---------------------- */
+
+.construção {
+    text-align: center;
+}
+
+.construção img {
+    width: 40vw;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 750px) {
+
+    .header-left {
+        margin-top: 1vw;
+        margin-right: 15vw;
+        margin-left: 3vw;
+
+
+    }
+
+
+    body {
+        background-size: 150%;
+        background-position: center;
+    }
+
+    header {
+        padding: 15px;
+
+    }
+
+    .header-left {
+        margin-top: 1vw;
+        margin-left: 2vw;
+    }
+
+
+    .brand {
+        /*Black Horses*/
+        font-size: 42px;
+    }
+
+
+    .text {
+        /*artes marciais*/
+        font-size: 20px;
+        letter-spacing: 6px;
+        text-align: left;
+        margin-left: 17.7px;
+        margin-top: -7px;
+    }
+
+
+    .nav-icon-5 {
+        margin-bottom: 10px;
+        margin-right: 20px;
+        display: block;
+        width: 52px;
+        height: 30px;
+    }
+
+    .nav-icon-5 span {
+        height: 4px;
+        /*grossura*/
+    }
+
+    /*linhas*/
+    .nav-icon-5 span:nth-child(2) {
+        top: 13px;
+        left: 0px;
+
+    }
+
+    .nav-icon-5 span:nth-child(3) {
+        bottom: 0px;
+        left: 0px;
+    }
+
+
+    a img {
+        height: 30px;
+        margin-right: 10px;
+    }
+
+
+    .header-right {
+        display: none;
+    }
+
+
+    .tabela_fundo {
+        /*fundo cinza da tabela*/
+        padding: 5vw;
+        border-radius: 4vw;
+        width: 78vw;
+        height: 180vw;
+        margin-top: 5vw;
+        text-align: center;
+    }
+
+    .tabela_container {
+        display: flex;
+        justify-content: center;
+        gap: 8vw;
+        /*gap entre caixas*/
+        flex-wrap: wrap;
+        line-height: 7vw;
+    }
+
+    .tabela_caixa {
+        margin-top: 4vw;
+        padding: 2vw;
+        border-radius: 1.5vw;
+        width: 70vw;
+        height: 40vw;
+    }
+
+    .tabela_caixa h2 {
+        /*modalidades*/
+        font-size: 6vw;
+        padding: 2vw;
+        border-radius: 1.5vw;
+        text-align: center;
+        margin-bottom: 4vw;
+    }
+
+    .tabela_caixa p {
+        /*horarios*/
+        display: flex;
+        justify-content: space-between;
+        font-size: 5vw;
+    }
+
+    .tabela_caixa strong {
+        /*dias semana*/
+        margin-left: 1vw;
+        font-size: 5vw;
+        width: 25vw;
+    }
+
+    .tabela_caixa h6 {
+
+        font-family: Nunito;
+        font-size: 2.7vw;
+        margin-left: 32vw;
+        margin-top: -1.2vw;
+    }
+
+
+    .icons {
+        display: flex;
+        gap: 12px;
+    }
+
+    .secondary-header {
+        flex-direction: column;
+    }
+
+    .img_prin {
+        height: 80vw;
+    }
+
+    .img_div {
+        height: 20vw;
+        margin-bottom: 6vw;
+        margin-top: 6vw;
+    }
+
+    .blocks {
+        border: 50%;
+    }
+
+    .blocks {
+        margin-top: 2.4vw;
+    }
+
+    .blocks img {
+        border-radius: 10%;
+        width: 70vw;
+        margin-top: 3vw;
+        margin-bottom: 6vw;
+    }
+
+    .aula_experimental {
+        animation-delay: 3s;
+        width: 44vw;
+        height: 13vw;
+        border-radius: 10vw;
+        margin-top: 33vw;
+    }
+
+    .aula_experimental p {
+        font-size: 4.3vw;
+    }
+
+    .agendar {
+        width: 50vw;
+        height: 10vw;
+        margin-top: 8vw;
+        border-radius: 10vw;
+
+    }
+
+    .agendar img {
+        width: 30px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .agendar p {
+        font-size: 4vw;
+    }
+
+
+    .planos-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    .titulo {
+        /* "Nossos Planos" */
+        font-size: 12vw;
+        letter-spacing: 0.2vw;
+        padding-top: 3vw;
+        margin-bottom: 0vw;
+    }
+
+    .subtitulo {
+        /*explicação*/
+        padding: 4vw;
+        font-size: 4vw;
+        padding-top: 0vw;
+        margin-bottom: 0vw;
+    }
+
+    .planos_backg {
+        /*fundo cinza*/
+        width: 85vw;
+        height: 400vw;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 5vw;
+    }
+
+    .icon img {
+        margin-top: -2vw;
+        width: 6vw;
+        height: auto;
+    }
+
+    .container h2 {
+        /*mensal*/
+        font-size: 10vw;
+        padding-top: 2vw;
+        margin-bottom: 0vw;
+    }
+
+    .plano {
+        /*blocos*/
+        width: 53vw;
+        height: 67vw;
+        margin-top: 0vw;
+        margin-bottom: 5vw;
+        padding: 1vw;
+        border-radius: 10vw;
+    }
+
+
+    .plano h3 {
+        /*dias*/
+        font-size: 20vw;
+        margin-top: 12vw;
+        margin-bottom: 1vw;
+        line-height: 3vw;
+    }
+
+
+
+    .plano h4 {
+        /*Por semana*/
+        font-size: 5vw;
+        margin-top: 8vw;
+        line-height: 2vw;
+    }
+
+    .plano h5 {
+        /*valores*/
+        font-size: 13vw;
+        margin-top: 7.4vw;
+        margin-bottom: 0.5vw;
+    }
+
+    .plano h6 {
+        /*(sem turma fixa)*/
+        font-size: 2.7vw;
+        margin-top: 2vw;
+        letter-spacing: 0.27vw;
+    }
+
+    .plano img {
+        margin-top: 0.4vw;
+        height: 4vw;
+        width: auto;
+    }
+
+    .plano_anual {
+        width: 66vw;
+        height: 85vw;
+        margin-top: 0vw;
+        margin-bottom: 2vw;
+        padding: 1vw;
+        border-radius: 10vw;
+
+    }
+
+    .plano_anual img {
+        margin-top: 3vw;
+        height: 8vw;
+        width: auto;
+    }
+
+    .plano_anual h3 {
+        /*dias*/
+        font-size: 15vw;
+        margin-top: 18vw;
+        margin-bottom: 0vw;
+        line-height: 3vw;
+    }
+
+    .plano_anual h4 {
+        /*Por semana*/
+        font-size: 4vw;
+        line-height: 2vw;
+        margin-top: 6vw;
+    }
+
+    .plano_anual h5 {
+        /*valores*/
+        font-size: 13vw;
+        margin-top: 12vw;
+        margin-bottom: 0.5vw;
+    }
+
+    .plano_anual h6 {
+        font-size: 5vw;
+        line-height: 2vw;
+    }
+
+    .plano_anual p {
+        /*valor total*/
+        font-size: 2.7vw;
+        margin-top: 9.5vw;
+        margin-left: 32vw;
+    }
+
+    .location {
+        padding: 3vw;
+        border-radius: 4vw;
+        width: 85vw;
+        height: 130vw;
+        margin-top: 8vw;
+    }
+
+    .location p {
+        margin-top: 1vw;
+        font-size: 2.5vw;
+    }
+
+    .location h3 {
+        font-size: 3vw;
+        padding-top: 1vw;
+    }
+
+    .location iframe {
+        margin-top: 3vw;
+        border-radius: 1vw;
+        width: 72vw;
+        height: 100vw;
+        box-shadow: 10px 10px 20px rgba(2, 2, 0, 0.952);
+
+    }
+
+}
+
+@media (max-width: 500px){
+  .brand {
+      /*Black Horses*/
+      margin-top: -1vw;
+      font-size: 30px;
+      white-space: nowrap;
+      margin-bottom: 5px;
+  }
+
+  .text {
+      /*Artes Marciais*/
+      font-size: 15px;
+      letter-spacing: 1vw;
+      margin-left: 18px;
+      margin-bottom: 1vw;
+
+}
+}

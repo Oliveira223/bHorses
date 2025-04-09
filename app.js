@@ -46,3 +46,36 @@ let isMenuOpen = false;
             isMenuOpen = false; // Atualiza o estado do menu
         });
     });
+
+
+/* ----------------- Revelar -------------------------- */
+const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visivel');
+        // Se quiser animar só uma vez, descomente:
+        // observer.unobserve(entrada.target);
+      }
+    });
+  }, {
+    threshold: 0.2 // só ativa quando 20% da div estiver visível
+  });
+
+  document.querySelectorAll('.revelar').forEach((el) => observer.observe(el));
+
+
+/* ------------- Scroll para cobrir tela ------------- */
+let jaRolou = false;
+
+  window.addEventListener('scroll', () => {
+    if (jaRolou) return;
+
+    const secao = document.getElementById('links-imagens');
+    const posicao = secao.getBoundingClientRect().top;
+
+    // Ativa o scroll automático apenas uma vez
+    if (posicao < 150 && posicao > 0) {
+      jaRolou = true; // marca que já rolou
+      secao.scrollIntoView({ behavior: 'smooth' });
+    }
+  });

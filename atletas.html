@@ -4,22 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="blackhorse icon" href="bhicon.png" type="image/xcf">
+    <meta name="color-scheme" content="light">
 
-    <title>Boxe</title>
+    <link rel="blackhorse icon" href="icons/bhicon.png" type="image/xcf">
+    <title>Black Horses</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        body{
-            background-image: url(Backgrounds/Boxe_bkgrd.png);
-        }
-    </style>
 </head>
 
 <body>
-     <!-- Cabeçalho -->
-     <header class="fade-in">
+
+
+    <!-- Carregamento-->
+    <div class="loading">
+        <div id="preload">
+            <img src="icons/bhicon.png" alt="Carregando...">
+        </div>
+    </div>
+
+
+    <!-- Cabeçalho -->
+    <header class="fade-in">
 
 
         <a href="index.html">
@@ -38,12 +44,14 @@
             <a href="#planos">
                 <p>Informações</p>
             </a>
-            <a href="https://www.instagram.com/blackhorses.artesmarciais/">
+            <a href="https://www.instagram.com/blackhorses.artesmarciais/" target="_blank">
                 <p>Instagram</p>
             </a>
         </div>
 
     </header>
+
+    <!-- Fundo Quando menu aberto-->
 
     <div class="overlay">
         <div class="centered-content">
@@ -51,18 +59,19 @@
             <a href="index.html">
                 <p>Home</p>
             </a>
- 
-            <a href="index.html#planos">
+
+            <a href="sobre.html">
                 <p>Quem Somos</p>
             </a>
- 
-            <a href="index.html#planos">
+
+            <a href="#planos">
                 <p>Informações</p>
             </a>
- 
+
             <a href="eventos.html">
                 <p>Eventos</p>
             </a>
+
             <a
                 href="http://wa.me/5551999894785?fbclid=PAZXh0bgNhZW0CMTEAAaZNwMv0q_1PaB88URPpW2RdaG_IosV5YF_SSCEHOgOmYojSTq-BX2zYwTE_aem_xPeC3zsSZ45re2eY1knByA">
                 <h4>Aula Experimental</h4>
@@ -80,12 +89,23 @@
 
 
 
+    <img src="Fotos/UCS11168.webp" alt="Imagem equipe blackhorses" class="img_prin_sub">
 
 
+    <div class="aula_experimental">
+        <a href="http://wa.me/5551999894785">
+            <div class="texto_rolante">
+                <span>Comece agora</span>
+                <span>Treine com a gente</span>
+                <span>VEM SER BLACK!</span>
+            </div>
+        </a>
+    </div>
 
+    
 
-
-    <div class="construção">
+  
+    <div class="construção" style="margin-top: 20vw;">
         <h1>Em construção</h1>
         <img src="Imagens/em_construção.webp" alt="">
    </div>
@@ -100,42 +120,47 @@
          </a>
 
 
-  <!----------------------  Rodapé  ----------------->
-  <footer class="footer">
-        
-    <div class="footer_container">
-       
-       <div> 
-            <a href="">
-                <div class="footer_links">
+
+
+
+
+    <div style="height: 150vw;"></div>
+    <!----------------------  Rodapé  ----------------->
+    <footer class="footer">
+
+        <div class="footer_container">
+
+            <div>
+                <a href="">
+                    <div class="footer_links">
                         <img src="icons/inst_icon.png" alt="">
                         <p>Instagram</p>
-                </div>
-            </a>
-           
-            <a href="">
-                <div class="footer_links">
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="footer_links">
                         <img src="icons/whatsapp_icon.png" alt="">
                         <p>Whatsapp</p>
-                </div>
-            </a>
-            <a href="">
-                <div class="footer_links">
-                    <img src="icons/icons8-mail-96.png" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="footer_links">
+                        <img src="icons/icons8-mail-96.png" alt="">
                         <p>Gmail</p>
-                </div>
-            </a>
-       </div>
+                    </div>
+                </a>
+            </div>
 
-        <div class="footer_logo">
-        <img src="icons/bhicon_transparent.png" alt="">
+            <div class="footer_logo">
+                <img src="icons/bhicon_transparent.png" alt="">
+            </div>
+
         </div>
 
-    </div>
-  
-    <p class="footer_copyright"> &copy; 2025 Black Horses. Todos os direitos reservados.</p>
+        <p class="footer_copyright"> &copy; 2025 Black Horses. Todos os direitos reservados.</p>
 
-</footer>
+    </footer>
 
 
 
