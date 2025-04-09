@@ -67,15 +67,26 @@ const observer = new IntersectionObserver((entradas) => {
 /* ------------- Scroll para cobrir tela ------------- */
 let jaRolou = false;
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => 
+  {
     if (jaRolou) return;
 
     const secao = document.getElementById('links-imagens');
     const posicao = secao.getBoundingClientRect().top;
 
     // Ativa o scroll automático apenas uma vez
-    if (posicao < 150 && posicao > 0) {
+     if (posicao < 150 && posicao > 0) 
+     {
       jaRolou = true; // marca que já rolou
       secao.scrollIntoView({ behavior: 'smooth' });
+
+       // Libera novamente depois de 4 segundos
+       setTimeout(() => 
+       {
+         jaRolou = false;
+       }, 4000);
+       
+      }
     }
-  });
+  );
+
