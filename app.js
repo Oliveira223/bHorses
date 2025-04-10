@@ -1,17 +1,34 @@
+// ---------------------- Tela De Carremento --------------------- \\
+const tempoMinimo = 300; // mínimo 2 segundos
+const inicio = Date.now();
+
 window.onload = function () {
-    document.getElementById("preload").style.display = "none";  // Esconde a tela de carregamento
-    document.getElementById("conteudo").style.display = "block";  // Exibe o conteúdo
+  const tempoDecorrido = Date.now() - inicio;
+  const tempoRestante = tempoMinimo - tempoDecorrido;
+
+  setTimeout(() => {
+    const preload = document.getElementById("preload");
+    const conteudo = document.getElementById("conteudo");
+
+    // Aplica fade
+    preload.classList.add("esconder");
+
+    // Espera a transição de 1s terminar antes de esconder
+    setTimeout(() => {
+      preload.style.display = "none";
+      conteudo.style.display = "block";
+    }, 1000); // deve ser igual ao tempo da transição (1s)
+  }, tempoRestante > 0 ? tempoRestante : 0);
 };
 
+// ------------------- Menu De Navegação --------------------- \\
 const navIcon = document.querySelector('.nav-icon-5'); // O ícone do menu
 const overlay = document.querySelector('.overlay'); // O overlay
 const overlayLinks = document.querySelectorAll('.overlay a'); // Links dentro do overlay
 
 
-/* ---------------------------EVENTO DE CLIQUE ----------------------------- */
+// -----------------------EVENTO DE CLIQUE ---------------- \\
 let isMenuOpen = false;
-
-
 
     /*decteca o clique no navMenu*/
     navIcon.addEventListener('click', () => {
@@ -33,8 +50,6 @@ let isMenuOpen = false;
         }
     });
 
-/* ------------------------------------------------------------------------ */
-
 
     // Fechar o overlay ao clicar em um link dentro dele
     overlayLinks.forEach(link => {
@@ -48,7 +63,7 @@ let isMenuOpen = false;
     });
 
 
-/* ----------------- Revelar -------------------------- */
+// ----------------- Revelar Containers ------------------------- \\
 const observer = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
       if (entrada.isIntersecting) {
@@ -64,18 +79,19 @@ const observer = new IntersectionObserver((entradas) => {
   document.querySelectorAll('.revelar').forEach((el) => observer.observe(el));
 
 
-/* ------------- Scroll para cobrir tela ------------- */
+// --------------- Scroll para cobrir tela ------------------- \\
 let jaRolou = false;
 
   window.addEventListener('scroll', () => 
   {
+    if (window.innerWidth >= 768) return;  //apenas funciona para mobile
     if (jaRolou) return;
 
     const secao = document.getElementById('links-imagens');
     const posicao = secao.getBoundingClientRect().top;
 
     // Ativa o scroll automático apenas uma vez
-     if (posicao < 150 && posicao > 0) 
+     if (posicao < 200 && posicao > -80) //200 acima e 80 abaixo da viewport
      {
       jaRolou = true; // marca que já rolou
       secao.scrollIntoView({ behavior: 'smooth' });
@@ -85,7 +101,7 @@ let jaRolou = false;
        {
          jaRolou = false;
        }, 4000);
-       
+
       }
     }
   );
