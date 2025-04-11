@@ -16,27 +16,27 @@
 
           /* Estilo para a tela de carregamento */
           #preload {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgb(22, 22, 22);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.3s ease;
-            opacity: 1;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgb(22, 22, 22);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 9999;
+              transition: opacity 0.3s ease;
+              opacity: 1;
           }
-          
+
           #preload.esconder {
-            opacity: 0;
-            pointer-events: none;
+              opacity: 0;
+              pointer-events: none;
           }
-          
+
           #conteudo {
-            display: none;
+              display: none;
           }
 
           .loading img {
@@ -254,7 +254,7 @@
 
 
 
-        
+
 
 
 
@@ -293,18 +293,18 @@
           }
 
           .img_boxe {
-            object-fit: cover;
-            object-position: center 30%;
+              object-fit: cover;
+              object-position: center 30%;
           }
-          
+
           .img_muay {
-            object-fit: cover;
-            object-position: center 50%;
+              object-fit: cover;
+              object-position: center 50%;
           }
-          
+
           .img_hapkido {
-            object-fit: cover;
-            object-position: 100% 0%;
+              object-fit: cover;
+              object-position: 100% 0%;
           }
 
           /*Cabeçalho*/
@@ -1012,6 +1012,80 @@
           /* ------------------------------- */
 
 
+          .arrow-container{
+            height: 30vw;
+            position: relative;
+            display: none;
+            
+          }
+
+          .arrow {
+              display: none;
+              opacity: 0;
+              position: absolute;
+              left: 40%;
+              top: 20vw;
+              
+          }
+
+          .arrow-first {
+            animation: arrow-movement 4s 0s ease-in-out infinite;
+          }
+          
+          .arrow-second {
+            animation: arrow-movement 4s 1s ease-in-out infinite;
+          }
+          
+          .arrow-third {
+            animation: arrow-movement 4s 2s ease-in-out infinite;
+          }
+          
+          .arrow-fourth {
+            animation: arrow-movement 4s 3s ease-in-out infinite;
+          }
+
+          .arrow-fifth {
+            animation: arrow-movement 4s 4s ease-in-out infinite;
+          }
+
+          .arrow:before,
+          .arrow:after {
+              background: #fff;
+              content: '';
+              display: block;
+              height: 1.2vw;  /* Grossura da flecha */
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 25vw;  /* Tamanho da flecha */
+          }
+
+          .arrow:before {
+              transform: rotate(30deg) translateX(-39.5%);
+              transform-origin: top left;
+          }
+
+          .arrow:after {
+              transform: rotate(-30deg) translateX(39.5%);
+              transform-origin: top right;
+          }
+
+          @keyframes arrow-movement {
+              0% {
+                  opacity: 0;
+                  top: 20%;
+              }
+
+              70% {
+                  opacity: 1;
+              }
+
+              100% {
+                  opacity: 0;
+              }
+          }
+
+
 
           /* LINKS PARA OUTRAS PÁGINAS */
           .container-links {
@@ -1019,7 +1093,7 @@
               flex-direction: column;
               gap: 0vw;
               width: 100%;
-              margin-top: 8vw;
+              margin-top: 4vw;
           }
 
           .link-imagem {
@@ -1220,8 +1294,8 @@
               }
 
 
-              
-              
+
+
 
               .img_prin {
                   height: 80vw;
@@ -1232,19 +1306,19 @@
               }
 
               .img_boxe {
-                object-fit: cover;
-                object-position: center 20%;
+                  object-fit: cover;
+                  object-position: center 20%;
               }
-              
+
               .img_muay {
-                object-fit: cover;
-                object-position: center 60%;
+                  object-fit: cover;
+                  object-position: center 60%;
               }
-              
+
               .img_hapkido {
-                object-fit: cover;
-                object-position: 100% 0%;
-                transform: scale(1);
+                  object-fit: cover;
+                  object-position: 100% 0%;
+                  transform: scale(1);
               }
 
               /* ---------- NavMenu ----------------- */
@@ -1528,6 +1602,16 @@
               }
 
               /* ------------------------------------ */
+
+              .arrow {
+                  display: block;  
+              }
+
+              .arrow-container{
+                display: block;
+                
+              }
+      
 
               /* ----------Links -------------- */
 

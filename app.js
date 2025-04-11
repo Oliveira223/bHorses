@@ -91,7 +91,7 @@ let jaRolou = false;
     const posicao = secao.getBoundingClientRect().top;
 
     // Ativa o scroll automático apenas uma vez
-     if (posicao < 200 && posicao > -80) //200 acima e 80 abaixo da viewport
+     if (posicao < 350 && posicao > -80) //200 acima e 80 abaixo da viewport
      {
       jaRolou = true; // marca que já rolou
       secao.scrollIntoView({ behavior: 'smooth' });
