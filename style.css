@@ -11,7 +11,8 @@
           }
 
           :root {
-              color-scheme: light only;
+              /* color-scheme: light only; */
+              color-scheme: dark;
           }
 
           /* Estilo para a tela de carregamento */
