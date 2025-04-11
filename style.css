@@ -917,9 +917,6 @@
 
 
 
-
-
-
           .tabela_caixa h2 {
               font-family: 'Inter', sans-serif;
               font-size: 2vw;
@@ -934,6 +931,7 @@
           }
 
           .tabela_caixa p {
+              color: #000;
               display: flex;
               justify-content: space-between;
               margin-top: 1vw;
