@@ -259,10 +259,6 @@
 
 
 
-
-
-
-
           /*Imagem Equipe Black Horses*/
           .img_prin {
               width: 100vw;
@@ -320,7 +316,6 @@
               background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.445) 80%, rgba(0, 0, 0, 0.342) 87%, transparent);
               position: relative;
               transition: box-shadow 0.3s ease, padding 0.3s ease;
-
           }
 
 
@@ -633,7 +628,7 @@
               margin-right: auto;
               margin-left: auto;
               margin-top: 9vw;
-              margin-bottom: 7vw;
+              margin-bottom: 9vw;
 
               display: flex;
               justify-content: center;
@@ -763,6 +758,22 @@
               margin-top: 5px;
               font-size: 1vw;
               color: gray;
+          }
+
+          details[open] ul {
+              animation: fadeSlide 0.4s ease-in-out;
+          }
+
+          @keyframes fadeSlide {
+              from {
+                  opacity: 0;
+                  transform: translateY(-10px);
+              }
+
+              to {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
           }
 
           /* -------------------------------------- */
@@ -1010,79 +1021,155 @@
 
           /* ------------------------------- */
 
-
-          .arrow-container{
-            height: 30vw;
-            position: relative;
-            display: none;
-            
+          .scroll_container {
+              height: 45vw;
+              text-align: center;
           }
 
-          .arrow {
-              display: none;
-              opacity: 0;
-              position: absolute;
-              left: 40%;
-              top: 20vw;
+          .scroll p {
+              font-size: 4.5vw;
+              font-family: 'Inter', sans-serif;
+              color: #cfcfcf;
+              animation: puxa_texto 4s ease-in-out infinite normal;
+              transform-origin: center center;
+          }
+
+          .scroll img {
+              margin-top: 5vw;
+              width: 10vw;
+              height: auto;
+              margin-left: 40vw;
+              animation: puxa 4s ease-in-out infinite normal;
+              transform-origin: center center;
+          }
+
+
+
+          .sombra {
+            position: relative;
+            margin-top: -11vw;
+            margin-left: 62vw;
+            z-index: -1;
+            background-color: #222222de;
+            width: 9vw;
+            height: 9vw;
+            border-radius: 50vw;
+            opacity: 0;
+            animation: sombra 4s ease-in-out infinite normal;
+            transform-origin: center center;
+          }
+
+          @keyframes sombra {
+                0% {
+                    transform: translateY(0) rotateZ(0deg) rotateX(0deg);
+                }
+  
+                25% {
+                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
+                }
+  
+                30% {
+                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
+                }
+  
+                32% {
+                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
+                }
+  
+                35% {
+                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
+  
+                }
+  
+                50% {
+                   
+                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
+                }
+  
+                60% {
+                    
+                    transform: translateY(0vw) rotateZ(0deg) rotateX(0deg);
+                }
+  
+                75% {
+                    transform: translateY(0vw) rotateZ(0) rotateX(0deg);
+                }
+  
+                80% {
+                    opacity: 1;
+                    transform: translateY(0px) rotateZ(0deg) rotateX(deg);
+                }
+            }
+
+          @keyframes puxa {
+              0% {
+                  transform: translateY(0) rotateZ(0deg) rotateX(0deg);
+              }
+
+              25% {
+                  transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
+              }
+
+              30% {
+                  transform: translateY(20vw) rotateZ(-15deg) rotateX(0deg);
+              }
+
+              32% {
+                  transform: translateY(20vw) rotateZ(-18deg) rotateX(25deg);
+              }
+
+              35% {
+                  transform: translateY(20vw) rotateZ(-20deg) rotateX(30deg);
+
+              }
+
+              50% {
+                  transform: translateY(20vw) rotateZ(-20deg) rotateX(30deg);
+              }
+
+              60% {
+                  transform: translateY(0vw) rotateZ(-20deg) rotateX(30deg);
+              }
+
+              75% {
+                  transform: translateY(0vw) rotateZ(0) rotateX(0deg);
+              }
+
+              80% {
+                  transform: translateY(0px) rotateZ(0deg) rotateX(deg);
+              }
+
+            
               
           }
 
-          .arrow-first {
-            animation: arrow-movement 4s 0s ease-in-out infinite;
-          }
-          
-          .arrow-second {
-            animation: arrow-movement 4s 1s ease-in-out infinite;
-          }
-          
-          .arrow-third {
-            animation: arrow-movement 4s 2s ease-in-out infinite;
-          }
-          
-          .arrow-fourth {
-            animation: arrow-movement 4s 3s ease-in-out infinite;
-          }
-
-          .arrow-fifth {
-            animation: arrow-movement 4s 4s ease-in-out infinite;
-          }
-
-          .arrow:before,
-          .arrow:after {
-              background: #fff;
-              content: '';
-              display: block;
-              height: 1.2vw;  /* Grossura da flecha */
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 25vw;  /* Tamanho da flecha */
-          }
-
-          .arrow:before {
-              transform: rotate(30deg) translateX(-39.5%);
-              transform-origin: top left;
-          }
-
-          .arrow:after {
-              transform: rotate(-30deg) translateX(39.5%);
-              transform-origin: top right;
-          }
-
-          @keyframes arrow-movement {
+          @keyframes puxa_texto {
               0% {
-                  opacity: 0;
-                  top: 20%;
+                  transform: translateY(0vw) rotateZ(0deg) rotateX(0deg);
               }
 
-              70% {
-                  opacity: 1;
+              
+              50% {
+                  transform: translateY(0vw) rotateZ(0deg) rotateX(0deg);
+              }
+
+              65% {
+                  transform: translateY(-4vw) rotateZ(0deg) rotateX(20deg);
+              }
+
+              75% {
+                  transform: translateY(-4vw) rotateZ(0) rotateX(0deg);
+              }
+
+              80% {
+                  transform: translateY(-4vw) rotateZ(0deg) rotateX(0deg);
               }
 
               100% {
-                  opacity: 0;
-              }
+                transform: translateY(0vw) rotateZ(0deg) rotateX(0deg);
+            }
           }
+
 
 
 
@@ -1092,7 +1179,6 @@
               flex-direction: column;
               gap: 0vw;
               width: 100%;
-              margin-top: 4vw;
           }
 
           .link-imagem {
@@ -1364,6 +1450,9 @@
 
               }
 
+
+
+              /* Vem ser black */
               .aula_experimental {
                   margin: 25vw auto 0;
                   /* top auto bottom em uma linha */
@@ -1602,15 +1691,23 @@
 
               /* ------------------------------------ */
 
-              .arrow {
-                  display: block;  
+              .scroll_container {
+                  height: 45vw;
               }
 
-              .arrow-container{
-                display: block;
-                
+              .scroll p {
+                  font-size: 4.5vw;
               }
-      
+
+              .scroll img {
+                  margin-top: 5vw;
+                  width: 10vw;
+                  height: auto;
+                  transform-origin: center center;
+              }
+
+
+
 
               /* ----------Links -------------- */
 

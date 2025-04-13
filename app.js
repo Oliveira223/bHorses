@@ -68,14 +68,13 @@ const observer = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
       if (entrada.isIntersecting) {
         entrada.target.classList.add('visivel');
-        // Se quiser animar só uma vez, descomente:
-        // observer.unobserve(entrada.target);
       }
     });
   }, {
     threshold: 0.2 // só ativa quando 20% da div estiver visível
   });
 
+  
   document.querySelectorAll('.revelar').forEach((el) => observer.observe(el));
 
 
@@ -90,13 +89,13 @@ let jaRolou = false;
     const secao = document.getElementById('links-imagens');
     const posicao = secao.getBoundingClientRect().top;
 
-    // Ativa o scroll automático apenas uma vez
-     if (posicao < 350 && posicao > -80) //200 acima e 80 abaixo da viewport
+    //scroll automático 
+     if (posicao < 360 && posicao > -100) 
      {
       jaRolou = true; // marca que já rolou
       secao.scrollIntoView({ behavior: 'smooth' });
 
-       // Libera novamente depois de 4 segundos
+       // Libera scroll depois de 4 segundos
        setTimeout(() => 
        {
          jaRolou = false;
