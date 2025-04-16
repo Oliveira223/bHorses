@@ -1,5 +1,5 @@
 // ---------------------- Tela De Carremento --------------------- \\
-const tempoMinimo = 300; // mínimo 2 segundos
+const tempoMinimo = 300;
 const inicio = Date.now();
 
 window.onload = function () {
@@ -74,7 +74,7 @@ const observer = new IntersectionObserver((entradas) => {
     threshold: 0.2 // só ativa quando 20% da div estiver visível
   });
 
-  
+
   document.querySelectorAll('.revelar').forEach((el) => observer.observe(el));
 
 
@@ -104,4 +104,22 @@ let jaRolou = false;
       }
     }
   );
-
+  
+  window.addEventListener("load", () => {
+    const entries = performance.getEntriesByType("resource");
+  
+    let totalTime = 0;
+  
+    entries.forEach(entry => {
+      console.log(`📦 ${entry.name}`);
+      console.log(`↳ Tipo: ${entry.initiatorType}`);
+      console.log(`↳ Início: ${entry.startTime.toFixed(2)}ms`);
+      console.log(`↳ Duração total: ${entry.duration.toFixed(2)}ms`);
+      console.log("------------------------");
+  
+      totalTime += entry.duration;
+    });
+  
+    console.log(`⏱️ Tempo total de carregamento dos recursos: ${totalTime.toFixed(2)}ms`);
+  });
+  
