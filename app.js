@@ -2,7 +2,7 @@
 const tempoMinimo = 300;
 const inicio = Date.now();
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
   const tempoDecorrido = Date.now() - inicio;
   const tempoRestante = tempoMinimo - tempoDecorrido;
 
@@ -17,9 +17,10 @@ window.onload = function () {
     setTimeout(() => {
       preload.style.display = "none";
       conteudo.style.display = "block";
-    }, 1000); // deve ser igual ao tempo da transição (1s)
+    }, 1000);
   }, tempoRestante > 0 ? tempoRestante : 0);
-};
+});
+
 
 // ------------------- Menu De Navegação --------------------- \\
 const navIcon = document.querySelector('.nav-icon-5'); // O ícone do menu

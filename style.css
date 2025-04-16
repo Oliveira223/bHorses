@@ -46,33 +46,41 @@
               /* Adiciona animação de rotação */
           }
 
-
-
           @font-face {
-              font-family: 'MinhaFonte';
-              src: url(Fonts/handelsonsix_cyr_six.otf) format('truetype');
+            font-family: 'Inter';
+            src: url('/Fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+            font-display: swap;
           }
 
           @font-face {
-              font-family: 'Roboto';
-              src: url(Fonts/Roboto-VariableFont_wdth\,wght.ttf) format('truetype');
-          }
-
-          @font-face {
-              font-family: 'Inter';
-              src: url(Fonts/Inter-VariableFont_opsz\,wght.ttf) format('truetype');
-          }
-
-          @font-face {
-              font-family: 'Nunito';
-              src: url(Fonts/Nunito-VariableFont_wght.ttf) format('truetype');
-          }
-
-          @font-face {
-              font-family: 'BebasNeue';
-              src: url(Fonts/BebasNeue-Regular.ttf) format('truetype');
-          }
-
+            font-family: 'MinhaFonte';
+            src: url(Fonts/handelsonsix_cyr_six.otf) format('truetype');
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Roboto';
+            src: url(Fonts/Roboto-VariableFont_wdth,wght.ttf) format('truetype');
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url(Fonts/Inter-VariableFont_opsz,wght.ttf) format('truetype');
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Nunito';
+            src: url(Fonts/Nunito-VariableFont_wght.ttf) format('truetype');
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'BebasNeue';
+            src: url(Fonts/BebasNeue-Regular.ttf) format('truetype');
+            font-display: swap;
+        }
 
 
           /* --------------  ANIMAÇÕES  ------------------------------- */
@@ -85,23 +93,6 @@
               100% {
                   transform: rotate(360deg);
                   /* Gira a imagem 360 graus */
-              }
-          }
-
-          @keyframes zoomEffect {
-              0% {
-                  transform: scale(1);
-                  /* Inicia com o tamanho normal */
-              }
-
-              50% {
-                  transform: scale(1.15);
-                  /* Aumenta para 20% */
-              }
-
-              100% {
-                  transform: scale(1);
-                  /* Volta ao tamanho normal */
               }
           }
 
@@ -517,6 +508,7 @@
 
           .img_div {
               height: 10vw;
+              width: auto;
               display: block;
               margin-top: 5vw;
               margin-bottom: 5vw;
@@ -1257,6 +1249,7 @@
 
 
               .img_div {
+                 width: auto;
                   height: 20vw;
                   margin-bottom: 10vw;
                   margin-top: 10vw;
