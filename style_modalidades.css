@@ -1,0 +1,21 @@
+.construção {
+    text-align: center;
+}
+
+.construção h1 {
+    color: rgb(212, 173, 0);
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 6vw;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.construção img {
+    width: 40vw;
+    height: auto;
+}
+
+
+/* ----------------------------------*/
