@@ -35,8 +35,13 @@
             pointer-events: none;
           }
           
+
           #conteudo {
-            display: none;
+            opacity: 0;
+            transition: opacity 1s;
+          }
+          #conteudo.visivel {
+            opacity: 1;
           }
 
           .loading img {

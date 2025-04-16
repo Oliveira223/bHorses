@@ -3,22 +3,15 @@ const tempoMinimo = 300;
 const inicio = Date.now();
 
 document.addEventListener("DOMContentLoaded", function () {
-  const tempoDecorrido = Date.now() - inicio;
-  const tempoRestante = tempoMinimo - tempoDecorrido;
+  const preload = document.getElementById("preload");
+  const conteudo = document.getElementById("conteudo");
+
+  preload.classList.add("esconder");
 
   setTimeout(() => {
-    const preload = document.getElementById("preload");
-    const conteudo = document.getElementById("conteudo");
-
-    // Aplica fade
-    preload.classList.add("esconder");
-
-    // Espera a transição de 1s terminar antes de esconder
-    setTimeout(() => {
-      preload.style.display = "none";
-      conteudo.style.display = "block";
-    }, 1000);
-  }, tempoRestante > 0 ? tempoRestante : 0);
+    preload.style.display = "none";
+    conteudo.classList.add("visivel"); // apenas tira o "fade"
+  }, 1000);
 });
 
 
