@@ -104,22 +104,3 @@ let jaRolou = false;
       }
     }
   );
-  
-  window.addEventListener("load", () => {
-    const entries = performance.getEntriesByType("resource");
-  
-    let totalTime = 0;
-  
-    entries.forEach(entry => {
-      console.log(`📦 ${entry.name}`);
-      console.log(`↳ Tipo: ${entry.initiatorType}`);
-      console.log(`↳ Início: ${entry.startTime.toFixed(2)}ms`);
-      console.log(`↳ Duração total: ${entry.duration.toFixed(2)}ms`);
-      console.log("------------------------");
-  
-      totalTime += entry.duration;
-    });
-  
-    console.log(`⏱️ Tempo total de carregamento dos recursos: ${totalTime.toFixed(2)}ms`);
-  });
-  

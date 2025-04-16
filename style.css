@@ -488,6 +488,7 @@
           .blocks {
               margin-top: 2vw;
               text-align: center;
+              margin-bottom: 10vw;
               /* Centraliza as imagens */
           }
 
@@ -498,6 +499,7 @@
               display: inline-block;
               margin: 0 3vw;
               box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
+              
 
 
           }
@@ -516,7 +518,10 @@
           .img_div {
               height: 10vw;
               display: block;
-              margin: 0 auto;
+              margin-top: 5vw;
+              margin-bottom: 5vw;
+              margin-right: auto;
+              margin-left: auto;
           }
 
 
@@ -633,8 +638,8 @@
               background-color: #1fc55c;
               margin-right: auto;
               margin-left: auto;
-              margin-top: 9vw;
-              margin-bottom: 7vw;
+              
+              margin-bottom: 10vw;
 
               display: flex;
               justify-content: center;
@@ -695,7 +700,7 @@
 
 
           .titulo {
-              /* "Nossos Planos" */
+              /* h2 das informações */
               text-align: center;
               margin-top: 2vw;
               font-family: 'MinhaFonte', sans-serif;
@@ -703,7 +708,7 @@
               letter-spacing: 0.2vw;
               margin-bottom: 0vw;
               color: #dddbdb;
-              text-shadow: 0 0 10px rgb(0, 0, 0);
+              text-shadow: 0.4vw 0.4vw 1vw rgba(0, 0, 0, 0.795);
           }
 
 
@@ -724,7 +729,6 @@
               padding-top: 2vw;
               padding-bottom: 2vw;
 
-              margin-bottom: 5vw;
           }
 
           .info {
@@ -784,7 +788,7 @@
               background-color: #c5db00;
               width: 50vw;
               height: 3.5vw;
-              border-radius: 1.4vw;
+              border-radius: 4vw;
               display: flex;
               justify-content: center;
               /* eixo x */
@@ -844,43 +848,20 @@
 
 
           .planos_sec_container {
-              width: 100%;
-              display: flex;
-              justify-content: space-between;
-          }
-
-          .planos_sec_container_blocks {
-              margin-top: 5vw;
-               padding: 8vw;
-              /*distancia entre itens*/
-          }
-
-
-          /* to-do */
-          .planos_sec_container_blocks h1 {
-              color: #d4d3d3;
-              font-size: 5vw;
-              font-family: 'MinhaFonte', sans-serif;
-              letter-spacing: 0.2vw;
-          }
-
-          .planos_sec_container_blocks h2 {
-              margin-top: 10px;
-              font-size: 6vw;
-              font-weight: 600;
-              font-family: 'Nunito', 'Inter', monospace, sans-serif;
-              color: #ffffff;
-          }
-
-          .planos_sec_container_blocks p {
-            font-family: 'Nunito';
-            display: block;
+            width: 85%;
+              border-radius: 5vw;
+          
+              /* background-color: #3d3d3dcc; */
+              background-color: rgba(61, 61, 61, 0.801);
+              margin-right: auto;
+              margin-left: auto;
               text-align: center;
-              margin-top: 5px;
-              font-size: 1.5vw;
-              color: gray;
-        }
+              padding-top: 2vw;
+              padding-bottom: 2vw;
 
+             
+
+          }
 
 
 
@@ -892,7 +873,6 @@
               background-color: rgba(61, 61, 61, 0.801);
               margin-right: auto;
               margin-left: auto;
-              margin-bottom: 3vw;
               text-align: center;
               padding-top: 4vw;
               padding-bottom: 4vw;
@@ -978,9 +958,10 @@
               width: 90%;
               border-radius: 5vw;
               background-color: rgba(61, 61, 61, 0.801);
-
-              margin-top: 5vw;
               text-align: center;
+
+            
+        
               margin-left: auto;
               margin-right: auto;
               padding-top: 2vw;
@@ -1016,7 +997,6 @@
 
           /* LINKS PARA OUTRAS PÁGINAS */
           .container-links {
-            margin-top: 5vw;
               display: flex;
               flex-direction: row;
               gap: 0vw;
@@ -1278,15 +1258,20 @@
 
               .img_div {
                   height: 20vw;
-                  margin-bottom: 6vw;
-                  margin-top: 6vw;
+                  margin-bottom: 10vw;
+                  margin-top: 10vw;
+              }
+
+              .blocks{
+                margin-bottom: 20vw;
               }
 
               .blocks img {
                   border-radius: 10%;
                   width: 70vw;
                   margin-top: 3vw;
-                  margin-bottom: 6vw;
+                margin-bottom: 10vw;
+                  
 
               }
 
@@ -1325,16 +1310,16 @@
                   letter-spacing: 0.2vw;
                   padding-top: 3vw;
                   margin-top: 2vw;
-
+                  text-shadow: 0 0 10px rgb(0, 0, 0);
               }
-
+             
 
               /* ------------------  planos  -------------------*/
               .planos_backg {
                   /*fundo cinza*/
                   width: 100%;
-                  margin-bottom: 5vw;
                   border-radius: 0vw;
+                  padding-bottom: 8vw;
               }
 
 
@@ -1346,7 +1331,7 @@
 
               .planos_caixa {
                   margin-top: 10px;
-                  width: 90%;
+                  width: 85%;
                   height: 8vw;
                   border-radius: 10px;
               }
@@ -1364,7 +1349,7 @@
 
               .planos_caixa_anual {
                   margin-top: 10px;
-                  width: 100%;
+                  width: 95%;
                   height: 20%;
                   border-radius: 12px;
               }
@@ -1400,35 +1385,33 @@
                   margin-top: 3px;
                   margin-bottom: 5px;
                   font-size: 3vw;
+                  padding-right: 8vw;
               }
 
 
               .planos_sec_container {
                 width: 100%;
+                border-radius: 0vw;
                 display: block;
                 justify-content: space-between;
+                padding-bottom: 8vw;
             }
 
-            .planos_sec_container_blocks h1{    
-                font-size: 10vw;
-        
-        }
-
-              .planos_sec_container_blocks p{
-                font-size: 5vw;
-              }
+         
 
 
               /* ---------------------------------------*/
 
 
-
+            /* converse conosoco */
               .agendar {
                   width: 55%;
                   height: 14vw;
                   border-radius: 10vw;
                   padding-right: 8px;
                   padding-left: 8px;
+                  margin-bottom: 20vw;
+                  
 
               }
 
@@ -1451,18 +1434,17 @@
                   border-radius: 0vw;
                   width: 100%;
               
-                  margin-top: 5px;
                   margin-right: auto;
                   margin-left: auto;
-                  margin-bottom: 15vw;
+                  padding-bottom: 10vw;
               }
 
               .tabela_container {
                 margin-top: 3vw;
-                margin-bottom: 4vw;
+    
                   display: flex;
                   justify-content: center;
-                  gap: 8vw;
+                  gap: 10vw;
                   /*gap entre caixas*/
                   flex-wrap: wrap;
                   line-height: 7vw;
@@ -1517,16 +1499,15 @@
               .location {
                   text-align: center;
                   width: 100%;
-                  margin-top: 1vw;
                   border-radius: 0vw;
-                  margin-bottom: 10vw;
                   margin-right: auto;
                   margin-left: auto;
+                  padding-bottom: 10vw;
 
               }
 
               .location p {
-                  margin-top: 1vw;
+                  margin-top: 5vw;
                   font-size: 2.5vw;
               }
 
