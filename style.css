@@ -11,33 +11,32 @@
           }
 
           :root {
-              /* color-scheme: light only; */
-              color-scheme: dark;
+              color-scheme: light only;
           }
 
           /* Estilo para a tela de carregamento */
           #preload {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: rgb(22, 22, 22);
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              z-index: 9999;
-              transition: opacity 0.3s ease;
-              opacity: 1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(22, 22, 22);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.3s ease;
+            opacity: 1;
           }
-
+          
           #preload.esconder {
-              opacity: 0;
-              pointer-events: none;
+            opacity: 0;
+            pointer-events: none;
           }
-
+          
           #conteudo {
-              display: none;
+            display: none;
           }
 
           .loading img {
@@ -255,6 +254,10 @@
 
 
 
+        
+
+
+
 
 
 
@@ -290,18 +293,18 @@
           }
 
           .img_boxe {
-              object-fit: cover;
-              object-position: center 30%;
+            object-fit: cover;
+            object-position: center 30%;
           }
-
+          
           .img_muay {
-              object-fit: cover;
-              object-position: center 50%;
+            object-fit: cover;
+            object-position: center 50%;
           }
-
+          
           .img_hapkido {
-              object-fit: cover;
-              object-position: 100% 0%;
+            object-fit: cover;
+            object-position: 100% 0%;
           }
 
           /*Cabeçalho*/
@@ -316,6 +319,7 @@
               background: linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.445) 80%, rgba(0, 0, 0, 0.342) 87%, transparent);
               position: relative;
               transition: box-shadow 0.3s ease, padding 0.3s ease;
+
           }
 
 
@@ -575,6 +579,8 @@
 
 
           /* -------- VEM SEM BLACK ---------- */
+
+          /* todo */
           .texto_rolante {
               height: 2.5vw;
               /* = font-size = line height */
@@ -628,7 +634,7 @@
               margin-right: auto;
               margin-left: auto;
               margin-top: 9vw;
-              margin-bottom: 9vw;
+              margin-bottom: 7vw;
 
               display: flex;
               justify-content: center;
@@ -708,9 +714,10 @@
           .planos_backg {
               /*fundo cinza*/
               width: 85%;
-              border-radius: 4vw;
+              border-radius: 5vw;
+          
               /* background-color: #3d3d3dcc; */
-              background-image: radial-gradient(circle, #313230e7, #353736da, #393b3be5, #3f3f40ea, #444444e3);
+              background-color: rgba(61, 61, 61, 0.801);
               margin-right: auto;
               margin-left: auto;
               text-align: center;
@@ -758,22 +765,6 @@
               margin-top: 5px;
               font-size: 1vw;
               color: gray;
-          }
-
-          details[open] ul {
-              animation: fadeSlide 0.4s ease-in-out;
-          }
-
-          @keyframes fadeSlide {
-              from {
-                  opacity: 0;
-                  transform: translateY(-10px);
-              }
-
-              to {
-                  opacity: 1;
-                  transform: translateY(0);
-              }
           }
 
           /* -------------------------------------- */
@@ -853,26 +844,15 @@
 
 
           .planos_sec_container {
-              width: 86%;
-              /* igual à .planos_backg */
-              margin: 0 auto;
+              width: 100%;
               display: flex;
               justify-content: space-between;
-              margin-bottom: 10vw;
           }
 
           .planos_sec_container_blocks {
-              text-align: center;
-              /* background-color: rgba(61, 61, 61, 0.801); */
-              background-image: radial-gradient(circle, #313230e7, #353736da, #393b3be5, #3f3f40ea, #444444e3);
-              width: 37.5vw;
-              min-height: 10vw;
-              border-radius: 3vw;
-              padding-top: 2vw;
-              padding-bottom: 2vw;
-
+              margin-top: 5vw;
+               padding: 8vw;
               /*distancia entre itens*/
-              line-height: 10vw;
           }
 
 
@@ -892,6 +872,14 @@
               color: #ffffff;
           }
 
+          .planos_sec_container_blocks p {
+            font-family: 'Nunito';
+            display: block;
+              text-align: center;
+              margin-top: 5px;
+              font-size: 1.5vw;
+              color: gray;
+        }
 
 
 
@@ -928,6 +916,9 @@
 
 
 
+
+
+
           .tabela_caixa h2 {
               font-family: 'Inter', sans-serif;
               font-size: 2vw;
@@ -942,7 +933,6 @@
           }
 
           .tabela_caixa p {
-              color: #000;
               display: flex;
               justify-content: space-between;
               margin-top: 1vw;
@@ -986,9 +976,10 @@
           /* ----------- Localização  -----------------*/
           .location {
               width: 90%;
-              border-radius: 4vw;
+              border-radius: 5vw;
               background-color: rgba(61, 61, 61, 0.801);
 
+              margin-top: 5vw;
               text-align: center;
               margin-left: auto;
               margin-right: auto;
@@ -1021,163 +1012,11 @@
 
           /* ------------------------------- */
 
-          .scroll_container {
-            display: none;  
-            height: 45vw;
-              text-align: center;
-              
-          }
-
-          .scroll p {
-              font-size: 4.5vw;
-              font-family: 'Inter', sans-serif;
-              color: #cfcfcf;
-              animation: puxa_texto 4s ease-in-out infinite normal;
-              transform-origin: center center;
-          }
-
-          .scroll img {
-              margin-top: 5vw;
-              width: 10vw;
-              height: auto;
-              margin-left: 40vw;
-              animation: puxa 4s ease-in-out infinite normal;
-              transform-origin: center center;
-          }
-
-
-
-          .sombra {
-            position: relative;
-            margin-top: -11vw;
-            margin-left: 62vw;
-            z-index: -1;
-            background-color: #222222de;
-            width: 9vw;
-            height: 9vw;
-            border-radius: 50vw;
-            opacity: 0;
-            animation: sombra 4s ease-in-out infinite normal;
-            transform-origin: center center;
-          }
-
-          @keyframes sombra {
-                0% {
-                    transform: translateY(0) rotateZ(0deg) rotateX(0deg);
-                }
-  
-                25% {
-                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
-                }
-  
-                30% {
-                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
-                }
-  
-                32% {
-                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
-                }
-  
-                35% {
-                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
-  
-                }
-  
-                50% {
-                   
-                    transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
-                }
-  
-                60% {
-                    
-                    transform: translateY(0vw) rotateZ(0deg) rotateX(0deg);
-                }
-  
-                75% {
-                    transform: translateY(0vw) rotateZ(0) rotateX(0deg);
-                }
-  
-                80% {
-                    opacity: 1;
-                    transform: translateY(0px) rotateZ(0deg) rotateX(deg);
-                }
-            }
-
-          @keyframes puxa {
-              0% {
-                  transform: translateY(0) rotateZ(0deg) rotateX(0deg);
-              }
-
-              25% {
-                  transform: translateY(20vw) rotateZ(0deg) rotateX(0deg);
-              }
-
-              30% {
-                  transform: translateY(20vw) rotateZ(-15deg) rotateX(0deg);
-              }
-
-              32% {
-                  transform: translateY(20vw) rotateZ(-18deg) rotateX(25deg);
-              }
-
-              35% {
-                  transform: translateY(20vw) rotateZ(-20deg) rotateX(30deg);
-
-              }
-
-              50% {
-                  transform: translateY(20vw) rotateZ(-20deg) rotateX(30deg);
-              }
-
-              60% {
-                  transform: translateY(0vw) rotateZ(-20deg) rotateX(30deg);
-              }
-
-              75% {
-                  transform: translateY(0vw) rotateZ(0) rotateX(0deg);
-              }
-
-              80% {
-                  transform: translateY(0px) rotateZ(0deg) rotateX(deg);
-              }
-
-            
-              
-          }
-
-          @keyframes puxa_texto {
-              0% {
-                  transform: translateY(0vw) rotateZ(0deg) rotateX(0deg);
-              }
-
-              
-              50% {
-                  transform: translateY(0vw) rotateZ(0deg) rotateX(0deg);
-              }
-
-              65% {
-                  transform: translateY(-4vw) rotateZ(0deg) rotateX(20deg);
-              }
-
-              75% {
-                  transform: translateY(-4vw) rotateZ(0) rotateX(0deg);
-              }
-
-              80% {
-                  transform: translateY(-4vw) rotateZ(0deg) rotateX(0deg);
-              }
-
-              100% {
-                transform: translateY(0vw) rotateZ(0deg) rotateX(0deg);
-            }
-          }
-
-
 
 
           /* LINKS PARA OUTRAS PÁGINAS */
           .container-links {
-            margin-top: -20vw;
+            margin-top: 5vw;
               display: flex;
               flex-direction: row;
               gap: 0vw;
@@ -1257,7 +1096,6 @@
 
 
 
-
           /* ----------  rodapé  --------------- */
           .footer {
               background-color: #191a1d;
@@ -1283,7 +1121,7 @@
 
 
           .footer_links {
-              padding-top: 1vw;
+              padding-top: 2vw;
               margin-left: 30vw;
               display: flex;
               align-items: center;
@@ -1305,7 +1143,7 @@
               margin-right: 30vw;
               width: 10vw;
               height: auto;
-              padding-top: 1.2vw;
+              padding-top: 28px;
           }
 
 
@@ -1349,7 +1187,7 @@
 
 
 
-          @media (max-width: 1200px) {
+          @media (max-width: 768px) {
               body {
                   background-size: 150%;
                   background-position: center;
@@ -1381,8 +1219,8 @@
               }
 
 
-
-
+              
+              
 
               .img_prin {
                   height: 80vw;
@@ -1393,19 +1231,19 @@
               }
 
               .img_boxe {
-                  object-fit: cover;
-                  object-position: center 20%;
+                object-fit: cover;
+                object-position: center 20%;
               }
-
+              
               .img_muay {
-                  object-fit: cover;
-                  object-position: center 60%;
+                object-fit: cover;
+                object-position: center 60%;
               }
-
+              
               .img_hapkido {
-                  object-fit: cover;
-                  object-position: 100% 0%;
-                  transform: scale(1);
+                object-fit: cover;
+                object-position: 100% 0%;
+                transform: scale(1);
               }
 
               /* ---------- NavMenu ----------------- */
@@ -1452,9 +1290,6 @@
 
               }
 
-
-
-              /* Vem ser black */
               .aula_experimental {
                   margin: 25vw auto 0;
                   /* top auto bottom em uma linha */
@@ -1497,9 +1332,9 @@
               /* ------------------  planos  -------------------*/
               .planos_backg {
                   /*fundo cinza*/
-                  width: 80%;
-                  padding: 4vw;
+                  width: 100%;
                   margin-bottom: 5vw;
+                  border-radius: 0vw;
               }
 
 
@@ -1567,6 +1402,23 @@
                   font-size: 3vw;
               }
 
+
+              .planos_sec_container {
+                width: 100%;
+                display: block;
+                justify-content: space-between;
+            }
+
+            .planos_sec_container_blocks h1{    
+                font-size: 10vw;
+        
+        }
+
+              .planos_sec_container_blocks p{
+                font-size: 5vw;
+              }
+
+
               /* ---------------------------------------*/
 
 
@@ -1596,9 +1448,9 @@
               .tabela_fundo {
                   /*fundo cinza da tabela*/
                   text-align: center;
-                  border-radius: 4vw;
-                  width: 80%;
-                  padding: 20px;
+                  border-radius: 0vw;
+                  width: 100%;
+              
                   margin-top: 5px;
                   margin-right: auto;
                   margin-left: auto;
@@ -1606,6 +1458,8 @@
               }
 
               .tabela_container {
+                margin-top: 3vw;
+                margin-bottom: 4vw;
                   display: flex;
                   justify-content: center;
                   gap: 8vw;
@@ -1662,10 +1516,9 @@
               /* ------------  Localização  ---------------- */
               .location {
                   text-align: center;
-                  border-radius: 4vw;
-                  width: 80%;
-                  padding: 20px;
+                  width: 100%;
                   margin-top: 1vw;
+                  border-radius: 0vw;
                   margin-bottom: 10vw;
                   margin-right: auto;
                   margin-left: auto;
@@ -1693,32 +1546,7 @@
 
               /* ------------------------------------ */
 
-              .scroll_container {
-                display: block;
-                height: 45vw;
-            }
-  
-            .scroll p {
-                font-size: 4.5vw;
-            }
-  
-            .scroll img {
-                margin-top: 5vw;
-                width: 10vw;
-                height: auto;
-                margin-left: 40vw;
-            }
-  
-            .sombra {
-              margin-top: -11vw;
-              margin-left: 62vw;
-              width: 9vw;
-              height: 9vw;
-            }
-
-
-
-              /* ----------Links -------------- */
+                /* ----------Links -------------- */
 
             .container-links{
                 margin-top: 0;
@@ -1779,6 +1607,4 @@
                   padding-bottom: 15px;
               }
 
-               }
-
-       
+          }
