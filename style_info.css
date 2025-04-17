@@ -1,0 +1,210 @@
+
+.construção {
+    text-align: center;
+}
+
+.construção h1 {
+    color: rgb(212, 173, 0);
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 6vw;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.construção img {
+    width: 40vw;
+    height: auto;
+}
+
+
+/* ----------------------------------*/
+
+
+.video-container{
+    position: relative;
+    width: 75vw;
+    height: 40vw;
+    margin: 20vw auto;
+    border-radius: 1vw;
+  }
+
+.video-container iframe{
+    border-radius: 1vw;
+}
+
+
+.container_espaços{
+    width: 85vw;
+    min-height: 10vw;
+    border-radius: 5vw;
+    background-color: rgba(61, 61, 61, 0.801);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+
+.icon-grid {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2vw; /* Espaçamento entre os ícones */
+    column-gap: 0vw; /* Ajusta o espaçamento entre as colunas */
+    text-align: center;
+  }
+
+  .icon-item {
+    margin-left: 6vw;
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e o ícone */
+    justify-content: left; /* Alinha horizontalmente */
+    gap: 2vw; /* Espaçamento entre o ícone e o texto */
+  }
+  
+  .icon-item img {
+    width: 3vw; /* Tamanho do ícone */
+    height: auto;
+  }
+  
+  .icon-item p {
+    color: aliceblue;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2vw;
+}
+
+
+
+
+
+.foto-container {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    display: flex;
+    flex-wrap: wrap; /* Permite a quebra das imagens quando atingirem o limite */
+    gap: 10vw; /* Espaçamento entre as imagens */
+    justify-content: space-between;
+  }
+  
+  .foto_left, .foto_right {
+    
+    
+    width: 70vw; /* Define a largura das imagens */
+    height: auto;
+    
+  }
+  
+  .foto_left img{
+    width: 100%; /* As imagens ocupam toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+  } 
+  .foto_right img {
+
+    width: 100%; /* As imagens ocupam toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-top-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+  }
+  
+  .foto_left {
+    margin-right: auto; /* Coloca a imagem à esquerda */
+  }
+  
+  .foto_right {
+    margin-left: auto; /* Coloca a imagem à direita */
+  }
+
+
+  
+
+@media (max-width: 768px) {
+    .construção img {
+        width: 40vw;
+        height: auto;
+    }
+
+    .video-container{
+        width: 90vw;
+        height: 50vw;
+      }
+    
+    .video-container iframe{
+        border-radius: 3vw;
+    }
+    
+  
+  
+    .container_espaços{
+        text-align: center;
+        width: 100%;
+        border-radius: 0vw;
+    }
+
+
+    
+.icon-grid {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    grid-gap: 2vw; /* Espaçamento entre os ícones */
+    column-gap: 0vw; /* Ajusta o espaçamento entre as colunas */
+   
+  }
+
+  .icon-item {
+    margin-left: 6vw;
+   
+    gap: 2vw; /* Espaçamento entre o ícone e o texto */
+  }
+  
+  .icon-item img {
+    width: 5vw; /* Tamanho do ícone */
+    height: auto;
+  }
+  
+  .icon-item p {
+    font-size: 4vw;
+}
+
+
+.foto-container {
+    margin-top: 20vw;
+    gap: 20vw; /* Espaçamento entre as imagens */
+    
+  }
+  
+  .foto_left, .foto_right {
+    width: 80vw; /* Define a largura das imagens */
+    
+    
+  }
+  
+  .foto_left img{
+    width: 100%; /* As imagens ocupam toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-top-right-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+  } 
+  .foto_right img {
+
+    width: 100%; /* As imagens ocupam toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-top-left-radius: 5vw;
+    border-bottom-left-radius: 5vw;
+  }
+  
+
+   
+
+  
+    
+
+
+}
