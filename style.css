@@ -11,7 +11,7 @@
           }
 
           :root {
-              color-scheme: light only;
+              color-scheme: dark only;
           }
 
           /* Estilo para a tela de carregamento */
@@ -910,6 +910,7 @@
           }
 
           .tabela_caixa p {
+            color: #000;
               display: flex;
               justify-content: space-between;
               margin-top: 1vw;
