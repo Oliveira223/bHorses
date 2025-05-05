@@ -18,6 +18,51 @@
 }
 
 /* ------- HAPKIDO --------- */
+
+.img-slider {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vw;
+    width: 79vw;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    border: 0.8vw solid #000; /* Borda preta de 5px */
+    border-radius: 2vw;     /* Opcional: borda arredondada */
+  }
+  
+  .slider-container {
+    display: flex;
+    width: 300vw; /* 3 imagens com 100vw cada */
+    animation: slider 26s infinite;
+  }
+  
+  .slide {
+    width: 80vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center; /* Centraliza imagem */
+    align-items: center;
+  }
+  
+  .slide img {
+    width: 80vw;
+    height: auto;
+    display: block;
+  }
+  
+  @keyframes slider {
+    0%, 25%   { transform: translateX(0); }
+    30%, 55%  { transform: translateX(-80vw); }
+    60%, 85%  { transform: translateX(-160vw); }
+    90%, 100% { transform: translateX(0); }
+  }
+  
+
+
+
+
+
 .hapkido {
     display: block;
     text-align: center;
