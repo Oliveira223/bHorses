@@ -28,20 +28,21 @@ window.addEventListener("load", function () {
     };
   }
 
-  // Debug de performance
-  const entries = performance.getEntriesByType("resource");
-  let totalTime = 0;
+  // // Debug de performance
+  // const entries = performance.getEntriesByType("resource");
+  // let totalTime = 0;
 
-  entries.forEach(entry => {
-    console.log(`📦 ${entry.name}`);
-    console.log(`↳ Tipo: ${entry.initiatorType}`);
-    console.log(`↳ Início: ${entry.startTime.toFixed(2)}ms`);
-    console.log(`↳ Duração total: ${entry.duration.toFixed(2)}ms`);
-    console.log("------------------------");
-    totalTime += entry.duration;
-  });
+  // entries.forEach(entry => {
+  //   console.log(`📦 ${entry.name}`);
+  //   console.log(`↳ Tipo: ${entry.initiatorType}`);
+  //   console.log(`↳ Início: ${entry.startTime.toFixed(2)}ms`);
+  //   console.log(`↳ Duração total: ${entry.duration.toFixed(2)}ms`);
+  //   console.log("------------------------");
+  //   totalTime += entry.duration;
+  // });
 
-  console.log(`⏱️ Tempo total de carregamento dos recursos: ${totalTime.toFixed(2)}ms`);
+  // console.log(`⏱️ Tempo total de carregamento dos recursos: ${totalTime.toFixed(2)}ms`);
+
 });
 
 // ------------------- Menu De Navegação --------------------- \\
@@ -76,7 +77,7 @@ const observer = new IntersectionObserver((entradas) => {
     }
   });
 }, {
-  threshold: 0.2
+  threshold: 0.08
 });
 
 document.querySelectorAll('.revelar').forEach((el) => observer.observe(el));

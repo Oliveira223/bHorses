@@ -17,7 +17,84 @@
     height: auto;
 }
 
+/* ------- HAPKIDO --------- */
+.hapkido {
+    display: block;
+    text-align: center;
+    margin-top: 3vw;
+}
 
+.hapkido_gray {
+    background-color: rgba(61, 61, 61, 0.733);
+    display: flex;
+    margin-top: 10vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    text-align: center;
+    align-items: center;
+    /*alinha verticalmente*/
+}
+
+.hapkido_hangul {
+    height: 30vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+}
+
+.hapkido p {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    color: rgb(217, 219, 221);
+    font-family: 'Kaushan';
+    font-size: 3vw;
+    text-align: left;
+    letter-spacing: 0.3vw;
+}
+
+.hapkido_foto {
+    width: 40vw;
+    border-radius: 10%;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.603);
+}
+
+.defesa_pessoal {
+    width: 85%;
+    border-radius: 5vw;
+    background-color: rgba(61, 61, 61, 0.801);
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.defesa_pessoal h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: 4vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    color: white;
+}
+
+.defesa_pessoal h3 {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    font-style: italic;
+    color: #bbb;
+}
+
+.defesa_pessoal ul {
+    padding: 0;
+    line-height: 1.8;
+}
+
+.defesa_pessoal li {
+    text-align: left;
+    font-size: 2vw;
+    margin-left: 19vw;
+
+}
 
 
 
@@ -25,10 +102,10 @@
 /* ----------------------------------*/
 
 
-  .video-container{
+.video-container {
     width: 100px;
     height: 200px;
-  }
+}
 
 
 
@@ -43,4 +120,83 @@
         width: 40vw;
         height: auto;
     }
+
+
+    .hapkido {
+        margin-top: 5vw;
+    }
+
+    .hapkido_gray {
+        margin-top: 10vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+
+    .hapkido_hangul {
+        height: 50vw;
+        margin-left: 5vw;
+        margin-right: 2vw;
+    }
+
+    .hapkido p {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        font-size: 5vw;
+        letter-spacing: 0.3vw;
+    }
+
+    .hapkido_foto {
+        width: 60vw;
+        border-radius: 10%;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
+    }
+
+    .defesa_pessoal {
+        border-radius: 0vw;
+        width: 100vw;
+        margin-top: 5vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+
+    .defesa_pessoal h2 {
+        font-size: 7vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+
+    .defesa_pessoal h3 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+
+    .defesa_pessoal ul {
+        padding: 0;
+        line-height: 1.8;
+    }
+
+    .defesa_pessoal li {
+        font-size: 4vw;
+        margin-left: 0vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

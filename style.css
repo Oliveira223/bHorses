@@ -51,13 +51,8 @@
               /* Adiciona animação de rotação */
           }
 
-          @font-face {
-            font-family: 'Inter';
-            src: url('/Fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-            font-display: swap;
-          }
 
-          @font-face {
+        @font-face {
             font-family: 'MinhaFonte';
             src: url(Fonts/handelsonsix_cyr_six.otf) format('truetype');
             font-display: swap;
@@ -87,6 +82,11 @@
             font-display: swap;
         }
 
+        @font-face {
+            font-family: 'Kaushan';
+            src: url(Fonts/KaushanScript-Regular.ttf) format('truetype');
+            font-display: swap;
+        }
 
           /* --------------  ANIMAÇÕES  ------------------------------- */
           @keyframes spin {
@@ -386,7 +386,7 @@
           }
 
           .centered-content p {
-              margin-top: 50px;
+              margin-top: 35px;
 
           }
 
@@ -1005,7 +1005,7 @@
               width: 100%;
               height: 70vh;
               overflow: hidden;
-              background-size: 220%;
+              background-size: 135vh;
               /* inicialmente mais “próxima” */
               background-position: 42% 30%;
               background-repeat: no-repeat;
@@ -1037,7 +1037,7 @@
           }
 
           .link-imagem:hover {
-              background-size: 200%;
+              background-size: 120vh;
               /* afasta no hover */
           }
 
