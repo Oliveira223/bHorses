@@ -88,6 +88,12 @@
             font-display: swap;
         }
 
+        @font-face {
+            font-family: 'Nanum';
+            src: url(Fonts/NanumBrushScript-Regular.ttf) format('truetype');
+            font-display: swap;
+        }
+
           /* --------------  ANIMAÇÕES  ------------------------------- */
           @keyframes spin {
               0% {

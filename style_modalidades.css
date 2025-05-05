@@ -69,10 +69,11 @@
 }
 
 .defesa_pessoal h2 {
-    font-family: 'Satisfy', cursive;
-    font-size: 4vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    font-family: 'Nanum', 'Satisfy', cursive;
+    font-size: 7vw;
+    font-weight: 500;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     color: white;
 }
 
@@ -160,9 +161,10 @@
     }
 
     .defesa_pessoal h2 {
-        font-size: 7vw;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
+        font-size: 11vw;
+        font-weight: 500;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
     }
 
     .defesa_pessoal h3 {
