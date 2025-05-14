@@ -19,6 +19,7 @@
 
 /* ------- HAPKIDO --------- */
 
+
 .img-slider {
     margin-left: auto;
     margin-right: auto;
@@ -59,7 +60,9 @@
   }
   
 
-
+  .margem{
+    margin-top: 20vw;
+  }
 
 
 
@@ -103,8 +106,7 @@
 }
 
 .defesa_pessoal {
-    width: 85%;
-    border-radius: 5vw;
+    width: 100%;
     background-color: rgba(61, 61, 61, 0.801);
     margin-right: auto;
     margin-left: auto;
@@ -143,25 +145,97 @@
 }
 
 
-
-
 /* ----------------------------------*/
 
 
-.video-container {
-    width: 100px;
-    height: 200px;
+/* -------- BOXE ---------- */
+.boxe {
+  display: block;
+  text-align: center;
+  margin-top: 3vw;
+}
+
+.boxe_gray {
+  background-color: rgba(61, 61, 61, 0.733);
+  display: block;
+  margin-top: 10vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  text-align: center;
+  align-items: center;
+}
+
+.boxe_img{
+    width: 15vw;
+}
+
+.boxe_titulo {
+  color: rgb(217, 219, 221);
+  font-family: 'Inter', sans-serif;
+  font-size: 4vw;
+  margin-bottom: 4vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: center;
+}
+
+.boxe_gray p {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  color: rgb(217, 219, 221);
+  font-family: 'Inter', sans-serif;
+  font-size: 2vw;
+  text-align: justify;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  word-break: normal;
+  hyphens: auto;
+  margin-bottom: 2.5vw;
+}
+
+.boxe_lista {
+  margin-left: 7vw;
+  margin-right: 5vw;
+  color: rgb(217, 219, 221);
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  margin-bottom: 4vw;
+  padding-left: 1.5vw;
+  list-style-type: disc;
+}
+
+.boxe_lista li{
+    font-size: 2vw;
 }
 
 
 
 
 
+    /* ----------------------- */
 
+    .video-container {
+  position: relative;
+  width:  78vw;
+  height: 50vw;
+  margin: 20vw auto;
+  border-radius: 1vw;
+}
+
+.video-container iframe {
+  border-radius: 1vw;
+}
 
 
 
 @media (max-width: 768px) {
+    
+  .margem{
+    margin-top: 15vw;
+  }
+
     .construção img {
         width: 40vw;
         height: auto;
@@ -197,6 +271,54 @@
         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
     }
 
+    /* -------------------  BOXE --------------- */
+
+.boxe {
+  margin-top: 3vw;
+}
+
+.boxe_gray {
+  margin-top: 10vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+
+.boxe_img{
+    width: 40vw;
+}
+
+.boxe_titulo {
+  font-size: 6vw;
+  margin-bottom: 4vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.boxe_gray p {
+  font-size: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  margin-bottom: 2.5vw;
+}
+
+.boxe_lista {
+  margin-left: 7vw;
+  margin-right: 5vw;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  margin-bottom: 4vw;
+  padding-left: 1.5vw;
+}
+
+
+.boxe_lista li{
+    font-size: 4vw;
+}
+/* --------------------------- */
+
     .defesa_pessoal {
         border-radius: 0vw;
         width: 100vw;
@@ -226,6 +348,19 @@
         font-size: 4vw;
         margin-left: 0vw;
     }
+
+    .video-container {
+  position: relative;
+  width:  78vw;
+  height: 140vw;
+  margin: 20vw auto;
+  border-radius: 1vw;
+}
+
+.video-container iframe {
+  border-radius: 3vw;
+  border: 0.8vw solid #000000;
+}
 
 
 

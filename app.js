@@ -16,17 +16,21 @@ window.addEventListener("load", function () {
     conteudo.classList.add("visivel"); // apenas tira o "fade"
   }, Math.max(0, tempoRestante)); // garante tempo mínimo
 
-  // Imagem com blur (low-res -> high-res)
-  const img = document.querySelector('.blur-load');
-  if (img) {
+    // Imagens com blur (low-res -> high-res) — agora para todas
+  const imgs = document.querySelectorAll('.blur-load');
+  imgs.forEach(img => {
     const realSrc = img.dataset.src;
-    const highRes = new Image();
-    highRes.src = realSrc;
-    highRes.onload = () => {
-      img.src = realSrc;
-      img.classList.add('loaded');
-    };
-  }
+
+    // Pequeno delay para garantir que a low-res apareça primeiro
+    setTimeout(() => {
+      const highRes = new Image();
+      highRes.src = realSrc;
+      highRes.onload = () => {
+        img.src = realSrc;
+        img.classList.add('loaded');
+      };
+    }, 50);
+  });
 
   // // Debug de performance
   // const entries = performance.getEntriesByType("resource");
@@ -100,4 +104,5 @@ window.addEventListener('scroll', () => {
     }, 4000);
   }
 });
+
 
