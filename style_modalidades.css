@@ -61,7 +61,7 @@
   
 
   .margem{
-    margin-top: 20vw;
+    margin-top: 10vw;
   }
 
 
@@ -216,10 +216,10 @@
 
     /* ----------------------- */
 
-    .video-container {
+  .video-container {
   position: relative;
-  width:  78vw;
-  height: 50vw;
+  width:  85vw;
+  height: auto;
   margin: 20vw auto;
   border-radius: 1vw;
 }
@@ -351,8 +351,8 @@
 
     .video-container {
   position: relative;
-  width:  78vw;
-  height: 140vw;
+  width:  90vw;
+  height: 50vw;
   margin: 20vw auto;
   border-radius: 1vw;
 }
@@ -362,7 +362,9 @@
   border: 0.8vw solid #000000;
 }
 
-
+.margem{
+    margin-top: 20vw;
+  }
 
 
 
