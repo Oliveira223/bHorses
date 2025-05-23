@@ -20,19 +20,20 @@
 
 /* ----------------------------------*/
 
-
-.video-container {
+ .video-container {
   position: relative;
-  width: 75vw;
-  height: 40vw;
+  width:  65vw;
+  height: 30vw;
   margin: 20vw auto;
-  border-radius: 1vw;
+  
 }
 
 .video-container iframe {
-  border-radius: 1vw;
+  border-radius: 2vw;
+  border: 0.4vw solid #000000;
 }
 
+/* ----------------- ESPAÇOS ----------- */
 
 .container_espaços {
   width: 85vw;
@@ -150,16 +151,6 @@
 
 /* -------------------  Atletas  ------------------- */
 
-.atletas_container {
-  background-color: rgba(61, 61, 61, 0.733);
-  padding-bottom: 5vw;
-  margin-top: 10vw;
-  display: row;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
 .imagem_cinturoes {
   display: flex;
   justify-content: center;
@@ -174,7 +165,19 @@
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.6);
 }
 
+.atletas_container {
+  background-color: rgba(61, 61, 61, 0.733);
+  padding-top: 2vw;
+  padding-bottom: 10vw;
+  margin-top: 10vw;
+  display: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
 .atletas {
+  margin-top: 5vw;
   padding-top: 5vw;
   margin-left: 10vw;
   display: flex;
@@ -183,18 +186,40 @@
   /*Espaço entre foto e nome */
 }
 
-.atletas p {
+.nome{
+  align-items: center;
+}
+
+.atletas p { /* Nomes */
   color: #bbbbbb;
+  font-family: 'Roboto', sans-serif;
+  font-size: 6vw;
+}
+
+.atletas h3 {
+   color: #bbbbbb;
   font-family: 'Roboto', sans-serif;
   font-size: 5vw;
 }
 
-.atletas img {
+.foto-principal { /*foto atleta*/
+  width: 20vw;
+  height: auto;
   border-radius: 1vw;
-  width: 15vw;
+  border: 0.8vw solid #d8a006;
+}
+
+.atletas-icon {
+  width: 8vw;
   height: auto;
 }
 
+
+.atletas-subicon {
+  margin-left: 1vw;
+  width: 3.7vw;
+  height: auto;
+}
 
 
 /*------------------------------------ */
@@ -218,24 +243,67 @@
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Texto com boa responsividade */
-.texto_sobre {
+
+.sobre {
+  display: block;
+  text-align: center;
+  margin-top: 3vw;
+}
+
+.sobre_gray {
   background-color: rgba(61, 61, 61, 0.733);
-  margin-top: 5vw;
-  padding: 10vw 10vw 10vw 5vw;
-  font-size: 5vw;
-  text-align: left;
+  display: block;
+  margin-top: 10vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  text-align: center;
+  align-items: center;
 }
 
-.texto_sobre p {
-  color: #bbbbbb;
-  font-family: 'Roboto', sans-serif;
-  inline-size: 85vw;
-  overflow-wrap: break-word;
+.sobre_img{
+    width: 15vw;
+}
+
+.sobre_titulo {
+  color: rgb(217, 219, 221);
+  font-family: 'Inter', sans-serif;
+  font-size: 4vw;
+  margin-bottom: 4vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: center;
+}
+
+  .sobre p {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  color: rgb(217, 219, 221);
+  font-family: 'Inter', sans-serif;
+  font-size: 2vw;
+  text-align: justify;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  word-break: normal;
   hyphens: auto;
+  margin-bottom: 2.5vw;
 }
 
+.sobre_lista {
+  margin-left: 7vw;
+  margin-right: 5vw;
+  color: rgb(217, 219, 221);
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  margin-bottom: 4vw;
+  padding-left: 1.5vw;
+  list-style-type: disc;
+}
 
+.sobre_lista li{
+    font-size: 2vw;
+}
 
 
 
@@ -272,15 +340,18 @@
     width: 40vw;
     height: auto;
   }
+ .video-container {
+  position: relative;
+  width:  90vw;
+  height: 50vw;
+  margin: 20vw auto;
+  border-radius: 1vw;
+}
 
-  .video-container {
-    width: 90vw;
-    height: 50vw;
-  }
-
-  .video-container iframe {
-    border-radius: 3vw;
-  }
+.video-container iframe {
+  border-radius: 3vw;
+  border: 0.8vw solid #000000;
+}
 
 
 
@@ -354,7 +425,52 @@
     border-bottom-left-radius: 5vw;
   }
 
+  /* --------- SOBRE --------------- */
 
+.sobre {
+  margin-top: 3vw;
+}
+
+.sobre_gray {
+  margin-top: 10vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+
+.sobre_img{
+    width: 40vw;
+}
+
+.sobre_titulo {
+  font-size: 6vw;
+  margin-bottom: 4vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.sobre p {
+  font-size: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  margin-bottom: 2.5vw;
+}
+
+.sobre_lista {
+  margin-left: 7vw;
+  margin-right: 5vw;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  margin-bottom: 4vw;
+  padding-left: 1.5vw;
+}
+
+
+.sobre_lista li{
+    font-size: 4vw;
+}
 
 
 
