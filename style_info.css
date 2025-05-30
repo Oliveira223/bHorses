@@ -221,6 +221,7 @@
   width: 70vw;
   border-radius: 1vw;
   margin-top: 3vw;
+   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.6);
 }
 
 .fotos_comp_left{
@@ -500,7 +501,7 @@
 .atletas {
   margin-top: 5vw;
   padding-top: 5vw;
-  margin-left: 10vw; 
+  margin-left: 7vw; 
   gap: 5vw;
   /*Espaço entre foto e nome */
 }

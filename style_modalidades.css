@@ -1,68 +1,68 @@
 .construção {
-    text-align: center;
+  text-align: center;
 }
 
 .construção h1 {
-    color: rgb(212, 173, 0);
-    font-family: 'MinhaFonte', sans-serif;
-    font-size: 6vw;
-    text-align: center;
-    margin-right: 10px;
-    margin-left: 10px;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  color: rgb(212, 173, 0);
+  font-family: 'MinhaFonte', sans-serif;
+  font-size: 6vw;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 }
 
 .construção img {
-    width: 40vw;
-    height: auto;
+  width: 40vw;
+  height: auto;
 }
 
 /* ------- HAPKIDO --------- */
 
 
-  .margem{
-    margin-top: 10vw;
-  }
+.margem {
+  margin-top: 10vw;
+}
 
 
 
 .hapkido {
-    display: block;
-    text-align: center;
-    margin-top: 3vw;
+  display: block;
+  text-align: center;
+  margin-top: 3vw;
 }
 
 .hapkido_gray {
-    background-color: rgba(61, 61, 61, 0.733);
-    display: flex;
-    margin-top: 10vw;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
-    text-align: center;
-    align-items: center;
-    /*alinha verticalmente*/
+  background-color: rgba(61, 61, 61, 0.733);
+  display: flex;
+  margin-top: 10vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  text-align: center;
+  align-items: center;
+  /*alinha verticalmente*/
 }
 
 .hapkido_hangul {
-    height: 30vw;
-    margin-left: 5vw;
-    margin-right: 2vw;
+  height: 30vw;
+  margin-left: 5vw;
+  margin-right: 2vw;
 }
 
 .hapkido p {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    color: rgb(217, 219, 221);
-    font-family: 'Kaushan';
-    font-size: 3vw;
-    text-align: left;
-    letter-spacing: 0.3vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  color: rgb(217, 219, 221);
+  font-family: 'Kaushan';
+  font-size: 3vw;
+  text-align: left;
+  letter-spacing: 0.3vw;
 }
 
 .hapkido_foto {
-    width: 40vw;
-    border-radius: 10%;
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.603);
+  width: 40vw;
+  border-radius: 10%;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.603);
 }
 
 
@@ -86,8 +86,8 @@
   align-items: center;
 }
 
-.boxe_img{
-    width: 15vw;
+.boxe_img {
+  width: 15vw;
 }
 
 .boxe_titulo {
@@ -127,22 +127,22 @@
   list-style-type: disc;
 }
 
-.boxe_lista li{
-    font-size: 2vw;
+.boxe_lista li {
+  font-size: 2vw;
 }
 
 
 
 
 
-    /* ----------------------- */
+/* ----------------------- */
 
-  .video-container {
+.video-container {
   position: relative;
-  width:  65vw;
+  width: 65vw;
   height: 30vw;
   margin: 20vw auto;
-  
+
 }
 
 .video-container iframe {
@@ -151,141 +151,166 @@
 }
 
 
+/* --------- Muay Thai ------------ */
+.imagem_mt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem_mt img {
+  width: 60vw;
+  height: auto;
+  border-radius: 2vw;
+  margin-top: 12vw;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.6);
+}
+
+
 
 @media (max-width: 768px) {
-    
-  .margem{
+
+  .margem {
     margin-top: 15vw;
   }
 
-    .construção img {
-        width: 40vw;
-        height: auto;
-    }
-
-
-    .hapkido {
-        margin-top: 5vw;
-    }
-
-    .hapkido_gray {
-        margin-top: 10vw;
-        padding-top: 5vw;
-        padding-bottom: 5vw;
-    }
-
-    .hapkido_hangul {
-        height: 50vw;
-        margin-left: 5vw;
-        margin-right: 2vw;
-    }
-
-    .hapkido p {
-        margin-left: 5vw;
-        margin-right: 5vw;
-        font-size: 5vw;
-        letter-spacing: 0.3vw;
-    }
-
-    .hapkido_foto {
-        width: 60vw;
-        border-radius: 10%;
-        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
-    }
-
-    /* -------------------  BOXE --------------- */
-
-.boxe {
-  margin-top: 3vw;
-}
-
-.boxe_gray {
-  margin-top: 10vw;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
-}
-
-
-.boxe_img{
+  .construção img {
     width: 40vw;
-}
-
-.boxe_titulo {
-  font-size: 6vw;
-  margin-bottom: 4vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
-}
-
-.boxe_gray p {
-  font-size: 5vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  letter-spacing: 0.05em;
-  line-height: 1.6;
-  margin-bottom: 2.5vw;
-}
-
-.boxe_lista {
-  margin-left: 7vw;
-  margin-right: 5vw;
-  letter-spacing: 0.05em;
-  line-height: 1.6;
-  margin-bottom: 4vw;
-  padding-left: 1.5vw;
-}
+    height: auto;
+  }
 
 
-.boxe_lista li{
+  .hapkido {
+    margin-top: 5vw;
+  }
+
+  .hapkido_gray {
+    margin-top: 10vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  .hapkido_hangul {
+    height: 50vw;
+    margin-left: 5vw;
+    margin-right: 2vw;
+  }
+
+  .hapkido p {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 5vw;
+    letter-spacing: 0.3vw;
+  }
+
+  .hapkido_foto {
+    width: 60vw;
+    border-radius: 10%;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.603);
+  }
+
+  /* -------------------  BOXE --------------- */
+
+  .boxe {
+    margin-top: 3vw;
+  }
+
+  .boxe_gray {
+    margin-top: 10vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+
+  .boxe_img {
+    width: 40vw;
+  }
+
+  .boxe_titulo {
+    font-size: 6vw;
+    margin-bottom: 4vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .boxe_gray p {
+    font-size: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    margin-bottom: 2.5vw;
+  }
+
+  .boxe_lista {
+    margin-left: 7vw;
+    margin-right: 5vw;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    margin-bottom: 4vw;
+    padding-left: 1.5vw;
+  }
+
+
+  .boxe_lista li {
     font-size: 4vw;
-}
-/* --------------------------- */
+  }
 
-    .defesa_pessoal {
-        border-radius: 0vw;
-        width: 100vw;
-        margin-top: 5vw;
-        padding-top: 5vw;
-        padding-bottom: 5vw;
-    }
+  /* --------------------------- */
 
-    .defesa_pessoal h2 {
-        font-size: 11vw;
-        font-weight: 500;
-        margin-top: 1vw;
-        margin-bottom: 1vw;
-    }
+  .defesa_pessoal {
+    border-radius: 0vw;
+    width: 100vw;
+    margin-top: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
 
-    .defesa_pessoal h3 {
-        font-size: 5vw;
-        margin-bottom: 4vw;
-    }
+  .defesa_pessoal h2 {
+    font-size: 11vw;
+    font-weight: 500;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
 
-    .defesa_pessoal ul {
-        padding: 0;
-        line-height: 1.8;
-    }
+  .defesa_pessoal h3 {
+    font-size: 5vw;
+    margin-bottom: 4vw;
+  }
 
-    .defesa_pessoal li {
-        font-size: 4vw;
-        margin-left: 0vw;
-    }
+  .defesa_pessoal ul {
+    padding: 0;
+    line-height: 1.8;
+  }
 
-    .video-container {
-  position: relative;
-  width:  90vw;
-  height: 50vw;
-  margin: 20vw auto;
-  border-radius: 1vw;
-}
+  .defesa_pessoal li {
+    font-size: 4vw;
+    margin-left: 0vw;
+  }
 
-.video-container iframe {
-  border-radius: 3vw;
-  border: 0.8vw solid #000000;
-}
+  .video-container {
+    position: relative;
+    width: 90vw;
+    height: 50vw;
+    margin: 20vw auto;
+    border-radius: 1vw;
+  }
 
-.margem{
+  .video-container iframe {
+    border-radius: 3vw;
+    border: 0.8vw solid #000000;
+  }
+
+  .margem {
     margin-top: 20vw;
+  }
+
+
+  .imagem_mt img {
+    width: 85vw;
+    border-radius: 2vw;
+    margin-top: 20vw;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.6);
   }
 
 
