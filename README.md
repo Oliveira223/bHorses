@@ -1,3 +1,3 @@
-Feito por Pedro Oliveira para a Escola de Artes Marciais Black Horses.
+Feito por __Pedro Oliveira__ para a Escola de __Artes Marciais Black Horses__.
 
-link temporário para o site: https://oliveira223.github.io/bHorses/ 
+- link temporário para o site: blackhorses.com.br 
