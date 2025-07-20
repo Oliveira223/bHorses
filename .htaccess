@@ -1,0 +1,24 @@
+# Ativa o Rewrite Engine
+RewriteEngine On
+
+# Redireciona HTTP para HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Permite acesso tanto com www quanto sem www (não força nada)
+# Remove as linhas abaixo se quiser manter ambos funcionando
+
+# --- Se quiser forçar SEM www (opcional) ---
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+# --- Se quiser forçar COM www (opcional) ---
+# RewriteCond %{HTTP_HOST} ^blackhorses\.com\.br [NC]
+# RewriteRule ^(.*)$ https://www.blackhorses.com.br/$1 [L,R=301]
+
+# Proteção básica
+Options -Indexes
+
+# Define página de erro personalizada (opcional)
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html

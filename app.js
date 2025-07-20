@@ -1,4 +1,4 @@
-// ---------------------- Tela De Carregamento + Performance --------------------- \\
+// ---------------------- Tela De Carregamento --------------------- \\
 const tempoMinimo = 800;
 const inicio = Date.now();
 
@@ -31,22 +31,6 @@ window.addEventListener("load", function () {
       };
     }, 50);
   });
-
-  // // Debug de performance
-  // const entries = performance.getEntriesByType("resource");
-  // let totalTime = 0;
-
-  // entries.forEach(entry => {
-  //   console.log(`📦 ${entry.name}`);
-  //   console.log(`↳ Tipo: ${entry.initiatorType}`);
-  //   console.log(`↳ Início: ${entry.startTime.toFixed(2)}ms`);
-  //   console.log(`↳ Duração total: ${entry.duration.toFixed(2)}ms`);
-  //   console.log("------------------------");
-  //   totalTime += entry.duration;
-  // });
-
-  // console.log(`⏱️ Tempo total de carregamento dos recursos: ${totalTime.toFixed(2)}ms`);
-
 });
 
 // ------------------- Menu De Navegação --------------------- \\
